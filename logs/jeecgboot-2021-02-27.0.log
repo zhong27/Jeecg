@@ -226,3 +226,5 @@ org.apache.shiro.authc.AuthenticationException: Token失效，请重新登录!
 2021-02-27 13:38:10.103 [http-nio-8080-exec-8] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->main_id = 1365307079249637378
 2021-02-27 13:38:21.103 [http-nio-8080-exec-3] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->main_id = 1365307079249637378
 2021-02-27 13:38:38.313 [http-nio-8080-exec-10] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->main_id = 1365536781067436033
+2021-02-27 14:12:17.632 [http-nio-8080-exec-7] INFO  org.jeecg.config.shiro.ShiroRealm:155 - ——————————用户在线操作，更新token保证不掉线—————————jwtTokenRefresh——————— eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTQ0MDYwNzIsInVzZXJuYW1lIjoiYWRtaW4ifQ.C7jLzoKC7-TdQd2IcNugY09p_Mf8IYOY8lKd6DeVm84
+2021-02-27 14:12:17.660 [http-nio-8080-exec-7] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->main_id = 1365307079249637378
