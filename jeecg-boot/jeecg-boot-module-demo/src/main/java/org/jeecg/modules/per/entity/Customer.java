@@ -63,9 +63,11 @@ public class Customer implements Serializable {
 	/**客户类型   */
     @Excel(name = "客户类型   ", width = 15)
     @ApiModelProperty(value = "客户类型   ")
+    @Dict(dicCode = "customer_type")
     private java.lang.String customerType;
 	/**账户状态*/
     @Excel(name = "账户状态", width = 15)
+    @Dict(dicCode = "account_type")
     @ApiModelProperty(value = "账户状态")
     private java.lang.String accountStatus;
 }
