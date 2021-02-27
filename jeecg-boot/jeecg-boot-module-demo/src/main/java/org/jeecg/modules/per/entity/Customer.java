@@ -16,7 +16,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * @Description: 客户信息
  * @Author: jeecg-boot
- * @Date:   2021-02-26
+ * @Date:   2021-02-27
  * @Version: V1.0
  */
 @Data
@@ -61,13 +61,17 @@ public class Customer implements Serializable {
     @ApiModelProperty(value = " 电话号码")
     private java.lang.String number;
 	/**客户类型   */
-    @Excel(name = "客户类型   ", width = 15)
-    @ApiModelProperty(value = "客户类型   ")
+    @Excel(name = "客户类型   ", width = 15, dicCode = "customer_type")
     @Dict(dicCode = "customer_type")
+    @ApiModelProperty(value = "客户类型   ")
     private java.lang.String customerType;
 	/**账户状态*/
-    @Excel(name = "账户状态", width = 15)
+    @Excel(name = "账户状态", width = 15, dicCode = "account_type")
     @Dict(dicCode = "account_type")
     @ApiModelProperty(value = "账户状态")
     private java.lang.String accountStatus;
+	/**营业执照*/
+    @Excel(name = "营业执照", width = 15)
+    @ApiModelProperty(value = "营业执照")
+    private java.lang.String price;
 }

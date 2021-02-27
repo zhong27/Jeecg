@@ -16,7 +16,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * @Description: 银行卡信息
  * @Author: jeecg-boot
- * @Date:   2021-02-26
+ * @Date:   2021-02-27
  * @Version: V1.0
  */
 @Data

@@ -76,6 +76,9 @@
             下载
           </a-button>
         </template>
+        <template slot="pcaSlot" slot-scope="text">
+          <div>{{ getPcaText(text) }}</div>
+        </template>
 
         <span slot="action" slot-scope="text, record">
           <a @click="handleEdit(record)">编辑</a>
@@ -112,6 +115,8 @@
   import CustomerModal from './modules/CustomerModal'
   import { getAction } from '@/api/manage'
   import BankList from './BankList'
+  import {initDictOptions,filterMultiDictText} from '@/components/dict/JDictSelectUtil'
+  import Area from '@/components/_util/Area'
   import '@/assets/less/TableExpand.less'
   import JSuperQuery from '@/components/jeecg/JSuperQuery.vue'
 
@@ -136,7 +141,8 @@
           {
             title:'地址',
             align:"center",
-            dataIndex: 'addres'
+            dataIndex: 'addres',
+            scopedSlots: {customRender: 'pcaSlot'}
           },
           {
             title:' 电话号码',
@@ -146,12 +152,18 @@
           {
             title:'客户类型   ',
             align:"center",
-            dataIndex: 'customerType'
+            dataIndex: 'customerType_dictText',
           },
           {
             title:'账户状态',
             align:"center",
-            dataIndex: 'accountStatus'
+            dataIndex: 'accountStatus_dictText',
+          },
+          {
+            title:'营业执照',
+            align:"center",
+            dataIndex: 'price',
+            scopedSlots: {customRender: 'imgSlot'}
           },
           {
             title: '操作',
@@ -170,6 +182,8 @@
           importExcelUrl: "per/customer/importExcel",
         },
         dictOptions:{
+         customerType:[],
+         accountStatus:[],
         },
         /* 分页参数 */
         ipagination:{
@@ -188,6 +202,7 @@
       }
     },
     created() {
+      this.pcaData = new Area()
       this.getSuperFieldList();
     },
     computed: {
@@ -196,7 +211,20 @@
       }
     },
     methods: {
+      getPcaText(code){
+        return this.pcaData.getText(code);
+      },
       initDictConfig(){
+        initDictOptions('customer_type').then((res) => {
+          if (res.success) {
+            this.$set(this.dictOptions, 'customerType', res.result)
+          }
+        })
+        initDictOptions('account_type').then((res) => {
+          if (res.success) {
+            this.$set(this.dictOptions, 'accountStatus', res.result)
+          }
+        })
       },
       clickThenSelect(record) {
         return {
@@ -243,10 +271,11 @@
       getSuperFieldList(){
         let fieldList=[];
         fieldList.push({type:'string',value:'customerName',text:'客户名称',dictCode:''})
-        fieldList.push({type:'string',value:'addres',text:'地址',dictCode:''})
+        fieldList.push({type:'pca',value:'addres',text:'地址'})
         fieldList.push({type:'string',value:'number',text:' 电话号码',dictCode:''})
-        fieldList.push({type:'string',value:'customerType',text:'客户类型   ',dictCode:''})
-        fieldList.push({type:'string',value:'accountStatus',text:'账户状态',dictCode:''})
+        fieldList.push({type:'string',value:'customerType',text:'客户类型   ',dictCode:'customer_type'})
+        fieldList.push({type:'string',value:'accountStatus',text:'账户状态',dictCode:'account_type'})
+        fieldList.push({type:'string',value:'price',text:'营业执照',dictCode:''})
         this.superFieldList = fieldList
       }
     }

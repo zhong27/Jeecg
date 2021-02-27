@@ -162,6 +162,8 @@
           importUrl: "/per/customer/importBank",
         },
         dictOptions:{
+         customerType:[],
+         accountStatus:[],
         },
         superFieldList:[],
       }
@@ -183,10 +185,11 @@
       getSuperFieldList(){
         let fieldList=[];
         fieldList.push({type:'string',value:'customerName',text:'客户名称',dictCode:''})
-        fieldList.push({type:'string',value:'addres',text:'地址',dictCode:''})
+        fieldList.push({type:'pca',value:'addres',text:'地址'})
         fieldList.push({type:'string',value:'number',text:' 电话号码',dictCode:''})
-        fieldList.push({type:'string',value:'customerType',text:'客户类型   ',dictCode:''})
-        fieldList.push({type:'string',value:'accountStatus',text:'账户状态',dictCode:''})
+        fieldList.push({type:'string',value:'customerType',text:'客户类型   ',dictCode:'customer_type'})
+        fieldList.push({type:'string',value:'accountStatus',text:'账户状态',dictCode:'account_type'})
+        fieldList.push({type:'string',value:'price',text:'营业执照',dictCode:''})
         this.superFieldList = fieldList
       }
     }

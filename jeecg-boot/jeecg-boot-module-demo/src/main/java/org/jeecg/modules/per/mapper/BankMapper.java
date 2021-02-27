@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Param;
 /**
  * @Description: 银行卡信息
  * @Author: jeecg-boot
- * @Date:   2021-02-26
+ * @Date:   2021-02-27
  * @Version: V1.0
  */
 public interface BankMapper extends BaseMapper<Bank> {

@@ -18,7 +18,7 @@
           </a-col>
           <a-col :span="24">
             <a-form-item label="地址" :labelCol="labelCol" :wrapperCol="wrapperCol">
-              <a-input v-decorator="['addres']" placeholder="请输入地址" ></a-input>
+		      <j-area-linkage type="cascader" v-decorator="['addres']" placeholder="请输入省市区" />
             </a-form-item>
           </a-col>
           <a-col :span="24">
@@ -28,12 +28,17 @@
           </a-col>
           <a-col :span="24">
             <a-form-item label="客户类型   " :labelCol="labelCol" :wrapperCol="wrapperCol">
-              <a-input v-decorator="['customerType']" placeholder="请输入客户类型   " ></a-input>
+              <j-dict-select-tag type="list" v-decorator="['customerType']" :trigger-change="true" dictCode="customer_type" placeholder="请选择客户类型   " />
             </a-form-item>
           </a-col>
           <a-col :span="24">
             <a-form-item label="账户状态" :labelCol="labelCol" :wrapperCol="wrapperCol">
-              <a-input v-decorator="['accountStatus']" placeholder="请输入账户状态" ></a-input>
+              <j-dict-select-tag type="list" v-decorator="['accountStatus']" :trigger-change="true" dictCode="account_type" placeholder="请选择账户状态" />
+            </a-form-item>
+          </a-col>
+          <a-col :span="24">
+            <a-form-item label="营业执照" :labelCol="labelCol" :wrapperCol="wrapperCol">
+              <j-image-upload isMultiple  v-decorator="['price']" ></j-image-upload>
             </a-form-item>
           </a-col>
         </a-row>
@@ -47,10 +52,16 @@
   import { httpAction } from '@/api/manage'
   import pick from 'lodash.pick'
   import { validateDuplicateValue } from '@/utils/util'
+  import JImageUpload from '@/components/jeecg/JImageUpload'
+  import JDictSelectTag from "@/components/dict/JDictSelectTag"
+  import JAreaLinkage from '@comp/jeecg/JAreaLinkage'
 
   export default {
     name: "CustomerModal",
     components: { 
+      JImageUpload,
+      JDictSelectTag,
+      JAreaLinkage,
     },
     data () {
       return {
@@ -94,7 +105,7 @@
         this.model = Object.assign({}, record);
         this.visible = true;
         this.$nextTick(() => {
-          this.form.setFieldsValue(pick(this.model,'customerName','addres','number','customerType','accountStatus'))
+          this.form.setFieldsValue(pick(this.model,'customerName','addres','number','customerType','accountStatus','price'))
         })
       },
       close () {
@@ -137,7 +148,7 @@
         this.close()
       },
       popupCallback(row){
-        this.form.setFieldsValue(pick(row,'customerName','addres','number','customerType','accountStatus'))
+        this.form.setFieldsValue(pick(row,'customerName','addres','number','customerType','accountStatus','price'))
       },
 
       
