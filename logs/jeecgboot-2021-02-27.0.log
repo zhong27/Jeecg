@@ -9755,3 +9755,772 @@ select * from (SELECT product_name,product_class,mat_len,mat_width,mat_thick,mat
 2021-02-27 21:56:06.553 [http-nio-8080-exec-7] INFO  org.jeecg.modules.online.cgreport.service.a.b:135 - 报表查询sql=>
 select * from (SELECT product_name,product_class,mat_len,mat_width,mat_thick,mat_no,warehouse FROM sto_enter_house) jeecg_rp_temp  where 1=1 
 2021-02-27 21:56:17.629 [http-nio-8080-exec-9] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->order_id = 1365632355821256705
+2021-02-27 22:00:49.250 [http-nio-8080-exec-2] INFO  org.jeecg.config.shiro.ShiroRealm:155 - ——————————用户在线操作，更新token保证不掉线—————————jwtTokenRefresh——————— eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTQ0MzI1MzEsInVzZXJuYW1lIjoiYWRtaW4ifQ.aTG0RUdnfo9DCaDqWgLFBuuDgTFqp_LUYyeOVKy0_P0
+2021-02-27 22:00:49.259 [http-nio-8080-exec-2] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->copy_type = 0
+2021-02-27 22:08:47.884 [http-nio-8080-exec-9] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->copy_type = 0
+2021-02-27 22:08:53.452 [http-nio-8080-exec-4] INFO  org.jeecg.modules.online.cgform.service.impl.d:298 - ==判断表是否存在消耗时间2毫秒
+2021-02-27 22:08:53.869 [http-nio-8080-exec-4] INFO  org.jeecg.modules.online.config.b.c:85 - <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="order_bill" table="order_bill" optimistic-lock="version">
+						<id name="id" type="java.lang.String" length="36" unsaved-value="null">
+							<generator class="uuid" />
+						</id>
+					
+					<property name="create_by"
+								type="java.lang.String"
+ access="property">
+						<column name="create_by" 
+							                               
+length="50"
+							
+							not-null="false" unique="false">
+							<comment>创建人</comment>
+						</column>
+					</property>
+					<property name="create_time"
+									type="java.util.Date"
+ access="property">
+						<column name="create_time" 
+							                               
+length="20"
+							
+							not-null="false" unique="false">
+							<comment>创建日期</comment>
+						</column>
+					</property>
+					<property name="update_by"
+								type="java.lang.String"
+ access="property">
+						<column name="update_by" 
+							                               
+length="50"
+							
+							not-null="false" unique="false">
+							<comment>更新人</comment>
+						</column>
+					</property>
+					<property name="update_time"
+									type="java.util.Date"
+ access="property">
+						<column name="update_time" 
+							                               
+length="20"
+							
+							not-null="false" unique="false">
+							<comment>更新日期</comment>
+						</column>
+					</property>
+					<property name="sys_org_code"
+								type="java.lang.String"
+ access="property">
+						<column name="sys_org_code" 
+							                               
+length="64"
+							
+							not-null="false" unique="false">
+							<comment>所属部门</comment>
+						</column>
+					</property>
+					<property name="customer_id"
+								type="java.lang.String"
+ access="property">
+						<column name="customer_id" 
+							                               
+length="32"
+							
+							not-null="false" unique="false">
+							<comment>客户名称</comment>
+						</column>
+					</property>
+					<property name="bill_no"
+								type="java.lang.String"
+ access="property">
+						<column name="bill_no" 
+							                               
+length="32"
+							
+							not-null="false" unique="false">
+							<comment>提单编号</comment>
+						</column>
+					</property>
+					<property name="order_no"
+								type="java.lang.String"
+ access="property">
+						<column name="order_no" 
+							                               
+length="32"
+							
+							not-null="false" unique="false">
+							<comment>订单编号</comment>
+						</column>
+					</property>
+					<property name="product_name"
+								type="java.lang.String"
+ access="property">
+						<column name="product_name" 
+							                               
+length="32"
+							
+							not-null="false" unique="false">
+							<comment>产品名称</comment>
+						</column>
+					</property>
+					<property name="product_class"
+								type="java.lang.String"
+ access="property">
+						<column name="product_class" 
+							                               
+length="32"
+							
+							not-null="false" unique="false">
+							<comment>产品大类</comment>
+						</column>
+					</property>
+					<property name="total"
+									type="java.math.BigDecimal"
+ access="property">
+						<column name="total" 
+							                               
+							precision="20" scale="5"
+							
+							not-null="false" unique="false">
+							<comment>总价</comment>
+						</column>
+					</property>
+					<property name="order_id"
+								type="java.lang.String"
+ access="property">
+						<column name="order_id" 
+							                               
+length="32"
+							
+							not-null="false" unique="false">
+							<comment>订单id</comment>
+						</column>
+					</property>
+					<property name="consignee"
+								type="java.lang.String"
+ access="property">
+						<column name="consignee" 
+							                               
+length="32"
+							
+							not-null="false" unique="false">
+							<comment>收货人</comment>
+						</column>
+					</property>
+					<property name="consignee_address"
+								type="java.lang.String"
+ access="property">
+						<column name="consignee_address" 
+							                               
+length="32"
+							
+							not-null="false" unique="false">
+							<comment>收货地址</comment>
+						</column>
+					</property>
+	</class>
+	
+	
+	
+	
+	
+	
+</hibernate-mapping>
+2021-02-27 22:08:54.029 [http-nio-8080-exec-4] INFO  org.hibernate.Version:44 - HHH000412: Hibernate ORM core version 5.4.22.Final
+2021-02-27 22:08:56.918 [http-nio-8080-exec-4] INFO  org.hibernate.annotations.common.Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-02-27 22:08:57.132 [http-nio-8080-exec-4] INFO  org.hibernate.dialect.Dialect:170 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-02-27 22:08:57.327 [http-nio-8080-exec-4] WARN  org.hibernate.id.UUIDHexGenerator:42 - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2021-02-27 22:08:57.333 [http-nio-8080-exec-4] INFO  org.hibernate.tool.hbm2ddl.SchemaExport:245 - HHH000227: Running hbm2ddl schema export
+2021-02-27 22:08:57.353 [http-nio-8080-exec-4] WARN  org.hibernate.orm.connections.pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-02-27 22:08:57.355 [http-nio-8080-exec-4] INFO  org.hibernate.orm.connections.pooling:115 - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai]
+2021-02-27 22:08:57.356 [http-nio-8080-exec-4] INFO  org.hibernate.orm.connections.pooling:124 - HHH10001001: Connection properties: {user=root, password=****}
+2021-02-27 22:08:57.357 [http-nio-8080-exec-4] INFO  org.hibernate.orm.connections.pooling:129 - HHH10001003: Autocommit mode: false
+2021-02-27 22:08:57.362 [http-nio-8080-exec-4] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-02-27 22:08:57.418 [http-nio-8080-exec-4] INFO  org.hibernate.orm.connections.access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@60149773] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-02-27 22:08:57.489 [http-nio-8080-exec-4] INFO  org.hibernate.orm.connections.access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6058f312] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-02-27 22:08:58.145 [http-nio-8080-exec-4] INFO  org.jeecg.modules.online.cgform.b.a:552 - ==同步数据库消耗时间4715毫秒
+2021-02-27 22:08:58.286 [http-nio-8080-exec-6] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->copy_type = 0
+2021-02-27 22:10:07.515 [http-nio-8080-exec-2] INFO  org.jeecg.modules.online.cgform.util.b:1026 - --动态表单保存sql-->insert into order_bill(id,bill_no,consignee_address,product_name,product_class,create_time,order_no,total,customer_id,create_by,sys_org_code,consignee) values('1365665520065548289',#{bill_no,jdbcType=VARCHAR},#{consignee_address,jdbcType=VARCHAR},#{product_name,jdbcType=VARCHAR},#{product_class,jdbcType=VARCHAR},#{create_time},#{order_no,jdbcType=VARCHAR},#{total,jdbcType=DECIMAL},#{customer_id,jdbcType=VARCHAR},#{create_by,jdbcType=VARCHAR},#{sys_org_code,jdbcType=VARCHAR},#{consignee,jdbcType=VARCHAR})
+2021-02-27 22:10:32.377 [http-nio-8080-exec-1] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->copy_type = 0
+2021-02-27 22:11:38.953 [http-nio-8080-exec-1] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->copy_type = 0
+2021-02-27 22:11:42.055 [http-nio-8080-exec-9] INFO  org.jeecg.modules.online.config.b.d:216 - 数据库表：【order_bill】已存在
+2021-02-27 22:11:42.056 [http-nio-8080-exec-9] INFO  org.jeecg.modules.online.cgform.service.impl.d:298 - ==判断表是否存在消耗时间16毫秒
+2021-02-27 22:11:42.125 [http-nio-8080-exec-9] INFO  org.jeecg.modules.online.config.b.c:345 - getColumnMetadataFormDataBase --->COLUMN_NAME:ID TYPE_NAME :VARCHAR DECIMAL_DIGITS:0 COLUMN_SIZE:36
+2021-02-27 22:11:42.126 [http-nio-8080-exec-9] INFO  org.jeecg.modules.online.config.b.c:345 - getColumnMetadataFormDataBase --->COLUMN_NAME:CREATE_BY TYPE_NAME :VARCHAR DECIMAL_DIGITS:0 COLUMN_SIZE:50
+2021-02-27 22:11:42.126 [http-nio-8080-exec-9] INFO  org.jeecg.modules.online.config.b.c:345 - getColumnMetadataFormDataBase --->COLUMN_NAME:CREATE_TIME TYPE_NAME :DATETIME DECIMAL_DIGITS:0 COLUMN_SIZE:19
+2021-02-27 22:11:42.126 [http-nio-8080-exec-9] INFO  org.jeecg.modules.online.config.b.c:345 - getColumnMetadataFormDataBase --->COLUMN_NAME:UPDATE_BY TYPE_NAME :VARCHAR DECIMAL_DIGITS:0 COLUMN_SIZE:50
+2021-02-27 22:11:42.126 [http-nio-8080-exec-9] INFO  org.jeecg.modules.online.config.b.c:345 - getColumnMetadataFormDataBase --->COLUMN_NAME:UPDATE_TIME TYPE_NAME :DATETIME DECIMAL_DIGITS:0 COLUMN_SIZE:19
+2021-02-27 22:11:42.127 [http-nio-8080-exec-9] INFO  org.jeecg.modules.online.config.b.c:345 - getColumnMetadataFormDataBase --->COLUMN_NAME:SYS_ORG_CODE TYPE_NAME :VARCHAR DECIMAL_DIGITS:0 COLUMN_SIZE:64
+2021-02-27 22:11:42.127 [http-nio-8080-exec-9] INFO  org.jeecg.modules.online.config.b.c:345 - getColumnMetadataFormDataBase --->COLUMN_NAME:CUSTOMER_ID TYPE_NAME :VARCHAR DECIMAL_DIGITS:0 COLUMN_SIZE:32
+2021-02-27 22:11:42.127 [http-nio-8080-exec-9] INFO  org.jeecg.modules.online.config.b.c:345 - getColumnMetadataFormDataBase --->COLUMN_NAME:BILL_NO TYPE_NAME :VARCHAR DECIMAL_DIGITS:0 COLUMN_SIZE:32
+2021-02-27 22:11:42.127 [http-nio-8080-exec-9] INFO  org.jeecg.modules.online.config.b.c:345 - getColumnMetadataFormDataBase --->COLUMN_NAME:ORDER_NO TYPE_NAME :VARCHAR DECIMAL_DIGITS:0 COLUMN_SIZE:32
+2021-02-27 22:11:42.128 [http-nio-8080-exec-9] INFO  org.jeecg.modules.online.config.b.c:345 - getColumnMetadataFormDataBase --->COLUMN_NAME:PRODUCT_NAME TYPE_NAME :VARCHAR DECIMAL_DIGITS:0 COLUMN_SIZE:32
+2021-02-27 22:11:42.128 [http-nio-8080-exec-9] INFO  org.jeecg.modules.online.config.b.c:345 - getColumnMetadataFormDataBase --->COLUMN_NAME:PRODUCT_CLASS TYPE_NAME :VARCHAR DECIMAL_DIGITS:0 COLUMN_SIZE:32
+2021-02-27 22:11:42.128 [http-nio-8080-exec-9] INFO  org.jeecg.modules.online.config.b.c:345 - getColumnMetadataFormDataBase --->COLUMN_NAME:TOTAL TYPE_NAME :DECIMAL DECIMAL_DIGITS:5 COLUMN_SIZE:20
+2021-02-27 22:11:42.128 [http-nio-8080-exec-9] INFO  org.jeecg.modules.online.config.b.c:345 - getColumnMetadataFormDataBase --->COLUMN_NAME:ORDER_ID TYPE_NAME :VARCHAR DECIMAL_DIGITS:0 COLUMN_SIZE:32
+2021-02-27 22:11:42.129 [http-nio-8080-exec-9] INFO  org.jeecg.modules.online.config.b.c:345 - getColumnMetadataFormDataBase --->COLUMN_NAME:CONSIGNEE TYPE_NAME :VARCHAR DECIMAL_DIGITS:0 COLUMN_SIZE:32
+2021-02-27 22:11:42.129 [http-nio-8080-exec-9] INFO  org.jeecg.modules.online.config.b.c:345 - getColumnMetadataFormDataBase --->COLUMN_NAME:CONSIGNEE_ADDRESS TYPE_NAME :VARCHAR DECIMAL_DIGITS:0 COLUMN_SIZE:32
+2021-02-27 22:11:42.130 [http-nio-8080-exec-9] INFO  org.jeecg.modules.online.config.b.c:375 - getColumnMetadataFormCgForm ----> DbFieldName: id | DbType: string | DbPointLength:0 | DbLength:36
+2021-02-27 22:11:42.131 [http-nio-8080-exec-9] INFO  org.jeecg.modules.online.config.b.c:375 - getColumnMetadataFormCgForm ----> DbFieldName: create_by | DbType: string | DbPointLength:0 | DbLength:50
+2021-02-27 22:11:42.131 [http-nio-8080-exec-9] INFO  org.jeecg.modules.online.config.b.c:375 - getColumnMetadataFormCgForm ----> DbFieldName: create_time | DbType: date | DbPointLength:0 | DbLength:20
+2021-02-27 22:11:42.131 [http-nio-8080-exec-9] INFO  org.jeecg.modules.online.config.b.c:375 - getColumnMetadataFormCgForm ----> DbFieldName: update_by | DbType: string | DbPointLength:0 | DbLength:50
+2021-02-27 22:11:42.132 [http-nio-8080-exec-9] INFO  org.jeecg.modules.online.config.b.c:375 - getColumnMetadataFormCgForm ----> DbFieldName: update_time | DbType: date | DbPointLength:0 | DbLength:20
+2021-02-27 22:11:42.132 [http-nio-8080-exec-9] INFO  org.jeecg.modules.online.config.b.c:375 - getColumnMetadataFormCgForm ----> DbFieldName: sys_org_code | DbType: string | DbPointLength:0 | DbLength:64
+2021-02-27 22:11:42.132 [http-nio-8080-exec-9] INFO  org.jeecg.modules.online.config.b.c:375 - getColumnMetadataFormCgForm ----> DbFieldName: customer_id | DbType: string | DbPointLength:0 | DbLength:32
+2021-02-27 22:11:42.132 [http-nio-8080-exec-9] INFO  org.jeecg.modules.online.config.b.c:375 - getColumnMetadataFormCgForm ----> DbFieldName: bill_no | DbType: string | DbPointLength:0 | DbLength:32
+2021-02-27 22:11:42.132 [http-nio-8080-exec-9] INFO  org.jeecg.modules.online.config.b.c:375 - getColumnMetadataFormCgForm ----> DbFieldName: order_no | DbType: string | DbPointLength:0 | DbLength:32
+2021-02-27 22:11:42.133 [http-nio-8080-exec-9] INFO  org.jeecg.modules.online.config.b.c:375 - getColumnMetadataFormCgForm ----> DbFieldName: product_name | DbType: string | DbPointLength:0 | DbLength:32
+2021-02-27 22:11:42.133 [http-nio-8080-exec-9] INFO  org.jeecg.modules.online.config.b.c:375 - getColumnMetadataFormCgForm ----> DbFieldName: product_class | DbType: string | DbPointLength:0 | DbLength:32
+2021-02-27 22:11:42.133 [http-nio-8080-exec-9] INFO  org.jeecg.modules.online.config.b.c:375 - getColumnMetadataFormCgForm ----> DbFieldName: total | DbType: bigdecimal | DbPointLength:5 | DbLength:20
+2021-02-27 22:11:42.133 [http-nio-8080-exec-9] INFO  org.jeecg.modules.online.config.b.c:375 - getColumnMetadataFormCgForm ----> DbFieldName: order_id | DbType: string | DbPointLength:0 | DbLength:32
+2021-02-27 22:11:42.134 [http-nio-8080-exec-9] INFO  org.jeecg.modules.online.config.b.c:375 - getColumnMetadataFormCgForm ----> DbFieldName: consignee | DbType: string | DbPointLength:0 | DbLength:32
+2021-02-27 22:11:42.134 [http-nio-8080-exec-9] INFO  org.jeecg.modules.online.config.b.c:375 - getColumnMetadataFormCgForm ----> DbFieldName: consignee_address | DbType: string | DbPointLength:0 | DbLength:32
+2021-02-27 22:11:42.134 [http-nio-8080-exec-9] INFO  org.jeecg.modules.online.config.b.c:375 - getColumnMetadataFormCgForm ----> DbFieldName: total_weight | DbType: bigdecimal | DbPointLength:5 | DbLength:20
+2021-02-27 22:11:42.135 [http-nio-8080-exec-9] INFO  org.jeecg.modules.online.config.b.c:256 -  db update sql : [alter table  order_bill  ADD COLUMN total_weight decimal(20,5) NULL COMMENT '总重量' ;, , alter table  order_bill  MODIFY COLUMN id varchar(36) NOT NULL COMMENT '主键' ;, ]
+2021-02-27 22:11:42.863 [http-nio-8080-exec-9] INFO  org.jeecg.modules.online.cgform.b.a:552 - ==同步数据库消耗时间829毫秒
+2021-02-27 22:11:43.048 [http-nio-8080-exec-5] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->copy_type = 0
+2021-02-27 22:11:52.492 [http-nio-8080-exec-2] INFO  org.jeecg.modules.online.cgform.util.b:1105 - --动态表单编辑sql-->update order_bill set bill_no=#{bill_no,jdbcType=VARCHAR},consignee_address=#{consignee_address,jdbcType=VARCHAR},product_name=#{product_name,jdbcType=VARCHAR},product_class=#{product_class,jdbcType=VARCHAR},update_time=#{update_time},update_by=#{update_by,jdbcType=VARCHAR},order_no=#{order_no,jdbcType=VARCHAR},total=#{total,jdbcType=DECIMAL},customer_id=#{customer_id,jdbcType=VARCHAR},total_weight=#{total_weight,jdbcType=DECIMAL},consignee=#{consignee,jdbcType=VARCHAR} where  id='1365665520065548289'
+2021-02-27 22:12:32.800 [http-nio-8080-exec-1] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->copy_type = 0
+2021-02-27 22:13:04.220 [http-nio-8080-exec-4] INFO  o.j.codegenerate.generate.impl.CodeGenerateOne:119 - load template data: {primaryKeyPolicy=java.lang.String, serialVersionUID=5927068514060456009, entityPackage=ord, entityName=OrderBill, primaryKeyField=id, columns=[{"fieldDbName":"create_time","fieldName":"createTime","filedComment":"创建日期","fieldType":"java.util.Date","fieldDbType":"Date","classType":"datetime","classType_row":"datetime","optionType":"","charmaxLength":"","precision":"null","scale":"null","nullable":"Y","fieldLength":"120","fieldHref":"","fieldValidType":"null","fieldDefault":"","fieldShowType":"datetime","fieldOrderNum":"3","isKey":"N","isShow":"N","isShowList":"Y","isQuery":"N","uploadnum":"null","defaultVal":"null","sort":"N","readonly":"N","queryMode":"single","dictField":"","dictTable":"","dictText":""}, {"fieldDbName":"customer_id","fieldName":"customerId","filedComment":"客户名称","fieldType":"java.lang.String","fieldDbType":"string","classType":"list","classType_row":"list","optionType":"","charmaxLength":"","precision":"null","scale":"null","nullable":"N","fieldLength":"120","fieldHref":"","fieldValidType":"null","fieldDefault":"","fieldShowType":"list","fieldOrderNum":"7","isKey":"N","isShow":"Y","isShowList":"Y","isQuery":"Y","uploadnum":"null","defaultVal":"null","sort":"N","readonly":"N","queryMode":"single","dictField":"id","dictTable":"per_customer","dictText":"customer_name"}, {"fieldDbName":"bill_no","fieldName":"billNo","filedComment":"提单编号","fieldType":"java.lang.String","fieldDbType":"string","classType":"text","classType_row":"text","optionType":"","charmaxLength":"","precision":"null","scale":"null","nullable":"Y","fieldLength":"120","fieldHref":"","fieldValidType":"null","fieldDefault":"","fieldShowType":"text","fieldOrderNum":"8","isKey":"N","isShow":"Y","isShowList":"Y","isQuery":"N","uploadnum":"null","defaultVal":"null","sort":"N","readonly":"N","queryMode":"single","dictField":"","dictTable":"","dictText":""}, {"fieldDbName":"order_no","fieldName":"orderNo","filedComment":"订单编号","fieldType":"java.lang.String","fieldDbType":"string","classType":"text","classType_row":"text","optionType":"","charmaxLength":"","precision":"null","scale":"null","nullable":"Y","fieldLength":"120","fieldHref":"","fieldValidType":"null","fieldDefault":"","fieldShowType":"text","fieldOrderNum":"9","isKey":"N","isShow":"Y","isShowList":"Y","isQuery":"N","uploadnum":"null","defaultVal":"null","sort":"N","readonly":"N","queryMode":"single","dictField":"","dictTable":"","dictText":""}, {"fieldDbName":"product_name","fieldName":"productName","filedComment":"产品名称","fieldType":"java.lang.String","fieldDbType":"string","classType":"text","classType_row":"text","optionType":"","charmaxLength":"","precision":"null","scale":"null","nullable":"N","fieldLength":"120","fieldHref":"","fieldValidType":"null","fieldDefault":"","fieldShowType":"text","fieldOrderNum":"10","isKey":"N","isShow":"Y","isShowList":"Y","isQuery":"N","uploadnum":"null","defaultVal":"null","sort":"N","readonly":"N","queryMode":"single","dictField":"","dictTable":"","dictText":""}, {"fieldDbName":"product_class","fieldName":"productClass","filedComment":"产品大类","fieldType":"java.lang.String","fieldDbType":"string","classType":"list","classType_row":"list","optionType":"","charmaxLength":"","precision":"null","scale":"null","nullable":"N","fieldLength":"120","fieldHref":"","fieldValidType":"null","fieldDefault":"","fieldShowType":"list","fieldOrderNum":"11","isKey":"N","isShow":"Y","isShowList":"Y","isQuery":"Y","uploadnum":"null","defaultVal":"null","sort":"N","readonly":"N","queryMode":"single","dictField":"product_class","dictTable":"","dictText":""}, {"fieldDbName":"total","fieldName":"total","filedComment":"总价","fieldType":"java.math.BigDecimal","fieldDbType":"BigDecimal","classType":"text","classType_row":"text","optionType":"","charmaxLength":"","precision":"null","scale":"null","nullable":"Y","fieldLength":"120","fieldHref":"","fieldValidType":"null","fieldDefault":"","fieldShowType":"text","fieldOrderNum":"12","isKey":"N","isShow":"Y","isShowList":"Y","isQuery":"N","uploadnum":"null","defaultVal":"null","sort":"N","readonly":"N","queryMode":"single","dictField":"","dictTable":"","dictText":""}, {"fieldDbName":"order_id","fieldName":"orderId","filedComment":"订单id","fieldType":"java.lang.String","fieldDbType":"string","classType":"text","classType_row":"text","optionType":"","charmaxLength":"","precision":"null","scale":"null","nullable":"Y","fieldLength":"120","fieldHref":"","fieldValidType":"null","fieldDefault":"","fieldShowType":"text","fieldOrderNum":"13","isKey":"N","isShow":"N","isShowList":"Y","isQuery":"N","uploadnum":"null","defaultVal":"null","sort":"N","readonly":"N","queryMode":"single","dictField":"","dictTable":"","dictText":""}, {"fieldDbName":"consignee","fieldName":"consignee","filedComment":"收货人","fieldType":"java.lang.String","fieldDbType":"string","classType":"text","classType_row":"text","optionType":"","charmaxLength":"","precision":"null","scale":"null","nullable":"Y","fieldLength":"120","fieldHref":"","fieldValidType":"null","fieldDefault":"","fieldShowType":"text","fieldOrderNum":"14","isKey":"N","isShow":"Y","isShowList":"Y","isQuery":"N","uploadnum":"null","defaultVal":"null","sort":"N","readonly":"N","queryMode":"single","dictField":"","dictTable":"","dictText":""}, {"fieldDbName":"consignee_address","fieldName":"consigneeAddress","filedComment":"收货地址","fieldType":"java.lang.String","fieldDbType":"string","classType":"text","classType_row":"text","optionType":"","charmaxLength":"","precision":"null","scale":"null","nullable":"Y","fieldLength":"120","fieldHref":"","fieldValidType":"null","fieldDefault":"","fieldShowType":"text","fieldOrderNum":"15","isKey":"N","isShow":"Y","isShowList":"Y","isQuery":"N","uploadnum":"null","defaultVal":"null","sort":"N","readonly":"N","queryMode":"single","dictField":"","dictTable":"","dictText":""}, {"fieldDbName":"total_weight","fieldName":"totalWeight","filedComment":"总重量","fieldType":"java.math.BigDecimal","fieldDbType":"BigDecimal","classType":"text","classType_row":"text","optionType":"","charmaxLength":"","precision":"null","scale":"null","nullable":"Y","fieldLength":"120","fieldHref":"","fieldValidType":"null","fieldDefault":"","fieldShowType":"text","fieldOrderNum":"16","isKey":"N","isShow":"Y","isShowList":"Y","isQuery":"N","uploadnum":"null","defaultVal":"null","sort":"N","readonly":"N","queryMode":"single","dictField":"","dictTable":"","dictText":""}], tableVo={"tableName":"order_bill","ftlDescription":"提单管理","primaryKeyPolicy":"null","sequenceCode":"null","entityPackage":"ord","entityName":"OrderBill","fieldRowNum":"2","searchFieldNum":"-1","fieldRequiredNum":"4"}, originalColumns=[{"fieldDbName":"id","fieldName":"id","filedComment":"主键","fieldType":"java.lang.String","fieldDbType":"string","classType":"text","classType_row":"text","optionType":"","charmaxLength":"","precision":"null","scale":"null","nullable":"N","fieldLength":"120","fieldHref":"","fieldValidType":"null","fieldDefault":"","fieldShowType":"text","fieldOrderNum":"1","isKey":"Y","isShow":"N","isShowList":"N","isQuery":"N","uploadnum":"null","defaultVal":"null","sort":"N","readonly":"Y","queryMode":"single","dictField":"","dictTable":"","dictText":""}, {"fieldDbName":"create_by","fieldName":"createBy","filedComment":"创建人","fieldType":"java.lang.String","fieldDbType":"string","classType":"text","classType_row":"text","optionType":"","charmaxLength":"","precision":"null","scale":"null","nullable":"Y","fieldLength":"120","fieldHref":"","fieldValidType":"null","fieldDefault":"","fieldShowType":"text","fieldOrderNum":"2","isKey":"N","isShow":"N","isShowList":"N","isQuery":"N","uploadnum":"null","defaultVal":"null","sort":"N","readonly":"N","queryMode":"single","dictField":"","dictTable":"","dictText":""}, {"fieldDbName":"create_time","fieldName":"createTime","filedComment":"创建日期","fieldType":"java.util.Date","fieldDbType":"Date","classType":"datetime","classType_row":"datetime","optionType":"","charmaxLength":"","precision":"null","scale":"null","nullable":"Y","fieldLength":"120","fieldHref":"","fieldValidType":"null","fieldDefault":"","fieldShowType":"datetime","fieldOrderNum":"3","isKey":"N","isShow":"N","isShowList":"Y","isQuery":"N","uploadnum":"null","defaultVal":"null","sort":"N","readonly":"N","queryMode":"single","dictField":"","dictTable":"","dictText":""}, {"fieldDbName":"update_by","fieldName":"updateBy","filedComment":"更新人","fieldType":"java.lang.String","fieldDbType":"string","classType":"text","classType_row":"text","optionType":"","charmaxLength":"","precision":"null","scale":"null","nullable":"Y","fieldLength":"120","fieldHref":"","fieldValidType":"null","fieldDefault":"","fieldShowType":"text","fieldOrderNum":"4","isKey":"N","isShow":"N","isShowList":"N","isQuery":"N","uploadnum":"null","defaultVal":"null","sort":"N","readonly":"N","queryMode":"single","dictField":"","dictTable":"","dictText":""}, {"fieldDbName":"update_time","fieldName":"updateTime","filedComment":"更新日期","fieldType":"java.util.Date","fieldDbType":"Date","classType":"datetime","classType_row":"datetime","optionType":"","charmaxLength":"","precision":"null","scale":"null","nullable":"Y","fieldLength":"120","fieldHref":"","fieldValidType":"null","fieldDefault":"","fieldShowType":"datetime","fieldOrderNum":"5","isKey":"N","isShow":"N","isShowList":"N","isQuery":"N","uploadnum":"null","defaultVal":"null","sort":"N","readonly":"N","queryMode":"single","dictField":"","dictTable":"","dictText":""}, {"fieldDbName":"sys_org_code","fieldName":"sysOrgCode","filedComment":"所属部门","fieldType":"java.lang.String","fieldDbType":"string","classType":"text","classType_row":"text","optionType":"","charmaxLength":"","precision":"null","scale":"null","nullable":"Y","fieldLength":"120","fieldHref":"","fieldValidType":"null","fieldDefault":"","fieldShowType":"text","fieldOrderNum":"6","isKey":"N","isShow":"N","isShowList":"N","isQuery":"N","uploadnum":"null","defaultVal":"null","sort":"N","readonly":"N","queryMode":"single","dictField":"","dictTable":"","dictText":""}, {"fieldDbName":"customer_id","fieldName":"customerId","filedComment":"客户名称","fieldType":"java.lang.String","fieldDbType":"string","classType":"list","classType_row":"list","optionType":"","charmaxLength":"","precision":"null","scale":"null","nullable":"N","fieldLength":"120","fieldHref":"","fieldValidType":"null","fieldDefault":"","fieldShowType":"list","fieldOrderNum":"7","isKey":"N","isShow":"Y","isShowList":"Y","isQuery":"Y","uploadnum":"null","defaultVal":"null","sort":"N","readonly":"N","queryMode":"single","dictField":"id","dictTable":"per_customer","dictText":"customer_name"}, {"fieldDbName":"bill_no","fieldName":"billNo","filedComment":"提单编号","fieldType":"java.lang.String","fieldDbType":"string","classType":"text","classType_row":"text","optionType":"","charmaxLength":"","precision":"null","scale":"null","nullable":"Y","fieldLength":"120","fieldHref":"","fieldValidType":"null","fieldDefault":"","fieldShowType":"text","fieldOrderNum":"8","isKey":"N","isShow":"Y","isShowList":"Y","isQuery":"N","uploadnum":"null","defaultVal":"null","sort":"N","readonly":"N","queryMode":"single","dictField":"","dictTable":"","dictText":""}, {"fieldDbName":"order_no","fieldName":"orderNo","filedComment":"订单编号","fieldType":"java.lang.String","fieldDbType":"string","classType":"text","classType_row":"text","optionType":"","charmaxLength":"","precision":"null","scale":"null","nullable":"Y","fieldLength":"120","fieldHref":"","fieldValidType":"null","fieldDefault":"","fieldShowType":"text","fieldOrderNum":"9","isKey":"N","isShow":"Y","isShowList":"Y","isQuery":"N","uploadnum":"null","defaultVal":"null","sort":"N","readonly":"N","queryMode":"single","dictField":"","dictTable":"","dictText":""}, {"fieldDbName":"product_name","fieldName":"productName","filedComment":"产品名称","fieldType":"java.lang.String","fieldDbType":"string","classType":"text","classType_row":"text","optionType":"","charmaxLength":"","precision":"null","scale":"null","nullable":"N","fieldLength":"120","fieldHref":"","fieldValidType":"null","fieldDefault":"","fieldShowType":"text","fieldOrderNum":"10","isKey":"N","isShow":"Y","isShowList":"Y","isQuery":"N","uploadnum":"null","defaultVal":"null","sort":"N","readonly":"N","queryMode":"single","dictField":"","dictTable":"","dictText":""}, {"fieldDbName":"product_class","fieldName":"productClass","filedComment":"产品大类","fieldType":"java.lang.String","fieldDbType":"string","classType":"list","classType_row":"list","optionType":"","charmaxLength":"","precision":"null","scale":"null","nullable":"N","fieldLength":"120","fieldHref":"","fieldValidType":"null","fieldDefault":"","fieldShowType":"list","fieldOrderNum":"11","isKey":"N","isShow":"Y","isShowList":"Y","isQuery":"Y","uploadnum":"null","defaultVal":"null","sort":"N","readonly":"N","queryMode":"single","dictField":"product_class","dictTable":"","dictText":""}, {"fieldDbName":"total","fieldName":"total","filedComment":"总价","fieldType":"java.math.BigDecimal","fieldDbType":"BigDecimal","classType":"text","classType_row":"text","optionType":"","charmaxLength":"","precision":"null","scale":"null","nullable":"Y","fieldLength":"120","fieldHref":"","fieldValidType":"null","fieldDefault":"","fieldShowType":"text","fieldOrderNum":"12","isKey":"N","isShow":"Y","isShowList":"Y","isQuery":"N","uploadnum":"null","defaultVal":"null","sort":"N","readonly":"N","queryMode":"single","dictField":"","dictTable":"","dictText":""}, {"fieldDbName":"order_id","fieldName":"orderId","filedComment":"订单id","fieldType":"java.lang.String","fieldDbType":"string","classType":"text","classType_row":"text","optionType":"","charmaxLength":"","precision":"null","scale":"null","nullable":"Y","fieldLength":"120","fieldHref":"","fieldValidType":"null","fieldDefault":"","fieldShowType":"text","fieldOrderNum":"13","isKey":"N","isShow":"N","isShowList":"Y","isQuery":"N","uploadnum":"null","defaultVal":"null","sort":"N","readonly":"N","queryMode":"single","dictField":"","dictTable":"","dictText":""}, {"fieldDbName":"consignee","fieldName":"consignee","filedComment":"收货人","fieldType":"java.lang.String","fieldDbType":"string","classType":"text","classType_row":"text","optionType":"","charmaxLength":"","precision":"null","scale":"null","nullable":"Y","fieldLength":"120","fieldHref":"","fieldValidType":"null","fieldDefault":"","fieldShowType":"text","fieldOrderNum":"14","isKey":"N","isShow":"Y","isShowList":"Y","isQuery":"N","uploadnum":"null","defaultVal":"null","sort":"N","readonly":"N","queryMode":"single","dictField":"","dictTable":"","dictText":""}, {"fieldDbName":"consignee_address","fieldName":"consigneeAddress","filedComment":"收货地址","fieldType":"java.lang.String","fieldDbType":"string","classType":"text","classType_row":"text","optionType":"","charmaxLength":"","precision":"null","scale":"null","nullable":"Y","fieldLength":"120","fieldHref":"","fieldValidType":"null","fieldDefault":"","fieldShowType":"text","fieldOrderNum":"15","isKey":"N","isShow":"Y","isShowList":"Y","isQuery":"N","uploadnum":"null","defaultVal":"null","sort":"N","readonly":"N","queryMode":"single","dictField":"","dictTable":"","dictText":""}, {"fieldDbName":"total_weight","fieldName":"totalWeight","filedComment":"总重量","fieldType":"java.math.BigDecimal","fieldDbType":"BigDecimal","classType":"text","classType_row":"text","optionType":"","charmaxLength":"","precision":"null","scale":"null","nullable":"Y","fieldLength":"120","fieldHref":"","fieldValidType":"null","fieldDefault":"","fieldShowType":"text","fieldOrderNum":"16","isKey":"N","isShow":"Y","isShowList":"Y","isQuery":"N","uploadnum":"null","defaultVal":"null","sort":"N","readonly":"N","queryMode":"single","dictField":"","dictTable":"","dictText":""}], bussiPackage=org.jeecg.modules, tableName=order_bill}
+2021-02-27 22:13:04.228 [http-nio-8080-exec-4] INFO  org.jeecgframework.codegenerate.generate.impl.a.a:50 -   load template from templateRootDir = 'E:\Jeecg\jeecg-boot\jeecg-boot-module-system\target\classes\jeecg\code-template-online',stylePath ='default.one',  out GenerateRootDir:E:\Jeecg\jeecg-boot\jeecg-boot-module-demo
+2021-02-27 22:13:04.391 [http-nio-8080-exec-4] INFO  org.jeecgframework.codegenerate.generate.impl.a.a:110 - [generate]	 template:default\one\java\${bussiPackage}\${entityPackage}\controller\${entityName}Controller.javai ==> E:\Jeecg\jeecg-boot\jeecg-boot-module-demo\src/main/java\org\jeecg\modules\ord\controller\OrderBillController.java
+2021-02-27 22:13:04.454 [http-nio-8080-exec-4] INFO  org.jeecgframework.codegenerate.generate.impl.a.a:110 - [generate]	 template:default\one\java\${bussiPackage}\${entityPackage}\entity\${entityName}.javai ==> E:\Jeecg\jeecg-boot\jeecg-boot-module-demo\src/main/java\org\jeecg\modules\ord\entity\OrderBill.java
+2021-02-27 22:13:04.471 [http-nio-8080-exec-4] INFO  org.jeecgframework.codegenerate.generate.impl.a.a:110 - [generate]	 template:default\one\java\${bussiPackage}\${entityPackage}\mapper\${entityName}Mapper.javai ==> E:\Jeecg\jeecg-boot\jeecg-boot-module-demo\src/main/java\org\jeecg\modules\ord\mapper\OrderBillMapper.java
+2021-02-27 22:13:04.480 [http-nio-8080-exec-4] INFO  org.jeecgframework.codegenerate.generate.impl.a.a:110 - [generate]	 template:default\one\java\${bussiPackage}\${entityPackage}\mapper\xml\${entityName}Mapper.xml ==> E:\Jeecg\jeecg-boot\jeecg-boot-module-demo\src/main/java\org\jeecg\modules\ord\mapper\xml\OrderBillMapper.xml
+2021-02-27 22:13:04.485 [http-nio-8080-exec-4] INFO  org.jeecgframework.codegenerate.generate.impl.a.a:110 - [generate]	 template:default\one\java\${bussiPackage}\${entityPackage}\service\I${entityName}Service.javai ==> E:\Jeecg\jeecg-boot\jeecg-boot-module-demo\src/main/java\org\jeecg\modules\ord\service\IOrderBillService.java
+2021-02-27 22:13:04.493 [http-nio-8080-exec-4] INFO  org.jeecgframework.codegenerate.generate.impl.a.a:110 - [generate]	 template:default\one\java\${bussiPackage}\${entityPackage}\service\impl\${entityName}ServiceImpl.javai ==> E:\Jeecg\jeecg-boot\jeecg-boot-module-demo\src/main/java\org\jeecg\modules\ord\service\impl\OrderBillServiceImpl.java
+2021-02-27 22:13:04.571 [http-nio-8080-exec-4] INFO  org.jeecgframework.codegenerate.generate.impl.a.a:110 - [generate]	 template:default\one\java\${bussiPackage}\${entityPackage}\vue\${entityName}List.vuei ==> E:\Jeecg\jeecg-boot\jeecg-boot-module-demo\src/main/java\org\jeecg\modules\ord\vue\OrderBillList.vue
+2021-02-27 22:13:04.622 [http-nio-8080-exec-4] INFO  org.jeecgframework.codegenerate.generate.impl.a.a:110 - [generate]	 template:default\one\java\${bussiPackage}\${entityPackage}\vue\modules\${entityName}Form.vuei ==> E:\Jeecg\jeecg-boot\jeecg-boot-module-demo\src/main/java\org\jeecg\modules\ord\vue\modules\OrderBillForm.vue
+2021-02-27 22:13:04.639 [http-nio-8080-exec-4] INFO  org.jeecgframework.codegenerate.generate.impl.a.a:110 - [generate]	 template:default\one\java\${bussiPackage}\${entityPackage}\vue\modules\${entityName}Modal.vuei ==> E:\Jeecg\jeecg-boot\jeecg-boot-module-demo\src/main/java\org\jeecg\modules\ord\vue\modules\OrderBillModal.vue
+2021-02-27 22:13:04.651 [http-nio-8080-exec-4] INFO  org.jeecgframework.codegenerate.generate.impl.a.a:110 - [generate]	 template:default\one\java\${bussiPackage}\${entityPackage}\vue\modules\${entityName}Modal__Style#Drawer.vuei ==> E:\Jeecg\jeecg-boot\jeecg-boot-module-demo\src/main/java\org\jeecg\modules\ord\vue\modules\OrderBillModal__Style#Drawer.vue
+2021-02-27 22:13:04.662 [http-nio-8080-exec-4] INFO  o.j.codegenerate.generate.impl.CodeGenerateOne:140 -  ----- jeecg-boot ---- generate  code  success =======> 表名：order_bill 
+2021-02-27 22:14:23.128 [main] INFO  org.jeecg.JeecgSystemApplication:55 - Starting JeecgSystemApplication on LAPTOP-ZKS with PID 7324 (E:\Jeecg\jeecg-boot\jeecg-boot-module-system\target\classes started by Lenovo in E:\Jeecg\jeecg-boot)
+2021-02-27 22:14:23.140 [main] INFO  org.jeecg.JeecgSystemApplication:655 - The following profiles are active: dev
+2021-02-27 22:14:23.153 [background-preinit] INFO  org.hibernate.validator.internal.util.Version:21 - HV000001: Hibernate Validator 6.1.6.Final
+2021-02-27 22:14:25.805 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-02-27 22:14:25.809 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:127 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-02-27 22:14:25.986 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:187 - Finished Spring Data repository scanning in 160ms. Found 0 Redis repository interfaces.
+2021-02-27 22:14:26.614 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-27 22:14:26.620 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-27 22:14:26.736 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-27 22:14:26.843 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-27 22:14:26.846 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'shiroConfig' of type [org.jeecg.config.shiro.ShiroConfig$$EnhancerBySpringCGLIB$$3703640] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-27 22:14:26.895 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'shiroRealm' of type [org.jeecg.config.shiro.ShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-27 22:14:27.467 [main] INFO  org.jeecg.config.shiro.ShiroConfig:207 - ===============(1)创建缓存管理器RedisCacheManager
+2021-02-27 22:14:27.469 [main] INFO  org.jeecg.config.shiro.ShiroConfig:225 - ===============(2)创建RedisManager,连接Redis..
+2021-02-27 22:14:27.474 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'redisManager' of type [org.crazycake.shiro.RedisManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-27 22:14:27.478 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-27 22:14:27.522 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-27 22:14:27.773 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-27 22:14:27.779 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$dc25f18] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-27 22:14:27.789 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-27 22:14:27.806 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'redisConfig' of type [org.jeecg.config.redis.RedisConfig$$EnhancerBySpringCGLIB$$7a592554] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-27 22:14:27.848 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'org.apache.shiro.spring.boot.autoconfigure.ShiroBeanAutoConfiguration' of type [org.apache.shiro.spring.boot.autoconfigure.ShiroBeanAutoConfiguration$$EnhancerBySpringCGLIB$$b74ccbf7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-27 22:14:27.854 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'eventBus' of type [org.apache.shiro.event.support.DefaultEventBus] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-27 22:14:28.331 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:108 - Tomcat initialized with port(s): 8080 (http)
+2021-02-27 22:14:28.342 [main] INFO  org.apache.coyote.http11.Http11NioProtocol:173 - Initializing ProtocolHandler ["http-nio-8080"]
+2021-02-27 22:14:28.342 [main] INFO  org.apache.catalina.core.StandardService:173 - Starting service [Tomcat]
+2021-02-27 22:14:28.343 [main] INFO  org.apache.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-02-27 22:14:28.345 [main] INFO  org.apache.catalina.core.AprLifecycleListener:173 - Loaded Apache Tomcat Native library [1.2.24] using APR version [1.7.0].
+2021-02-27 22:14:28.346 [main] INFO  org.apache.catalina.core.AprLifecycleListener:173 - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-02-27 22:14:28.346 [main] INFO  org.apache.catalina.core.AprLifecycleListener:173 - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-02-27 22:14:28.350 [main] INFO  org.apache.catalina.core.AprLifecycleListener:173 - OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2021-02-27 22:14:28.612 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/jeecg-boot]:173 - Initializing Spring embedded WebApplicationContext
+2021-02-27 22:14:28.612 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext:285 - Root WebApplicationContext: initialization completed in 5370 ms
+2021-02-27 22:14:29.544 [main] INFO  com.alibaba.druid.pool.DruidDataSource:994 - {dataSource-1,master} inited
+2021-02-27 22:14:29.545 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource:132 - dynamic-datasource - load a datasource named [master] success
+2021-02-27 22:14:29.546 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource:237 - dynamic-datasource initial loaded [1] datasource,primary datasource named [master]
+2021-02-27 22:14:33.529 [main] INFO  org.jeecg.config.redis.RedisConfig:66 -  --- redis config init --- 
+2021-02-27 22:14:34.385 [main] INFO  org.quartz.impl.StdSchedulerFactory:1220 - Using default implementation for ThreadExecutor
+2021-02-27 22:14:34.388 [main] INFO  org.quartz.simpl.SimpleThreadPool:268 - Job execution threads will use class loader of thread: main
+2021-02-27 22:14:34.397 [main] INFO  org.quartz.core.SchedulerSignalerImpl:61 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-02-27 22:14:34.397 [main] INFO  org.quartz.core.QuartzScheduler:229 - Quartz Scheduler v.2.3.2 created.
+2021-02-27 22:14:34.402 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore:672 - Using db table-based data access locking (synchronization).
+2021-02-27 22:14:34.404 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore:145 - JobStoreCMT initialized.
+2021-02-27 22:14:34.405 [main] INFO  org.quartz.core.QuartzScheduler:294 - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'MyScheduler' with instanceId 'LAPTOP-ZKS1614435274387'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+2021-02-27 22:14:34.405 [main] INFO  org.quartz.impl.StdSchedulerFactory:1374 - Quartz scheduler 'MyScheduler' initialized from an externally provided properties instance.
+2021-02-27 22:14:34.406 [main] INFO  org.quartz.impl.StdSchedulerFactory:1378 - Quartz scheduler version: 2.3.2
+2021-02-27 22:14:34.406 [main] INFO  org.quartz.core.QuartzScheduler:2293 - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@6e617c0e
+2021-02-27 22:14:38.967 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver:58 - Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-02-27 22:14:39.141 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-02-27 22:14:39.389 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-27 22:14:40.110 [main] INFO  org.apache.coyote.http11.Http11NioProtocol:173 - Starting ProtocolHandler ["http-nio-8080"]
+2021-02-27 22:14:40.138 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:220 - Tomcat started on port(s): 8080 (http) with context path '/jeecg-boot'
+2021-02-27 22:14:40.139 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:160 - Context refreshed
+2021-02-27 22:14:40.156 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:163 - Found 1 custom documentation plugin(s)
+2021-02-27 22:14:40.245 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner:41 - Scanning for api listing references
+2021-02-27 22:14:40.429 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/jeecg-boot]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-27 22:14:40.429 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet:525 - Initializing Servlet 'dispatcherServlet'
+2021-02-27 22:14:40.446 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet:547 - Completed initialization in 16 ms
+2021-02-27 22:14:40.488 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_1
+2021-02-27 22:14:40.495 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_1
+2021-02-27 22:14:40.500 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_1
+2021-02-27 22:14:40.505 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_1
+2021-02-27 22:14:40.519 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_1
+2021-02-27 22:14:40.531 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_2
+2021-02-27 22:14:40.533 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_2
+2021-02-27 22:14:40.535 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_2
+2021-02-27 22:14:40.537 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_2
+2021-02-27 22:14:40.540 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_1
+2021-02-27 22:14:40.546 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_2
+2021-02-27 22:14:40.558 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_3
+2021-02-27 22:14:40.561 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_3
+2021-02-27 22:14:40.563 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_3
+2021-02-27 22:14:40.564 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_3
+2021-02-27 22:14:40.566 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_2
+2021-02-27 22:14:40.572 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_3
+2021-02-27 22:14:40.586 [http-nio-8080-exec-1] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-02-27 22:14:40.586 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_4
+2021-02-27 22:14:40.589 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_4
+2021-02-27 22:14:40.590 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_4
+2021-02-27 22:14:40.592 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_4
+2021-02-27 22:14:40.603 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_3
+2021-02-27 22:14:40.634 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_5
+2021-02-27 22:14:40.636 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_5
+2021-02-27 22:14:40.638 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_5
+2021-02-27 22:14:40.640 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_5
+2021-02-27 22:14:40.642 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_4
+2021-02-27 22:14:40.646 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_4
+2021-02-27 22:14:40.656 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_6
+2021-02-27 22:14:40.657 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_6
+2021-02-27 22:14:40.659 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_6
+2021-02-27 22:14:40.661 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_6
+2021-02-27 22:14:40.664 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_5
+2021-02-27 22:14:40.671 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_5
+2021-02-27 22:14:40.679 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_7
+2021-02-27 22:14:40.688 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_7
+2021-02-27 22:14:40.690 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_7
+2021-02-27 22:14:40.694 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_7
+2021-02-27 22:14:40.707 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_6
+2021-02-27 22:14:40.717 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_8
+2021-02-27 22:14:40.719 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_8
+2021-02-27 22:14:40.721 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_8
+2021-02-27 22:14:40.723 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_8
+2021-02-27 22:14:40.726 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_6
+2021-02-27 22:14:40.731 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_7
+2021-02-27 22:14:40.740 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_9
+2021-02-27 22:14:40.743 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_9
+2021-02-27 22:14:40.744 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_9
+2021-02-27 22:14:40.745 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_9
+2021-02-27 22:14:40.746 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_7
+2021-02-27 22:14:40.750 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_8
+2021-02-27 22:14:40.756 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_10
+2021-02-27 22:14:40.758 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_10
+2021-02-27 22:14:40.759 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_10
+2021-02-27 22:14:40.760 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_10
+2021-02-27 22:14:40.761 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_8
+2021-02-27 22:14:40.766 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_9
+2021-02-27 22:14:40.771 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_11
+2021-02-27 22:14:40.772 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_11
+2021-02-27 22:14:40.774 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_11
+2021-02-27 22:14:40.775 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_11
+2021-02-27 22:14:40.776 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_9
+2021-02-27 22:14:40.780 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_10
+2021-02-27 22:14:40.785 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_12
+2021-02-27 22:14:40.786 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_12
+2021-02-27 22:14:40.787 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_12
+2021-02-27 22:14:40.788 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_12
+2021-02-27 22:14:40.790 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_10
+2021-02-27 22:14:40.793 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_11
+2021-02-27 22:14:40.800 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_13
+2021-02-27 22:14:40.801 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_13
+2021-02-27 22:14:40.802 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_13
+2021-02-27 22:14:40.804 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_13
+2021-02-27 22:14:40.805 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_11
+2021-02-27 22:14:40.809 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_12
+2021-02-27 22:14:40.818 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_14
+2021-02-27 22:14:40.819 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_14
+2021-02-27 22:14:40.820 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_14
+2021-02-27 22:14:40.822 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_14
+2021-02-27 22:14:40.824 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_12
+2021-02-27 22:14:40.831 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_13
+2021-02-27 22:14:40.835 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_15
+2021-02-27 22:14:40.837 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_15
+2021-02-27 22:14:40.839 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_15
+2021-02-27 22:14:40.840 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_15
+2021-02-27 22:14:40.842 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_13
+2021-02-27 22:14:40.845 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_14
+2021-02-27 22:14:40.860 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:727 - Starting Quartz Scheduler now
+2021-02-27 22:14:41.045 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore:3644 - ClusterManager: detected 1 failed or restarted instances.
+2021-02-27 22:14:41.045 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore:3503 - ClusterManager: Scanning for instance "LAPTOP-ZKS1614434087314"'s failed in-progress jobs.
+2021-02-27 22:14:41.175 [main] INFO  org.quartz.core.QuartzScheduler:547 - Scheduler MyScheduler_$_LAPTOP-ZKS1614435274387 started.
+2021-02-27 22:14:41.193 [main] INFO  org.jeecg.JeecgSystemApplication:61 - Started JeecgSystemApplication in 19.473 seconds (JVM running for 21.654)
+2021-02-27 22:14:41.201 [main] INFO  org.jeecg.modules.init.SystemInitListener:27 -  服务已启动，准备初始化路由配置 ###################
+2021-02-27 22:14:43.073 [main] INFO  org.jeecg.JeecgSystemApplication:39 - 
+----------------------------------------------------------
+	Application Jeecg-Boot is running! Access URLs:
+	Local: 		http://localhost:8080/jeecg-boot/
+	External: 	http://192.168.2.1:8080/jeecg-boot/
+	Swagger文档: 	http://192.168.2.1:8080/jeecg-boot/doc.html
+----------------------------------------------------------
+2021-02-27 22:16:12.000 [http-nio-8080-exec-3] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-02-27 22:16:19.037 [http-nio-8080-exec-8] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-02-27 22:16:19.603 [http-nio-8080-exec-1] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->copy_type = 0
+2021-02-27 22:17:10.619 [http-nio-8080-exec-4] INFO  o.j.m.system.controller.SysPermissionController:73 - ======获取全部菜单数据=====耗时:46毫秒
+2021-02-27 22:17:45.021 [http-nio-8080-exec-1] INFO  o.j.m.system.controller.SysPermissionController:73 - ======获取全部菜单数据=====耗时:16毫秒
+2021-02-27 22:18:23.591 [http-nio-8080-exec-9] INFO  o.j.m.system.controller.SysPermissionController:73 - ======获取全部菜单数据=====耗时:14毫秒
+2021-02-27 22:18:38.168 [http-nio-8080-exec-8] WARN  o.j.m.s.service.impl.SysRolePermissionServiceImpl:176 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1eeeb059] was not registered for synchronization because DataSource is not transactional
+2021-02-27 22:18:38.315 [http-nio-8080-exec-8] INFO  o.j.m.system.controller.SysPermissionController:418 - ======角色授权成功=====耗时:155毫秒
+2021-02-27 22:18:40.484 [http-nio-8080-exec-3] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-02-27 22:18:44.567 [http-nio-8080-exec-7] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-02-27 22:18:49.584 [http-nio-8080-exec-5] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-02-27 22:18:49.600 [http-nio-8080-exec-5] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=钟科胜), DictModel(value=1365536781067436033, text=fewfwe), DictModel(value=1365619643196129282, text=黄木峰), DictModel(value=1365622533272911874, text=吉吉国王), DictModel(value=1365625196047777794, text=fewf )], timestamp=1614435529585, onlTable=null)
+2021-02-27 22:18:59.435 [http-nio-8080-exec-7] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-02-27 22:18:59.443 [http-nio-8080-exec-7] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=钟科胜), DictModel(value=1365536781067436033, text=fewfwe), DictModel(value=1365619643196129282, text=黄木峰), DictModel(value=1365622533272911874, text=吉吉国王), DictModel(value=1365625196047777794, text=fewf )], timestamp=1614435539437, onlTable=null)
+2021-02-27 22:19:20.009 [http-nio-8080-exec-10] INFO  o.j.m.system.controller.SysPermissionController:73 - ======获取全部菜单数据=====耗时:20毫秒
+2021-02-27 22:19:31.517 [http-nio-8080-exec-4] INFO  o.j.m.system.controller.SysPermissionController:73 - ======获取全部菜单数据=====耗时:7毫秒
+2021-02-27 22:19:32.952 [http-nio-8080-exec-6] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-02-27 22:19:37.525 [http-nio-8080-exec-9] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-02-27 22:19:38.151 [http-nio-8080-exec-3] INFO  o.j.m.system.controller.SysPermissionController:73 - ======获取全部菜单数据=====耗时:11毫秒
+2021-02-27 22:21:27.131 [http-nio-8080-exec-10] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->copy_type = 0
+2021-02-27 22:26:44.541 [http-nio-8080-exec-1] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->copy_type = 0
+2021-02-27 22:26:47.617 [http-nio-8080-exec-3] INFO  org.jeecg.modules.online.cgform.service.impl.d:298 - ==判断表是否存在消耗时间3毫秒
+2021-02-27 22:26:47.948 [http-nio-8080-exec-3] INFO  org.jeecg.modules.online.config.b.c:85 - <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cash_balance" table="cash_balance" optimistic-lock="version">
+						<id name="id" type="java.lang.String" length="36" unsaved-value="null">
+							<generator class="uuid" />
+						</id>
+					
+					<property name="create_by"
+								type="java.lang.String"
+ access="property">
+						<column name="create_by" 
+							                               
+length="50"
+							
+							not-null="false" unique="false">
+							<comment>创建人</comment>
+						</column>
+					</property>
+					<property name="create_time"
+									type="java.util.Date"
+ access="property">
+						<column name="create_time" 
+							                               
+length="20"
+							
+							not-null="false" unique="false">
+							<comment>创建日期</comment>
+						</column>
+					</property>
+					<property name="update_by"
+								type="java.lang.String"
+ access="property">
+						<column name="update_by" 
+							                               
+length="50"
+							
+							not-null="false" unique="false">
+							<comment>更新人</comment>
+						</column>
+					</property>
+					<property name="update_time"
+									type="java.util.Date"
+ access="property">
+						<column name="update_time" 
+							                               
+length="20"
+							
+							not-null="false" unique="false">
+							<comment>更新日期</comment>
+						</column>
+					</property>
+					<property name="sys_org_code"
+								type="java.lang.String"
+ access="property">
+						<column name="sys_org_code" 
+							                               
+length="64"
+							
+							not-null="false" unique="false">
+							<comment>所属部门</comment>
+						</column>
+					</property>
+					<property name="customer_name"
+								type="java.lang.String"
+ access="property">
+						<column name="customer_name" 
+							                               
+length="32"
+							
+							not-null="false" unique="false">
+							<comment>资金账户</comment>
+						</column>
+					</property>
+					<property name="total_money"
+									type="java.math.BigDecimal"
+ access="property">
+						<column name="total_money" 
+							                               
+							precision="20" scale="5"
+							
+							not-null="false" unique="false">
+							<comment>总金额</comment>
+						</column>
+					</property>
+					<property name="remain_money"
+									type="java.math.BigDecimal"
+ access="property">
+						<column name="remain_money" 
+							                               
+							precision="20" scale="5"
+							
+							not-null="false" unique="false">
+							<comment>可用余额</comment>
+						</column>
+					</property>
+	</class>
+	
+	
+	
+	
+	
+	
+</hibernate-mapping>
+2021-02-27 22:26:48.040 [http-nio-8080-exec-3] INFO  org.hibernate.Version:44 - HHH000412: Hibernate ORM core version 5.4.22.Final
+2021-02-27 22:26:50.258 [http-nio-8080-exec-3] INFO  org.hibernate.annotations.common.Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-02-27 22:26:50.450 [http-nio-8080-exec-3] INFO  org.hibernate.dialect.Dialect:170 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-02-27 22:26:50.609 [http-nio-8080-exec-3] WARN  org.hibernate.id.UUIDHexGenerator:42 - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2021-02-27 22:26:50.617 [http-nio-8080-exec-3] INFO  org.hibernate.tool.hbm2ddl.SchemaExport:245 - HHH000227: Running hbm2ddl schema export
+2021-02-27 22:26:50.634 [http-nio-8080-exec-3] WARN  org.hibernate.orm.connections.pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-02-27 22:26:50.636 [http-nio-8080-exec-3] INFO  org.hibernate.orm.connections.pooling:115 - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai]
+2021-02-27 22:26:50.636 [http-nio-8080-exec-3] INFO  org.hibernate.orm.connections.pooling:124 - HHH10001001: Connection properties: {user=root, password=****}
+2021-02-27 22:26:50.638 [http-nio-8080-exec-3] INFO  org.hibernate.orm.connections.pooling:129 - HHH10001003: Autocommit mode: false
+2021-02-27 22:26:50.645 [http-nio-8080-exec-3] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-02-27 22:26:50.665 [http-nio-8080-exec-3] INFO  org.hibernate.orm.connections.access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3a848d08] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-02-27 22:26:50.677 [http-nio-8080-exec-3] INFO  org.hibernate.orm.connections.access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7b781c02] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-02-27 22:26:51.087 [http-nio-8080-exec-3] INFO  org.jeecg.modules.online.cgform.b.a:552 - ==同步数据库消耗时间3497毫秒
+2021-02-27 22:26:51.197 [http-nio-8080-exec-7] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->copy_type = 0
+2021-02-27 22:27:01.993 [http-nio-8080-exec-7] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->copy_type = 0
+2021-02-27 22:27:16.663 [http-nio-8080-exec-7] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->copy_type = 0
+2021-02-27 22:27:34.636 [http-nio-8080-exec-7] INFO  org.jeecg.modules.online.cgform.util.b:1026 - --动态表单保存sql-->insert into cash_balance(id,total_money,sys_org_code,create_time,customer_name,create_by,remain_money) values('1365669912042856450',#{total_money,jdbcType=DECIMAL},#{sys_org_code,jdbcType=VARCHAR},#{create_time},#{customer_name,jdbcType=VARCHAR},#{create_by,jdbcType=VARCHAR},#{remain_money,jdbcType=DECIMAL})
+2021-02-27 22:27:45.032 [http-nio-8080-exec-9] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->copy_type = 0
+2021-02-27 22:27:58.316 [http-nio-8080-exec-9] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->copy_type = 0
+2021-02-27 22:28:10.495 [http-nio-8080-exec-9] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->copy_type = 0
+2021-02-27 22:28:54.473 [http-nio-8080-exec-3] INFO  o.j.codegenerate.generate.impl.CodeGenerateOne:119 - load template data: {primaryKeyPolicy=java.lang.String, serialVersionUID=-4637488862383331853, entityPackage=cash, entityName=CashBalance, primaryKeyField=id, columns=[{"fieldDbName":"create_time","fieldName":"createTime","filedComment":"创建日期","fieldType":"java.util.Date","fieldDbType":"Date","classType":"date","classType_row":"date","optionType":"","charmaxLength":"","precision":"null","scale":"null","nullable":"Y","fieldLength":"120","fieldHref":"","fieldValidType":"null","fieldDefault":"","fieldShowType":"date","fieldOrderNum":"3","isKey":"N","isShow":"N","isShowList":"Y","isQuery":"N","uploadnum":"null","defaultVal":"null","sort":"N","readonly":"N","queryMode":"group","dictField":"","dictTable":"","dictText":""}, {"fieldDbName":"customer_name","fieldName":"customerName","filedComment":"资金账户","fieldType":"java.lang.String","fieldDbType":"string","classType":"list","classType_row":"list","optionType":"","charmaxLength":"","precision":"null","scale":"null","nullable":"N","fieldLength":"120","fieldHref":"","fieldValidType":"null","fieldDefault":"","fieldShowType":"list","fieldOrderNum":"7","isKey":"N","isShow":"Y","isShowList":"Y","isQuery":"Y","uploadnum":"null","defaultVal":"null","sort":"N","readonly":"N","queryMode":"single","dictField":"id","dictTable":"per_customer","dictText":"customer_name"}, {"fieldDbName":"total_money","fieldName":"totalMoney","filedComment":"总金额","fieldType":"java.math.BigDecimal","fieldDbType":"BigDecimal","classType":"text","classType_row":"text","optionType":"","charmaxLength":"","precision":"null","scale":"null","nullable":"Y","fieldLength":"120","fieldHref":"","fieldValidType":"null","fieldDefault":"","fieldShowType":"text","fieldOrderNum":"8","isKey":"N","isShow":"Y","isShowList":"Y","isQuery":"N","uploadnum":"null","defaultVal":"null","sort":"N","readonly":"N","queryMode":"single","dictField":"","dictTable":"","dictText":""}, {"fieldDbName":"remain_money","fieldName":"remainMoney","filedComment":"可用余额","fieldType":"java.math.BigDecimal","fieldDbType":"BigDecimal","classType":"text","classType_row":"text","optionType":"","charmaxLength":"","precision":"null","scale":"null","nullable":"Y","fieldLength":"120","fieldHref":"","fieldValidType":"null","fieldDefault":"","fieldShowType":"text","fieldOrderNum":"9","isKey":"N","isShow":"Y","isShowList":"Y","isQuery":"N","uploadnum":"null","defaultVal":"null","sort":"N","readonly":"N","queryMode":"single","dictField":"","dictTable":"","dictText":""}], tableVo={"tableName":"cash_balance","ftlDescription":"资金账户","primaryKeyPolicy":"null","sequenceCode":"null","entityPackage":"cash","entityName":"CashBalance","fieldRowNum":"1","searchFieldNum":"-1","fieldRequiredNum":"4"}, originalColumns=[{"fieldDbName":"id","fieldName":"id","filedComment":"主键","fieldType":"java.lang.String","fieldDbType":"string","classType":"text","classType_row":"text","optionType":"","charmaxLength":"","precision":"null","scale":"null","nullable":"N","fieldLength":"120","fieldHref":"","fieldValidType":"null","fieldDefault":"","fieldShowType":"text","fieldOrderNum":"1","isKey":"Y","isShow":"N","isShowList":"N","isQuery":"N","uploadnum":"null","defaultVal":"null","sort":"N","readonly":"Y","queryMode":"single","dictField":"","dictTable":"","dictText":""}, {"fieldDbName":"create_by","fieldName":"createBy","filedComment":"创建人","fieldType":"java.lang.String","fieldDbType":"string","classType":"text","classType_row":"text","optionType":"","charmaxLength":"","precision":"null","scale":"null","nullable":"Y","fieldLength":"120","fieldHref":"","fieldValidType":"null","fieldDefault":"","fieldShowType":"text","fieldOrderNum":"2","isKey":"N","isShow":"N","isShowList":"N","isQuery":"N","uploadnum":"null","defaultVal":"null","sort":"N","readonly":"N","queryMode":"single","dictField":"","dictTable":"","dictText":""}, {"fieldDbName":"create_time","fieldName":"createTime","filedComment":"创建日期","fieldType":"java.util.Date","fieldDbType":"Date","classType":"date","classType_row":"date","optionType":"","charmaxLength":"","precision":"null","scale":"null","nullable":"Y","fieldLength":"120","fieldHref":"","fieldValidType":"null","fieldDefault":"","fieldShowType":"date","fieldOrderNum":"3","isKey":"N","isShow":"N","isShowList":"Y","isQuery":"N","uploadnum":"null","defaultVal":"null","sort":"N","readonly":"N","queryMode":"group","dictField":"","dictTable":"","dictText":""}, {"fieldDbName":"update_by","fieldName":"updateBy","filedComment":"更新人","fieldType":"java.lang.String","fieldDbType":"string","classType":"text","classType_row":"text","optionType":"","charmaxLength":"","precision":"null","scale":"null","nullable":"Y","fieldLength":"120","fieldHref":"","fieldValidType":"null","fieldDefault":"","fieldShowType":"text","fieldOrderNum":"4","isKey":"N","isShow":"N","isShowList":"N","isQuery":"N","uploadnum":"null","defaultVal":"null","sort":"N","readonly":"N","queryMode":"single","dictField":"","dictTable":"","dictText":""}, {"fieldDbName":"update_time","fieldName":"updateTime","filedComment":"更新日期","fieldType":"java.util.Date","fieldDbType":"Date","classType":"datetime","classType_row":"datetime","optionType":"","charmaxLength":"","precision":"null","scale":"null","nullable":"Y","fieldLength":"120","fieldHref":"","fieldValidType":"null","fieldDefault":"","fieldShowType":"datetime","fieldOrderNum":"5","isKey":"N","isShow":"N","isShowList":"N","isQuery":"N","uploadnum":"null","defaultVal":"null","sort":"N","readonly":"N","queryMode":"single","dictField":"","dictTable":"","dictText":""}, {"fieldDbName":"sys_org_code","fieldName":"sysOrgCode","filedComment":"所属部门","fieldType":"java.lang.String","fieldDbType":"string","classType":"text","classType_row":"text","optionType":"","charmaxLength":"","precision":"null","scale":"null","nullable":"Y","fieldLength":"120","fieldHref":"","fieldValidType":"null","fieldDefault":"","fieldShowType":"text","fieldOrderNum":"6","isKey":"N","isShow":"N","isShowList":"N","isQuery":"N","uploadnum":"null","defaultVal":"null","sort":"N","readonly":"N","queryMode":"single","dictField":"","dictTable":"","dictText":""}, {"fieldDbName":"customer_name","fieldName":"customerName","filedComment":"资金账户","fieldType":"java.lang.String","fieldDbType":"string","classType":"list","classType_row":"list","optionType":"","charmaxLength":"","precision":"null","scale":"null","nullable":"N","fieldLength":"120","fieldHref":"","fieldValidType":"null","fieldDefault":"","fieldShowType":"list","fieldOrderNum":"7","isKey":"N","isShow":"Y","isShowList":"Y","isQuery":"Y","uploadnum":"null","defaultVal":"null","sort":"N","readonly":"N","queryMode":"single","dictField":"id","dictTable":"per_customer","dictText":"customer_name"}, {"fieldDbName":"total_money","fieldName":"totalMoney","filedComment":"总金额","fieldType":"java.math.BigDecimal","fieldDbType":"BigDecimal","classType":"text","classType_row":"text","optionType":"","charmaxLength":"","precision":"null","scale":"null","nullable":"Y","fieldLength":"120","fieldHref":"","fieldValidType":"null","fieldDefault":"","fieldShowType":"text","fieldOrderNum":"8","isKey":"N","isShow":"Y","isShowList":"Y","isQuery":"N","uploadnum":"null","defaultVal":"null","sort":"N","readonly":"N","queryMode":"single","dictField":"","dictTable":"","dictText":""}, {"fieldDbName":"remain_money","fieldName":"remainMoney","filedComment":"可用余额","fieldType":"java.math.BigDecimal","fieldDbType":"BigDecimal","classType":"text","classType_row":"text","optionType":"","charmaxLength":"","precision":"null","scale":"null","nullable":"Y","fieldLength":"120","fieldHref":"","fieldValidType":"null","fieldDefault":"","fieldShowType":"text","fieldOrderNum":"9","isKey":"N","isShow":"Y","isShowList":"Y","isQuery":"N","uploadnum":"null","defaultVal":"null","sort":"N","readonly":"N","queryMode":"single","dictField":"","dictTable":"","dictText":""}], bussiPackage=org.jeecg.modules, tableName=cash_balance}
+2021-02-27 22:28:54.478 [http-nio-8080-exec-3] INFO  org.jeecgframework.codegenerate.generate.impl.a.a:50 -   load template from templateRootDir = 'E:\Jeecg\jeecg-boot\jeecg-boot-module-system\target\classes\jeecg\code-template-online',stylePath ='default.one',  out GenerateRootDir:E:\Jeecg\jeecg-boot\jeecg-boot-module-demo
+2021-02-27 22:28:54.533 [http-nio-8080-exec-3] INFO  org.jeecgframework.codegenerate.generate.impl.a.a:110 - [generate]	 template:default\one\java\${bussiPackage}\${entityPackage}\controller\${entityName}Controller.javai ==> E:\Jeecg\jeecg-boot\jeecg-boot-module-demo\src/main/java\org\jeecg\modules\cash\controller\CashBalanceController.java
+2021-02-27 22:28:54.681 [http-nio-8080-exec-3] INFO  org.jeecgframework.codegenerate.generate.impl.a.a:110 - [generate]	 template:default\one\java\${bussiPackage}\${entityPackage}\entity\${entityName}.javai ==> E:\Jeecg\jeecg-boot\jeecg-boot-module-demo\src/main/java\org\jeecg\modules\cash\entity\CashBalance.java
+2021-02-27 22:28:54.697 [http-nio-8080-exec-3] INFO  org.jeecgframework.codegenerate.generate.impl.a.a:110 - [generate]	 template:default\one\java\${bussiPackage}\${entityPackage}\mapper\${entityName}Mapper.javai ==> E:\Jeecg\jeecg-boot\jeecg-boot-module-demo\src/main/java\org\jeecg\modules\cash\mapper\CashBalanceMapper.java
+2021-02-27 22:28:54.717 [http-nio-8080-exec-3] INFO  org.jeecgframework.codegenerate.generate.impl.a.a:110 - [generate]	 template:default\one\java\${bussiPackage}\${entityPackage}\mapper\xml\${entityName}Mapper.xml ==> E:\Jeecg\jeecg-boot\jeecg-boot-module-demo\src/main/java\org\jeecg\modules\cash\mapper\xml\CashBalanceMapper.xml
+2021-02-27 22:28:54.722 [http-nio-8080-exec-3] INFO  org.jeecgframework.codegenerate.generate.impl.a.a:110 - [generate]	 template:default\one\java\${bussiPackage}\${entityPackage}\service\I${entityName}Service.javai ==> E:\Jeecg\jeecg-boot\jeecg-boot-module-demo\src/main/java\org\jeecg\modules\cash\service\ICashBalanceService.java
+2021-02-27 22:28:54.730 [http-nio-8080-exec-3] INFO  org.jeecgframework.codegenerate.generate.impl.a.a:110 - [generate]	 template:default\one\java\${bussiPackage}\${entityPackage}\service\impl\${entityName}ServiceImpl.javai ==> E:\Jeecg\jeecg-boot\jeecg-boot-module-demo\src/main/java\org\jeecg\modules\cash\service\impl\CashBalanceServiceImpl.java
+2021-02-27 22:28:54.752 [http-nio-8080-exec-3] INFO  org.jeecgframework.codegenerate.generate.impl.a.a:110 - [generate]	 template:default\one\java\${bussiPackage}\${entityPackage}\vue\${entityName}List.vuei ==> E:\Jeecg\jeecg-boot\jeecg-boot-module-demo\src/main/java\org\jeecg\modules\cash\vue\CashBalanceList.vue
+2021-02-27 22:28:54.824 [http-nio-8080-exec-3] INFO  org.jeecgframework.codegenerate.generate.impl.a.a:110 - [generate]	 template:default\one\java\${bussiPackage}\${entityPackage}\vue\modules\${entityName}Form.vuei ==> E:\Jeecg\jeecg-boot\jeecg-boot-module-demo\src/main/java\org\jeecg\modules\cash\vue\modules\CashBalanceForm.vue
+2021-02-27 22:28:54.839 [http-nio-8080-exec-3] INFO  org.jeecgframework.codegenerate.generate.impl.a.a:110 - [generate]	 template:default\one\java\${bussiPackage}\${entityPackage}\vue\modules\${entityName}Modal.vuei ==> E:\Jeecg\jeecg-boot\jeecg-boot-module-demo\src/main/java\org\jeecg\modules\cash\vue\modules\CashBalanceModal.vue
+2021-02-27 22:28:54.849 [http-nio-8080-exec-3] INFO  org.jeecgframework.codegenerate.generate.impl.a.a:110 - [generate]	 template:default\one\java\${bussiPackage}\${entityPackage}\vue\modules\${entityName}Modal__Style#Drawer.vuei ==> E:\Jeecg\jeecg-boot\jeecg-boot-module-demo\src/main/java\org\jeecg\modules\cash\vue\modules\CashBalanceModal__Style#Drawer.vue
+2021-02-27 22:28:54.861 [http-nio-8080-exec-3] INFO  o.j.codegenerate.generate.impl.CodeGenerateOne:140 -  ----- jeecg-boot ---- generate  code  success =======> 表名：cash_balance 
+2021-02-27 22:29:30.502 [http-nio-8080-exec-7] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-02-27 22:29:34.828 [http-nio-8080-exec-9] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-02-27 22:29:35.103 [http-nio-8080-exec-5] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->copy_type = 0
+2021-02-27 22:29:52.950 [background-preinit] INFO  org.hibernate.validator.internal.util.Version:21 - HV000001: Hibernate Validator 6.1.6.Final
+2021-02-27 22:29:52.969 [main] INFO  org.jeecg.JeecgSystemApplication:55 - Starting JeecgSystemApplication on LAPTOP-ZKS with PID 25080 (E:\Jeecg\jeecg-boot\jeecg-boot-module-system\target\classes started by Lenovo in E:\Jeecg\jeecg-boot)
+2021-02-27 22:29:52.970 [main] INFO  org.jeecg.JeecgSystemApplication:655 - The following profiles are active: dev
+2021-02-27 22:29:55.465 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-02-27 22:29:55.468 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:127 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-02-27 22:29:55.633 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:187 - Finished Spring Data repository scanning in 148ms. Found 0 Redis repository interfaces.
+2021-02-27 22:29:56.320 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-27 22:29:56.325 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-27 22:29:56.429 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-27 22:29:56.558 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-27 22:29:56.561 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'shiroConfig' of type [org.jeecg.config.shiro.ShiroConfig$$EnhancerBySpringCGLIB$$3039a232] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-27 22:29:56.610 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'shiroRealm' of type [org.jeecg.config.shiro.ShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-27 22:29:57.271 [main] INFO  org.jeecg.config.shiro.ShiroConfig:207 - ===============(1)创建缓存管理器RedisCacheManager
+2021-02-27 22:29:57.272 [main] INFO  org.jeecg.config.shiro.ShiroConfig:225 - ===============(2)创建RedisManager,连接Redis..
+2021-02-27 22:29:57.275 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'redisManager' of type [org.crazycake.shiro.RedisManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-27 22:29:57.281 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-27 22:29:57.328 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-27 22:29:57.572 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-27 22:29:57.578 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$3a8bcb0a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-27 22:29:57.587 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-27 22:29:57.604 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'redisConfig' of type [org.jeecg.config.redis.RedisConfig$$EnhancerBySpringCGLIB$$a7229146] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-27 22:29:57.647 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'org.apache.shiro.spring.boot.autoconfigure.ShiroBeanAutoConfiguration' of type [org.apache.shiro.spring.boot.autoconfigure.ShiroBeanAutoConfiguration$$EnhancerBySpringCGLIB$$e41637e9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-27 22:29:57.652 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'eventBus' of type [org.apache.shiro.event.support.DefaultEventBus] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-27 22:29:58.021 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:108 - Tomcat initialized with port(s): 8080 (http)
+2021-02-27 22:29:58.032 [main] INFO  org.apache.coyote.http11.Http11NioProtocol:173 - Initializing ProtocolHandler ["http-nio-8080"]
+2021-02-27 22:29:58.033 [main] INFO  org.apache.catalina.core.StandardService:173 - Starting service [Tomcat]
+2021-02-27 22:29:58.033 [main] INFO  org.apache.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-02-27 22:29:58.036 [main] INFO  org.apache.catalina.core.AprLifecycleListener:173 - Loaded Apache Tomcat Native library [1.2.24] using APR version [1.7.0].
+2021-02-27 22:29:58.037 [main] INFO  org.apache.catalina.core.AprLifecycleListener:173 - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-02-27 22:29:58.037 [main] INFO  org.apache.catalina.core.AprLifecycleListener:173 - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-02-27 22:29:58.041 [main] INFO  org.apache.catalina.core.AprLifecycleListener:173 - OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2021-02-27 22:29:58.387 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/jeecg-boot]:173 - Initializing Spring embedded WebApplicationContext
+2021-02-27 22:29:58.388 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext:285 - Root WebApplicationContext: initialization completed in 5272 ms
+2021-02-27 22:29:59.234 [main] INFO  com.alibaba.druid.pool.DruidDataSource:994 - {dataSource-1,master} inited
+2021-02-27 22:29:59.235 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource:132 - dynamic-datasource - load a datasource named [master] success
+2021-02-27 22:29:59.235 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource:237 - dynamic-datasource initial loaded [1] datasource,primary datasource named [master]
+2021-02-27 22:30:02.718 [main] INFO  org.jeecg.config.redis.RedisConfig:66 -  --- redis config init --- 
+2021-02-27 22:30:03.555 [main] INFO  org.quartz.impl.StdSchedulerFactory:1220 - Using default implementation for ThreadExecutor
+2021-02-27 22:30:03.558 [main] INFO  org.quartz.simpl.SimpleThreadPool:268 - Job execution threads will use class loader of thread: main
+2021-02-27 22:30:03.567 [main] INFO  org.quartz.core.SchedulerSignalerImpl:61 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-02-27 22:30:03.568 [main] INFO  org.quartz.core.QuartzScheduler:229 - Quartz Scheduler v.2.3.2 created.
+2021-02-27 22:30:03.574 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore:672 - Using db table-based data access locking (synchronization).
+2021-02-27 22:30:03.576 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore:145 - JobStoreCMT initialized.
+2021-02-27 22:30:03.577 [main] INFO  org.quartz.core.QuartzScheduler:294 - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'MyScheduler' with instanceId 'LAPTOP-ZKS1614436203556'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+2021-02-27 22:30:03.577 [main] INFO  org.quartz.impl.StdSchedulerFactory:1374 - Quartz scheduler 'MyScheduler' initialized from an externally provided properties instance.
+2021-02-27 22:30:03.577 [main] INFO  org.quartz.impl.StdSchedulerFactory:1378 - Quartz scheduler version: 2.3.2
+2021-02-27 22:30:03.578 [main] INFO  org.quartz.core.QuartzScheduler:2293 - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@6a3a56de
+2021-02-27 22:30:07.034 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver:58 - Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-02-27 22:30:07.210 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-02-27 22:30:07.472 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-27 22:30:08.244 [main] INFO  org.apache.coyote.http11.Http11NioProtocol:173 - Starting ProtocolHandler ["http-nio-8080"]
+2021-02-27 22:30:08.270 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:220 - Tomcat started on port(s): 8080 (http) with context path '/jeecg-boot'
+2021-02-27 22:30:08.271 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:160 - Context refreshed
+2021-02-27 22:30:08.290 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:163 - Found 1 custom documentation plugin(s)
+2021-02-27 22:30:08.376 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner:41 - Scanning for api listing references
+2021-02-27 22:30:08.422 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/jeecg-boot]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-27 22:30:08.422 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet:525 - Initializing Servlet 'dispatcherServlet'
+2021-02-27 22:30:08.436 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet:547 - Completed initialization in 14 ms
+2021-02-27 22:30:08.588 [http-nio-8080-exec-1] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-02-27 22:30:08.608 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_1
+2021-02-27 22:30:08.610 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_1
+2021-02-27 22:30:08.612 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_1
+2021-02-27 22:30:08.614 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_1
+2021-02-27 22:30:08.617 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_1
+2021-02-27 22:30:08.622 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_1
+2021-02-27 22:30:08.629 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_2
+2021-02-27 22:30:08.637 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_2
+2021-02-27 22:30:08.640 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_2
+2021-02-27 22:30:08.643 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_2
+2021-02-27 22:30:08.658 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_2
+2021-02-27 22:30:08.706 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_3
+2021-02-27 22:30:08.708 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_3
+2021-02-27 22:30:08.709 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_3
+2021-02-27 22:30:08.710 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_3
+2021-02-27 22:30:08.712 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_2
+2021-02-27 22:30:08.716 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_3
+2021-02-27 22:30:08.723 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_4
+2021-02-27 22:30:08.726 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_4
+2021-02-27 22:30:08.728 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_4
+2021-02-27 22:30:08.730 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_4
+2021-02-27 22:30:08.731 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_3
+2021-02-27 22:30:08.736 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_4
+2021-02-27 22:30:08.745 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_5
+2021-02-27 22:30:08.746 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_5
+2021-02-27 22:30:08.749 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_5
+2021-02-27 22:30:08.751 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_5
+2021-02-27 22:30:08.761 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_4
+2021-02-27 22:30:08.792 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_6
+2021-02-27 22:30:08.793 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_6
+2021-02-27 22:30:08.795 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_6
+2021-02-27 22:30:08.797 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_6
+2021-02-27 22:30:08.798 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_5
+2021-02-27 22:30:08.803 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_5
+2021-02-27 22:30:08.812 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_7
+2021-02-27 22:30:08.814 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_7
+2021-02-27 22:30:08.815 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_7
+2021-02-27 22:30:08.817 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_7
+2021-02-27 22:30:08.819 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_6
+2021-02-27 22:30:08.827 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_6
+2021-02-27 22:30:08.839 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_8
+2021-02-27 22:30:08.851 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_8
+2021-02-27 22:30:08.852 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_8
+2021-02-27 22:30:08.859 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_8
+2021-02-27 22:30:08.871 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_7
+2021-02-27 22:30:08.881 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_9
+2021-02-27 22:30:08.882 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_9
+2021-02-27 22:30:08.884 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_9
+2021-02-27 22:30:08.886 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_9
+2021-02-27 22:30:08.888 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_7
+2021-02-27 22:30:08.893 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_8
+2021-02-27 22:30:08.899 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_10
+2021-02-27 22:30:08.903 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_10
+2021-02-27 22:30:08.905 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_10
+2021-02-27 22:30:08.906 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_10
+2021-02-27 22:30:08.908 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_8
+2021-02-27 22:30:08.914 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_9
+2021-02-27 22:30:08.920 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_11
+2021-02-27 22:30:08.922 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_11
+2021-02-27 22:30:08.923 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_11
+2021-02-27 22:30:08.925 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_11
+2021-02-27 22:30:08.926 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_9
+2021-02-27 22:30:08.930 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_10
+2021-02-27 22:30:08.935 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_12
+2021-02-27 22:30:08.936 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_12
+2021-02-27 22:30:08.937 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_12
+2021-02-27 22:30:08.939 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_12
+2021-02-27 22:30:08.940 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_10
+2021-02-27 22:30:08.943 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_11
+2021-02-27 22:30:08.948 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_13
+2021-02-27 22:30:08.950 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_13
+2021-02-27 22:30:08.951 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_13
+2021-02-27 22:30:08.952 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_13
+2021-02-27 22:30:08.953 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_11
+2021-02-27 22:30:08.957 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_12
+2021-02-27 22:30:08.961 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_14
+2021-02-27 22:30:08.962 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_14
+2021-02-27 22:30:08.963 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_14
+2021-02-27 22:30:08.964 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_14
+2021-02-27 22:30:08.965 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_12
+2021-02-27 22:30:08.968 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_13
+2021-02-27 22:30:08.976 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_15
+2021-02-27 22:30:08.977 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_15
+2021-02-27 22:30:08.979 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_15
+2021-02-27 22:30:08.980 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_15
+2021-02-27 22:30:08.983 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_13
+2021-02-27 22:30:08.990 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_14
+2021-02-27 22:30:08.995 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_16
+2021-02-27 22:30:08.996 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_16
+2021-02-27 22:30:08.997 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_16
+2021-02-27 22:30:08.998 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_16
+2021-02-27 22:30:09.000 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_14
+2021-02-27 22:30:09.003 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_15
+2021-02-27 22:30:09.017 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:727 - Starting Quartz Scheduler now
+2021-02-27 22:30:09.195 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore:3644 - ClusterManager: detected 1 failed or restarted instances.
+2021-02-27 22:30:09.195 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore:3503 - ClusterManager: Scanning for instance "LAPTOP-ZKS1614435274387"'s failed in-progress jobs.
+2021-02-27 22:30:09.252 [main] INFO  org.quartz.core.QuartzScheduler:547 - Scheduler MyScheduler_$_LAPTOP-ZKS1614436203556 started.
+2021-02-27 22:30:09.270 [main] INFO  org.jeecg.JeecgSystemApplication:61 - Started JeecgSystemApplication in 17.673 seconds (JVM running for 20.058)
+2021-02-27 22:30:09.279 [main] INFO  org.jeecg.modules.init.SystemInitListener:27 -  服务已启动，准备初始化路由配置 ###################
+2021-02-27 22:30:11.592 [main] INFO  org.jeecg.JeecgSystemApplication:39 - 
+----------------------------------------------------------
+	Application Jeecg-Boot is running! Access URLs:
+	Local: 		http://localhost:8080/jeecg-boot/
+	External: 	http://192.168.2.1:8080/jeecg-boot/
+	Swagger文档: 	http://192.168.2.1:8080/jeecg-boot/doc.html
+----------------------------------------------------------
+2021-02-27 22:30:19.785 [http-nio-8080-exec-6] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-02-27 22:30:19.806 [http-nio-8080-exec-6] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=钟科胜), DictModel(value=1365536781067436033, text=fewfwe), DictModel(value=1365619643196129282, text=黄木峰), DictModel(value=1365622533272911874, text=吉吉国王), DictModel(value=1365625196047777794, text=fewf )], timestamp=1614436219786, onlTable=null)
+2021-02-27 22:30:23.395 [http-nio-8080-exec-8] INFO  o.j.m.system.controller.SysPermissionController:73 - ======获取全部菜单数据=====耗时:64毫秒
+2021-02-27 22:31:01.722 [http-nio-8080-exec-2] INFO  org.jeecg.config.shiro.ShiroRealm:155 - ——————————用户在线操作，更新token保证不掉线—————————jwtTokenRefresh——————— eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTQ0MzI1MzEsInVzZXJuYW1lIjoiYWRtaW4ifQ.aTG0RUdnfo9DCaDqWgLFBuuDgTFqp_LUYyeOVKy0_P0
+2021-02-27 22:31:02.025 [http-nio-8080-exec-3] INFO  o.j.m.system.controller.SysPermissionController:73 - ======获取全部菜单数据=====耗时:16毫秒
+2021-02-27 22:31:17.396 [http-nio-8080-exec-10] INFO  o.j.m.system.controller.SysPermissionController:73 - ======获取全部菜单数据=====耗时:13毫秒
+2021-02-27 22:31:52.131 [http-nio-8080-exec-2] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-02-27 22:31:56.416 [http-nio-8080-exec-5] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-02-27 22:31:56.755 [http-nio-8080-exec-9] INFO  o.j.m.system.controller.SysPermissionController:73 - ======获取全部菜单数据=====耗时:23毫秒
+2021-02-27 22:31:59.949 [http-nio-8080-exec-1] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-02-27 22:32:04.849 [http-nio-8080-exec-7] INFO  o.j.m.system.controller.SysPermissionController:73 - ======获取全部菜单数据=====耗时:28毫秒
+2021-02-27 22:32:08.096 [http-nio-8080-exec-10] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-02-27 22:33:12.143 [http-nio-8080-exec-10] INFO  o.j.m.system.controller.SysPermissionController:73 - ======获取全部菜单数据=====耗时:12毫秒
+2021-02-27 22:33:15.502 [http-nio-8080-exec-9] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-02-27 22:33:19.671 [http-nio-8080-exec-3] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-02-27 22:33:20.241 [http-nio-8080-exec-8] INFO  o.j.m.system.controller.SysPermissionController:73 - ======获取全部菜单数据=====耗时:14毫秒
+2021-02-27 22:33:58.167 [http-nio-8080-exec-5] WARN  o.j.m.s.service.impl.SysRolePermissionServiceImpl:176 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@c77efb4] was not registered for synchronization because DataSource is not transactional
+2021-02-27 22:33:58.340 [http-nio-8080-exec-5] INFO  o.j.m.system.controller.SysPermissionController:418 - ======角色授权成功=====耗时:181毫秒
+2021-02-27 22:33:59.803 [http-nio-8080-exec-1] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-02-27 22:34:04.389 [http-nio-8080-exec-6] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-02-27 22:34:22.822 [http-nio-8080-exec-1] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-02-27 22:34:28.391 [http-nio-8080-exec-6] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-02-27 22:35:11.327 [http-nio-8080-exec-1] INFO  o.j.m.system.controller.SysPermissionController:73 - ======获取全部菜单数据=====耗时:12毫秒
+2021-02-27 22:36:25.418 [http-nio-8080-exec-8] INFO  o.j.m.system.controller.SysPermissionController:73 - ======获取全部菜单数据=====耗时:10毫秒
+2021-02-27 22:36:28.111 [http-nio-8080-exec-10] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-02-27 22:36:32.924 [http-nio-8080-exec-2] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-02-27 22:36:33.666 [http-nio-8080-exec-5] INFO  o.j.m.system.controller.SysPermissionController:73 - ======获取全部菜单数据=====耗时:16毫秒
