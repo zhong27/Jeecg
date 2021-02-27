@@ -18,17 +18,17 @@ import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 
 /**
- * @Description: 材料入库
+ * @Description: 仓库管理
  * @Author: jeecg-boot
  * @Date:   2021-02-27
  * @Version: V1.0
  */
 @Data
-@TableName("sto_enter_house")
+@TableName("sto_warehouse")
 @Accessors(chain = true)
 @EqualsAndHashCode(callSuper = false)
-@ApiModel(value="sto_enter_house对象", description="材料入库")
-public class EnterHouse implements Serializable {
+@ApiModel(value="sto_warehouse对象", description="仓库管理")
+public class Warehouse implements Serializable {
     private static final long serialVersionUID = 1L;
 
 	/**主键*/
@@ -54,42 +54,24 @@ public class EnterHouse implements Serializable {
 	/**所属部门*/
     @ApiModelProperty(value = "所属部门")
     private java.lang.String sysOrgCode;
-	/**产品大类*/
-	@Excel(name = "产品大类", width = 15)
-    @Dict(dicCode = "product_class")
-    @ApiModelProperty(value = "产品大类")
-    private java.lang.String productClass;
-	/**材料名称*/
-	@Excel(name = "材料名称", width = 15)
-    @ApiModelProperty(value = "材料名称")
-    private java.lang.String productName;
-	/**材料长度*/
-	@Excel(name = "材料长度", width = 15)
-    @ApiModelProperty(value = "材料长度")
-    private java.math.BigDecimal matLen;
-	/**材料厚度*/
-	@Excel(name = "材料厚度", width = 15)
-    @ApiModelProperty(value = "材料厚度")
-    private java.math.BigDecimal matThick;
-	/**材料宽度*/
-	@Excel(name = "材料宽度", width = 15)
-    @ApiModelProperty(value = "材料宽度")
-    private java.math.BigDecimal matWidth;
-	/**材料重量*/
-	@Excel(name = "材料重量", width = 15)
-    @ApiModelProperty(value = "材料重量")
-    private java.math.BigDecimal matWeight;
-	/**材料数量*/
-	@Excel(name = "材料数量", width = 15)
-    @ApiModelProperty(value = "材料数量")
-    private java.lang.Integer matNumber;
-	/**材料号*/
-	@Excel(name = "材料号", width = 15)
-    @ApiModelProperty(value = "材料号")
-    private java.lang.String matNo;
-	/**仓库*/
-	@Excel(name = "仓库", width = 15)
-    @Dict(dicCode = "id",dictTable="sto_warehouse",dicText="house_name")
-    @ApiModelProperty(value = "仓库")
-    private java.lang.String warehouse;
+	/**仓库名称*/
+	@Excel(name = "仓库名称", width = 15)
+    @ApiModelProperty(value = "仓库名称")
+    private java.lang.String houseName;
+	/**仓库地址*/
+	@Excel(name = "仓库地址", width = 15)
+    @ApiModelProperty(value = "仓库地址")
+    private java.lang.String address;
+	/**仓库负责人*/
+	@Excel(name = "仓库负责人", width = 15)
+    @ApiModelProperty(value = "仓库负责人")
+    private java.lang.String houseMan;
+	/**负责人联系号码*/
+	@Excel(name = "负责人联系号码", width = 15)
+    @ApiModelProperty(value = "负责人联系号码")
+    private java.lang.String phone;
+	/**占地面积*/
+	@Excel(name = "占地面积", width = 15)
+    @ApiModelProperty(value = "占地面积")
+    private java.math.BigDecimal area;
 }
