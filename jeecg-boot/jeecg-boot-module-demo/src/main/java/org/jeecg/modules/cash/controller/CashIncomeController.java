@@ -20,6 +20,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import lombok.extern.slf4j.Slf4j;
 
+import org.jeecg.modules.cash.service.impl.CashIncomeServiceImpl;
 import org.jeecgframework.poi.excel.ExcelImportUtil;
 import org.jeecgframework.poi.excel.def.NormalExcelConstants;
 import org.jeecgframework.poi.excel.entity.ExportParams;
@@ -49,7 +50,8 @@ import org.jeecg.common.aspect.annotation.AutoLog;
 public class CashIncomeController extends JeecgController<CashIncome, ICashIncomeService> {
 	@Autowired
 	private ICashIncomeService cashIncomeService;
-	
+	 @Autowired
+	 CashIncomeServiceImpl cashIncomeServiceImpl;
 	/**
 	 * 分页列表查询
 	 *
@@ -85,8 +87,17 @@ public class CashIncomeController extends JeecgController<CashIncome, ICashIncom
 		cashIncomeService.save(cashIncome);
 		return Result.OK("添加成功！");
 	}
-	
-	/**
+
+	 @AutoLog(value = "来款审核")
+	 @ApiOperation(value="来款审核", notes="来款审核")
+	 @GetMapping(value = "/checkIncome")
+	 public Result<?> checkIncome(@RequestParam(name="id",required=true) String id) {
+		 cashIncomeServiceImpl.checkIncome(id);
+		 return Result.OK("信息添加成功！");
+	 }
+
+
+	 /**
 	 *  编辑
 	 *
 	 * @param cashIncome

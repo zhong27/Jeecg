@@ -62,7 +62,7 @@ public class CashIncome implements Serializable {
 	/**来款金额*/
 	@Excel(name = "来款金额", width = 15)
     @ApiModelProperty(value = "来款金额")
-    private java.math.BigDecimal incom;
+    private java.math.BigDecimal income;
 	/**来款银行*/
 	@Excel(name = "来款银行", width = 15, dicCode = "bank")
 	@Dict(dicCode = "bank")

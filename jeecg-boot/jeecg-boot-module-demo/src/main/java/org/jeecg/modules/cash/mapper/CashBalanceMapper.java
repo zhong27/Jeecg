@@ -13,5 +13,5 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @Version: V1.0
  */
 public interface CashBalanceMapper extends BaseMapper<CashBalance> {
-
+    public CashBalance selectByCusotmerId(@Param("id")String id);
 }

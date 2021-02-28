@@ -1,8 +1,16 @@
 package org.jeecg.modules.cash.service.impl;
 
+import cn.hutool.core.util.ObjectUtil;
+import cn.hutool.core.util.StrUtil;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import org.jeecg.modules.JeecgException;
+import org.jeecg.modules.cash.CheckStatus;
+import org.jeecg.modules.cash.entity.CashBalance;
 import org.jeecg.modules.cash.entity.CashIncome;
+import org.jeecg.modules.cash.mapper.CashBalanceMapper;
 import org.jeecg.modules.cash.mapper.CashIncomeMapper;
 import org.jeecg.modules.cash.service.ICashIncomeService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -15,5 +23,22 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
  */
 @Service
 public class CashIncomeServiceImpl extends ServiceImpl<CashIncomeMapper, CashIncome> implements ICashIncomeService {
+
+    @Autowired
+    CashBalanceServiceImpl cashBalanceService;
+
+
+    //来款审核
+    public void checkIncome(String id){
+        CashIncome cashIncome = getById(id);
+
+        //判断来款审核状态
+        if (StrUtil.equals(cashIncome.getStatus(),CheckStatus.FINISH.getValue())){
+            throw new JeecgException("来款已审核！");
+        }
+        cashIncome.setStatus(CheckStatus.FINISH.getValue());
+        updateById(cashIncome);
+        cashBalanceService.addBlance(cashIncome);
+    }
 
 }
