@@ -206,7 +206,7 @@ public class OrderBookingController extends JeecgController<OrderBooking, IOrder
 	@ApiOperation(value="订单明细表-通过id删除", notes="订单明细表-通过id删除")
 	@DeleteMapping(value = "/deleteOrderDet")
 	public Result<?> deleteOrderDet(@RequestParam(name="id",required=true) String id) {
-		orderDetService.removeById(id);
+		orderDetServiceImpl.deleteOrderDet(id);
 		return Result.OK("删除成功!");
 	}
 

@@ -2,6 +2,7 @@ package org.jeecg.modules.ord.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import org.apache.ibatis.annotations.Param;
+import org.jeecg.modules.ord.entity.OrderBooking;
 import org.jeecg.modules.ord.entity.OrderDet;
 import org.jeecg.modules.ord.mapper.OrderDetMapper;
 import org.jeecg.modules.ord.service.IOrderBookingService;
@@ -41,8 +42,17 @@ public class OrderDetServiceImpl extends ServiceImpl<OrderDetMapper, OrderDet> i
 
 	}
 	public void updateOrderDet(OrderDet orderDet){
+		//更新订单总价
 		orderDet.setTotal(orderDet.getPrice().multiply(orderDet.getWeight() ) );
 		orderBookingService.subTotal(orderDet);
 	}
 
+	public void deleteOrderDet(String id) {
+		//删除订单明细、减扣订单明细总价
+		OrderDet orderDet = getById(id);
+		OrderBooking orderBooking = orderBookingService.getById(orderDet.getOrderId());
+		orderBooking.setOrderTotal(orderBooking.getOrderTotal().subtract(orderDet.getTotal()));
+		orderBookingService.updateById(orderBooking);
+		removeById(id);
+	}
 }
