@@ -37,7 +37,6 @@ public interface IEnterHouseService extends IService<EnterHouse> {
         if (ObjectUtil.isNull(enterHouse)) {
             flag = IService.super.save(entity);
         }
-
         //已有库存更新重量，数量
         if (ObjectUtil.isNotNull(enterHouse)) {
             enterHouse.setMatNumber(entity.getMatNumber() + enterHouse.getMatNumber());

@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import lombok.extern.slf4j.Slf4j;
 import org.jeecg.common.system.base.controller.JeecgController;
 import org.jeecg.common.api.vo.Result;
+import org.jeecg.modules.ord.service.impl.OrderDetServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
@@ -52,6 +53,9 @@ public class OrderBookingController extends JeecgController<OrderBooking, IOrder
 
 	@Autowired
 	private IOrderDetService orderDetService;
+
+	 @Autowired
+	 private OrderDetServiceImpl orderDetServiceImpl;
 
 
 	/*---------------------------------主表处理-begin-------------------------------------*/
@@ -176,7 +180,7 @@ public class OrderBookingController extends JeecgController<OrderBooking, IOrder
 	@ApiOperation(value="订单明细表-添加", notes="订单明细表-添加")
 	@PostMapping(value = "/addOrderDet")
 	public Result<?> addOrderDet(@RequestBody OrderDet orderDet) {
-		orderDetService.save(orderDet);
+		orderDetServiceImpl.saveMain(orderDet);
 		return Result.OK("添加成功！");
 	}
 
@@ -189,7 +193,7 @@ public class OrderBookingController extends JeecgController<OrderBooking, IOrder
 	@ApiOperation(value="订单明细表-编辑", notes="订单明细表-编辑")
 	@PutMapping(value = "/editOrderDet")
 	public Result<?> editOrderDet(@RequestBody OrderDet orderDet) {
-		orderDetService.updateById(orderDet);
+		orderDetServiceImpl.updateOrderDet(orderDet);
 		return Result.OK("编辑成功!");
 	}
 

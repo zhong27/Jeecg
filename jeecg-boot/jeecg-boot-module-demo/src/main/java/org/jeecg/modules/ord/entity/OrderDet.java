@@ -89,6 +89,10 @@ public class OrderDet implements Serializable {
 	@Excel(name = "数量", width = 15)
 	@ApiModelProperty(value = "数量")
 	private java.lang.Integer num;
+	/**重量*/
+	@Excel(name = "重量", width = 15)
+	@ApiModelProperty(value = "重量")
+	private java.math.BigDecimal weight;
 	/**总价*/
 	@Excel(name = "总价", width = 15)
 	@ApiModelProperty(value = "总价")
