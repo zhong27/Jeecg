@@ -79,4 +79,8 @@ public class MaterialInformation implements Serializable {
     @Excel(name = "材料号", width = 15)
     @ApiModelProperty(value = "材料号")
     private java.lang.String matNo;
+    /**单价*/
+    @Excel(name = "单价", width = 15)
+    @ApiModelProperty(value = "单价")
+    private java.math.BigDecimal price;
 }

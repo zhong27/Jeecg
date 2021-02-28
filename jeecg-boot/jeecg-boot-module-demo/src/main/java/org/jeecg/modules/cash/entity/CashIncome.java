@@ -70,6 +70,7 @@ public class CashIncome implements Serializable {
     private java.lang.String bank;
 	/**审核状态*/
 	@Excel(name = "审核状态", width = 15)
+    @Dict(dicCode = "check_status")
     @ApiModelProperty(value = "审核状态")
     private java.lang.String status;
 	/**来款日期*/

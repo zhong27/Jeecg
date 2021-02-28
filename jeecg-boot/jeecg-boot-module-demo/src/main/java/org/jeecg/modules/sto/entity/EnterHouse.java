@@ -92,4 +92,8 @@ public class EnterHouse implements Serializable {
     @Dict(dicCode = "id",dictTable="sto_warehouse",dicText="house_name")
     @ApiModelProperty(value = "仓库")
     private java.lang.String warehouse;
+    /**单价*/
+    @Excel(name = "单价", width = 15)
+    @ApiModelProperty(value = "单价")
+    private java.math.BigDecimal price;
 }
