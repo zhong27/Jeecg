@@ -96,4 +96,17 @@ public class OrderBill implements Serializable {
 	@Excel(name = "总重量", width = 15)
     @ApiModelProperty(value = "总重量")
     private java.math.BigDecimal totalWeight;
+    /**业务员*/
+    @Excel(name = "业务员", width = 15, dictTable = "per_business", dicText = "name", dicCode = "id")
+    @Dict(dictTable = "per_business", dicText = "name", dicCode = "id")
+    @ApiModelProperty(value = "业务员")
+    private java.lang.String business;
+    /**司机*/
+    @Excel(name = "司机", width = 15)
+    @ApiModelProperty(value = "司机")
+    private java.lang.String driver;
+    /**车牌号*/
+    @Excel(name = "车牌号", width = 15)
+    @ApiModelProperty(value = "车牌号")
+    private java.lang.String carNo;
 }
