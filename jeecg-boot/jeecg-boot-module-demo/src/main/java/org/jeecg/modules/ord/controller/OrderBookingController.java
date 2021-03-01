@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import lombok.extern.slf4j.Slf4j;
 import org.jeecg.common.system.base.controller.JeecgController;
 import org.jeecg.common.api.vo.Result;
+import org.jeecg.modules.ord.service.impl.OrderBookingServiceImpl;
 import org.jeecg.modules.ord.service.impl.OrderDetServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -56,6 +57,9 @@ public class OrderBookingController extends JeecgController<OrderBooking, IOrder
 
 	 @Autowired
 	 private OrderDetServiceImpl orderDetServiceImpl;
+
+	 @Autowired
+	 private OrderBookingServiceImpl  orderBookingServiceImpl;
 
 
 	/*---------------------------------主表处理-begin-------------------------------------*/
@@ -116,7 +120,7 @@ public class OrderBookingController extends JeecgController<OrderBooking, IOrder
     @ApiOperation(value="订单预定-通过id删除", notes="订单预定-通过id删除")
     @DeleteMapping(value = "/delete")
     public Result<?> delete(@RequestParam(name="id",required=true) String id) {
-        orderBookingService.delMain(id);
+		orderBookingServiceImpl.delMain(id);
         return Result.OK("删除成功!");
     }
 
@@ -197,6 +201,19 @@ public class OrderBookingController extends JeecgController<OrderBooking, IOrder
 		return Result.OK("编辑成功!");
 	}
 
+	 /**
+	  * 订单支付
+	  * @param orderId
+	  * @return
+	  */
+	 @AutoLog(value = "订单支付")
+	 @ApiOperation(value="订单支付", notes="订单支付")
+	 @GetMapping(value = "/changePayStatus")
+	 public Result<?> changePayStatus(@RequestParam(name="orderId",required=true) String orderId) {
+		 orderBookingServiceImpl.changePayStatus(orderId);
+		 return Result.OK("信息添加成功！");
+	 }
+
 	/**
 	 * 通过id删除
 	 * @param id
@@ -219,7 +236,7 @@ public class OrderBookingController extends JeecgController<OrderBooking, IOrder
 	@ApiOperation(value="订单明细表-批量删除", notes="订单明细表-批量删除")
 	@DeleteMapping(value = "/deleteBatchOrderDet")
 	public Result<?> deleteBatchOrderDet(@RequestParam(name="ids",required=true) String ids) {
-	    this.orderDetService.removeByIds(Arrays.asList(ids.split(",")));
+		orderDetServiceImpl.deleteBatchById(Arrays.asList(ids.split(",")));
 		return Result.OK("批量删除成功!");
 	}
 

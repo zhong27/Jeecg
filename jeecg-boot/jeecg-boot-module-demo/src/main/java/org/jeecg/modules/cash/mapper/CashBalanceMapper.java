@@ -13,5 +13,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @Version: V1.0
  */
 public interface CashBalanceMapper extends BaseMapper<CashBalance> {
+    //客户id查询资金账户
     public CashBalance selectByCusotmerId(@Param("id")String id);
+
 }

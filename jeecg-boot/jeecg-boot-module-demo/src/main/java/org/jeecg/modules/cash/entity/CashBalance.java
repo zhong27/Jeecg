@@ -67,4 +67,8 @@ public class CashBalance implements Serializable {
 	@Excel(name = "可用余额", width = 15)
     @ApiModelProperty(value = "可用余额")
     private java.math.BigDecimal remainMoney;
+    /**已用金额*/
+    @Excel(name = "已用金额", width = 15)
+    @ApiModelProperty(value = "已用金额")
+    private java.math.BigDecimal amountUsed;
 }

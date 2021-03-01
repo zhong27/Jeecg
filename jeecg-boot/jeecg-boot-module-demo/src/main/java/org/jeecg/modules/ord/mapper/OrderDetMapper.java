@@ -14,7 +14,8 @@ import org.apache.ibatis.annotations.Param;
 public interface OrderDetMapper extends BaseMapper<OrderDet> {
 
 	public boolean deleteByMainId(@Param("mainId") String mainId);
-    
+
+	//通过订单主表id查询明细
 	public List<OrderDet> selectByMainId(@Param("mainId") String mainId);
 
 }

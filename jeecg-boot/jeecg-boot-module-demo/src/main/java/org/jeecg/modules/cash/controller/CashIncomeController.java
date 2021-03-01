@@ -88,6 +88,12 @@ public class CashIncomeController extends JeecgController<CashIncome, ICashIncom
 		return Result.OK("添加成功！");
 	}
 
+	 /**
+	  *   来款审核
+	  *
+	  * @param id
+	  * @return
+	  */
 	 @AutoLog(value = "来款审核")
 	 @ApiOperation(value="来款审核", notes="来款审核")
 	 @GetMapping(value = "/checkIncome")
