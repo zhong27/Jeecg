@@ -43,6 +43,8 @@ public class OrderBookingServiceImpl extends ServiceImpl<OrderBookingMapper, Ord
     private OrderDetServiceImpl orderDetService;
     @Autowired
     private CashBalanceServiceImpl cashBalanceService;
+    @Autowired
+    private OrderBillServiceImpl orderBillService;
 
     @Override
     @Transactional
@@ -115,6 +117,8 @@ public class OrderBookingServiceImpl extends ServiceImpl<OrderBookingMapper, Ord
             }
             //订单支付，扣款
             cashBalanceService.payOrder(orderBooking);
+            //订单生成提单
+            orderBillService.addBill(orderBooking);
             orderBooking.setPayStatus(PayStatusEnum.PAY.getValue());
 
             updateById(orderBooking);

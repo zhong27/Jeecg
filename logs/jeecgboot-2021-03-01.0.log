@@ -14201,3 +14201,1259 @@ org.jeecg.modules.JeecgException: 订单已支付,不可编辑！
 2021-03-01 21:50:27.401 [http-nio-8080-exec-5] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614606627395, onlTable=null)
 2021-03-01 21:50:27.491 [http-nio-8080-exec-8] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_business,name,id
 2021-03-01 21:50:27.495 [http-nio-8080-exec-8] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365295872115507202, text=小宇), DictModel(value=1365311196995072001, text=测试), DictModel(value=1365899602443632641, text=张晓), DictModel(value=1365908249106219009, text=笑笑)], timestamp=1614606627492, onlTable=null)
+2021-03-01 21:51:15.201 [background-preinit] INFO  org.hibernate.validator.internal.util.Version:21 - HV000001: Hibernate Validator 6.1.6.Final
+2021-03-01 21:51:15.261 [main] INFO  org.jeecg.JeecgSystemApplication:55 - Starting JeecgSystemApplication on LAPTOP-ZKS with PID 13668 (E:\Jeecg\jeecg-boot\jeecg-boot-module-system\target\classes started by Lenovo in E:\Jeecg\jeecg-boot)
+2021-03-01 21:51:15.261 [main] INFO  org.jeecg.JeecgSystemApplication:655 - The following profiles are active: dev
+2021-03-01 21:51:17.612 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-01 21:51:17.615 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:127 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-03-01 21:51:17.773 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:187 - Finished Spring Data repository scanning in 145ms. Found 0 Redis repository interfaces.
+2021-03-01 21:51:18.306 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 21:51:18.310 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 21:51:18.412 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 21:51:18.502 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 21:51:18.505 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'shiroConfig' of type [org.jeecg.config.shiro.ShiroConfig$$EnhancerBySpringCGLIB$$34a37ae6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 21:51:18.548 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'shiroRealm' of type [org.jeecg.config.shiro.ShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 21:51:19.054 [main] INFO  org.jeecg.config.shiro.ShiroConfig:207 - ===============(1)创建缓存管理器RedisCacheManager
+2021-03-01 21:51:19.057 [main] INFO  org.jeecg.config.shiro.ShiroConfig:225 - ===============(2)创建RedisManager,连接Redis..
+2021-03-01 21:51:19.060 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'redisManager' of type [org.crazycake.shiro.RedisManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 21:51:19.066 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 21:51:19.104 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 21:51:19.336 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 21:51:19.342 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$3ef5a3be] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 21:51:19.353 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 21:51:19.370 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'redisConfig' of type [org.jeecg.config.redis.RedisConfig$$EnhancerBySpringCGLIB$$ab8c69fa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 21:51:19.414 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'org.apache.shiro.spring.boot.autoconfigure.ShiroBeanAutoConfiguration' of type [org.apache.shiro.spring.boot.autoconfigure.ShiroBeanAutoConfiguration$$EnhancerBySpringCGLIB$$e880109d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 21:51:19.418 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'eventBus' of type [org.apache.shiro.event.support.DefaultEventBus] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 21:51:19.793 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:108 - Tomcat initialized with port(s): 8080 (http)
+2021-03-01 21:51:19.805 [main] INFO  org.apache.coyote.http11.Http11NioProtocol:173 - Initializing ProtocolHandler ["http-nio-8080"]
+2021-03-01 21:51:19.807 [main] INFO  org.apache.catalina.core.StandardService:173 - Starting service [Tomcat]
+2021-03-01 21:51:19.808 [main] INFO  org.apache.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-03-01 21:51:19.810 [main] INFO  org.apache.catalina.core.AprLifecycleListener:173 - Loaded Apache Tomcat Native library [1.2.24] using APR version [1.7.0].
+2021-03-01 21:51:19.810 [main] INFO  org.apache.catalina.core.AprLifecycleListener:173 - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-03-01 21:51:19.811 [main] INFO  org.apache.catalina.core.AprLifecycleListener:173 - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-03-01 21:51:19.815 [main] INFO  org.apache.catalina.core.AprLifecycleListener:173 - OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2021-03-01 21:51:20.064 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/jeecg-boot]:173 - Initializing Spring embedded WebApplicationContext
+2021-03-01 21:51:20.065 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext:285 - Root WebApplicationContext: initialization completed in 4749 ms
+2021-03-01 21:51:20.862 [main] INFO  com.alibaba.druid.pool.DruidDataSource:994 - {dataSource-1,master} inited
+2021-03-01 21:51:20.863 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource:132 - dynamic-datasource - load a datasource named [master] success
+2021-03-01 21:51:20.864 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource:237 - dynamic-datasource initial loaded [1] datasource,primary datasource named [master]
+2021-03-01 21:51:24.404 [main] INFO  org.jeecg.config.redis.RedisConfig:66 -  --- redis config init --- 
+2021-03-01 21:51:25.273 [main] INFO  org.quartz.impl.StdSchedulerFactory:1220 - Using default implementation for ThreadExecutor
+2021-03-01 21:51:25.276 [main] INFO  org.quartz.simpl.SimpleThreadPool:268 - Job execution threads will use class loader of thread: main
+2021-03-01 21:51:25.287 [main] INFO  org.quartz.core.SchedulerSignalerImpl:61 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-03-01 21:51:25.287 [main] INFO  org.quartz.core.QuartzScheduler:229 - Quartz Scheduler v.2.3.2 created.
+2021-03-01 21:51:25.292 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore:672 - Using db table-based data access locking (synchronization).
+2021-03-01 21:51:25.293 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore:145 - JobStoreCMT initialized.
+2021-03-01 21:51:25.294 [main] INFO  org.quartz.core.QuartzScheduler:294 - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'MyScheduler' with instanceId 'LAPTOP-ZKS1614606685276'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+2021-03-01 21:51:25.295 [main] INFO  org.quartz.impl.StdSchedulerFactory:1374 - Quartz scheduler 'MyScheduler' initialized from an externally provided properties instance.
+2021-03-01 21:51:25.295 [main] INFO  org.quartz.impl.StdSchedulerFactory:1378 - Quartz scheduler version: 2.3.2
+2021-03-01 21:51:25.296 [main] INFO  org.quartz.core.QuartzScheduler:2293 - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@27048db3
+2021-03-01 21:51:29.765 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver:58 - Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-03-01 21:51:29.929 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-01 21:51:30.169 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-01 21:51:30.809 [main] INFO  org.apache.coyote.http11.Http11NioProtocol:173 - Starting ProtocolHandler ["http-nio-8080"]
+2021-03-01 21:51:30.835 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:220 - Tomcat started on port(s): 8080 (http) with context path '/jeecg-boot'
+2021-03-01 21:51:30.836 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:160 - Context refreshed
+2021-03-01 21:51:30.852 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:163 - Found 1 custom documentation plugin(s)
+2021-03-01 21:51:30.922 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner:41 - Scanning for api listing references
+2021-03-01 21:51:31.105 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_1
+2021-03-01 21:51:31.107 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_1
+2021-03-01 21:51:31.108 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_1
+2021-03-01 21:51:31.110 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_1
+2021-03-01 21:51:31.113 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_1
+2021-03-01 21:51:31.118 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_1
+2021-03-01 21:51:31.126 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_2
+2021-03-01 21:51:31.129 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_2
+2021-03-01 21:51:31.130 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_2
+2021-03-01 21:51:31.132 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_2
+2021-03-01 21:51:31.134 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_2
+2021-03-01 21:51:31.139 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_2
+2021-03-01 21:51:31.148 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_3
+2021-03-01 21:51:31.154 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_3
+2021-03-01 21:51:31.158 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_3
+2021-03-01 21:51:31.160 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_3
+2021-03-01 21:51:31.170 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_3
+2021-03-01 21:51:31.176 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_4
+2021-03-01 21:51:31.179 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_4
+2021-03-01 21:51:31.180 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_4
+2021-03-01 21:51:31.182 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_4
+2021-03-01 21:51:31.183 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_3
+2021-03-01 21:51:31.187 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_4
+2021-03-01 21:51:31.199 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_5
+2021-03-01 21:51:31.201 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_5
+2021-03-01 21:51:31.202 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_5
+2021-03-01 21:51:31.203 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_5
+2021-03-01 21:51:31.205 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_4
+2021-03-01 21:51:31.209 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_5
+2021-03-01 21:51:31.217 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_6
+2021-03-01 21:51:31.219 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_6
+2021-03-01 21:51:31.221 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_6
+2021-03-01 21:51:31.223 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_6
+2021-03-01 21:51:31.225 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_5
+2021-03-01 21:51:31.229 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_6
+2021-03-01 21:51:31.237 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_7
+2021-03-01 21:51:31.239 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_7
+2021-03-01 21:51:31.241 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_7
+2021-03-01 21:51:31.243 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_7
+2021-03-01 21:51:31.253 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_6
+2021-03-01 21:51:31.281 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_8
+2021-03-01 21:51:31.284 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_8
+2021-03-01 21:51:31.285 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_8
+2021-03-01 21:51:31.287 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_8
+2021-03-01 21:51:31.289 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_7
+2021-03-01 21:51:31.296 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_7
+2021-03-01 21:51:31.304 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_9
+2021-03-01 21:51:31.306 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_9
+2021-03-01 21:51:31.307 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_9
+2021-03-01 21:51:31.309 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_9
+2021-03-01 21:51:31.310 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_8
+2021-03-01 21:51:31.315 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_8
+2021-03-01 21:51:31.322 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_10
+2021-03-01 21:51:31.330 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_10
+2021-03-01 21:51:31.332 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_10
+2021-03-01 21:51:31.335 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_10
+2021-03-01 21:51:31.345 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_9
+2021-03-01 21:51:31.358 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_11
+2021-03-01 21:51:31.360 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_11
+2021-03-01 21:51:31.362 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_11
+2021-03-01 21:51:31.364 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_11
+2021-03-01 21:51:31.365 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_9
+2021-03-01 21:51:31.369 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_10
+2021-03-01 21:51:31.375 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_12
+2021-03-01 21:51:31.378 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_12
+2021-03-01 21:51:31.379 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_12
+2021-03-01 21:51:31.381 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_12
+2021-03-01 21:51:31.382 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_10
+2021-03-01 21:51:31.386 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_11
+2021-03-01 21:51:31.395 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_13
+2021-03-01 21:51:31.397 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_13
+2021-03-01 21:51:31.398 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_13
+2021-03-01 21:51:31.399 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_13
+2021-03-01 21:51:31.401 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_11
+2021-03-01 21:51:31.404 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_12
+2021-03-01 21:51:31.408 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_14
+2021-03-01 21:51:31.410 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_14
+2021-03-01 21:51:31.411 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_14
+2021-03-01 21:51:31.413 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_14
+2021-03-01 21:51:31.414 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_12
+2021-03-01 21:51:31.418 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_13
+2021-03-01 21:51:31.423 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_15
+2021-03-01 21:51:31.425 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_15
+2021-03-01 21:51:31.426 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_15
+2021-03-01 21:51:31.427 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_15
+2021-03-01 21:51:31.428 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_13
+2021-03-01 21:51:31.432 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_14
+2021-03-01 21:51:31.436 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_16
+2021-03-01 21:51:31.438 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_16
+2021-03-01 21:51:31.439 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_16
+2021-03-01 21:51:31.440 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_16
+2021-03-01 21:51:31.442 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_14
+2021-03-01 21:51:31.448 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_15
+2021-03-01 21:51:31.456 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_17
+2021-03-01 21:51:31.457 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_17
+2021-03-01 21:51:31.458 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_17
+2021-03-01 21:51:31.459 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_17
+2021-03-01 21:51:31.461 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_15
+2021-03-01 21:51:31.468 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_16
+2021-03-01 21:51:31.473 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_18
+2021-03-01 21:51:31.474 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_18
+2021-03-01 21:51:31.475 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_18
+2021-03-01 21:51:31.476 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_18
+2021-03-01 21:51:31.477 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_16
+2021-03-01 21:51:31.480 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_17
+2021-03-01 21:51:31.491 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:727 - Starting Quartz Scheduler now
+2021-03-01 21:51:31.645 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore:3644 - ClusterManager: detected 1 failed or restarted instances.
+2021-03-01 21:51:31.645 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore:3503 - ClusterManager: Scanning for instance "LAPTOP-ZKS1614606406631"'s failed in-progress jobs.
+2021-03-01 21:51:31.778 [main] INFO  org.quartz.core.QuartzScheduler:547 - Scheduler MyScheduler_$_LAPTOP-ZKS1614606685276 started.
+2021-03-01 21:51:31.797 [main] INFO  org.jeecg.JeecgSystemApplication:61 - Started JeecgSystemApplication in 17.663 seconds (JVM running for 19.685)
+2021-03-01 21:51:31.805 [main] INFO  org.jeecg.modules.init.SystemInitListener:27 -  服务已启动，准备初始化路由配置 ###################
+2021-03-01 21:51:32.117 [RMI TCP Connection(1)-192.168.2.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/jeecg-boot]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-01 21:51:32.117 [RMI TCP Connection(1)-192.168.2.1] INFO  org.springframework.web.servlet.DispatcherServlet:525 - Initializing Servlet 'dispatcherServlet'
+2021-03-01 21:51:32.135 [RMI TCP Connection(1)-192.168.2.1] INFO  org.springframework.web.servlet.DispatcherServlet:547 - Completed initialization in 17 ms
+2021-03-01 21:51:33.344 [main] INFO  org.jeecg.JeecgSystemApplication:39 - 
+----------------------------------------------------------
+	Application Jeecg-Boot is running! Access URLs:
+	Local: 		http://localhost:8080/jeecg-boot/
+	External: 	http://192.168.2.1:8080/jeecg-boot/
+	Swagger文档: 	http://192.168.2.1:8080/jeecg-boot/doc.html
+----------------------------------------------------------
+2021-03-01 21:51:34.933 [http-nio-8080-exec-2] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-01 21:52:39.138 [http-nio-8080-exec-9] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-01 21:52:43.772 [http-nio-8080-exec-3] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-01 21:52:44.150 [http-nio-8080-exec-8] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 21:52:44.161 [http-nio-8080-exec-8] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614606764150, onlTable=null)
+2021-03-01 21:52:53.044 [http-nio-8080-exec-1] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 21:52:53.047 [http-nio-8080-exec-1] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614606773045, onlTable=null)
+2021-03-01 21:52:53.865 [http-nio-8080-exec-3] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 21:52:53.869 [http-nio-8080-exec-3] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614606773865, onlTable=null)
+2021-03-01 21:52:55.789 [http-nio-8080-exec-8] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 21:52:55.797 [http-nio-8080-exec-8] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614606775790, onlTable=null)
+2021-03-01 21:53:01.967 [http-nio-8080-exec-9] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 21:53:01.966 [http-nio-8080-exec-3] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 21:53:01.972 [http-nio-8080-exec-9] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614606781968, onlTable=null)
+2021-03-01 21:53:01.972 [http-nio-8080-exec-3] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614606781968, onlTable=null)
+2021-03-01 21:53:04.233 [http-nio-8080-exec-6] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 21:53:04.236 [http-nio-8080-exec-6] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614606784234, onlTable=null)
+2021-03-01 21:53:37.248 [http-nio-8080-exec-1] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 21:53:37.254 [http-nio-8080-exec-1] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614606817249, onlTable=null)
+2021-03-01 21:54:03.810 [http-nio-8080-exec-8] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,customer_name
+2021-03-01 21:54:03.820 [http-nio-8080-exec-8] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=佳佳建公司, text=佳佳建公司), DictModel(value=广钢集团, text=广钢集团), DictModel(value=申科重工, text=申科重工), DictModel(value=中建经销公司, text=中建经销公司), DictModel(value=广州科技, text=广州科技)], timestamp=1614606843812, onlTable=null)
+2021-03-01 21:54:27.219 [http-nio-8080-exec-8] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : sto_warehouse,house_name,id
+2021-03-01 21:54:27.223 [http-nio-8080-exec-8] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365588567270658049, text=广州仓), DictModel(value=1365588958129459201, text=柳州仓), DictModel(value=1365593172889059330, text=南宁仓)], timestamp=1614606867220, onlTable=null)
+2021-03-01 21:54:28.562 [http-nio-8080-exec-3] INFO  org.jeecg.modules.online.cgreport.a.a:290 - Online报表: 走了稳定逻辑
+2021-03-01 21:54:28.604 [http-nio-8080-exec-3] INFO  org.jeecg.common.system.query.QueryGenerator:909 - query auth sql is = 
+2021-03-01 21:54:28.604 [http-nio-8080-exec-3] INFO  org.jeecg.modules.online.cgreport.service.a.b:135 - 报表查询sql=>
+select * from (SELECT product_name,product_class,mat_len,mat_width,mat_thick,mat_no,price FROM sto_material_information) jeecg_rp_temp  where 1=1 
+2021-03-01 21:54:45.341 [http-nio-8080-exec-2] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 21:54:45.344 [http-nio-8080-exec-2] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614606885341, onlTable=null)
+2021-03-01 21:54:47.039 [http-nio-8080-exec-1] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 21:54:47.042 [http-nio-8080-exec-7] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 21:54:47.042 [http-nio-8080-exec-1] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614606887040, onlTable=null)
+2021-03-01 21:54:47.046 [http-nio-8080-exec-7] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614606887042, onlTable=null)
+2021-03-01 21:54:51.335 [http-nio-8080-exec-5] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 21:54:51.337 [http-nio-8080-exec-5] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614606891336, onlTable=null)
+2021-03-01 21:54:52.912 [http-nio-8080-exec-6] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 21:54:52.915 [http-nio-8080-exec-6] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614606892912, onlTable=null)
+2021-03-01 21:54:56.506 [http-nio-8080-exec-9] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 21:54:56.512 [http-nio-8080-exec-9] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614606896508, onlTable=null)
+2021-03-01 21:55:19.651 [http-nio-8080-exec-2] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 21:55:19.653 [http-nio-8080-exec-2] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614606919651, onlTable=null)
+2021-03-01 21:55:56.335 [http-nio-8080-exec-9] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 21:55:56.341 [http-nio-8080-exec-9] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614606956336, onlTable=null)
+2021-03-01 21:55:58.913 [http-nio-8080-exec-3] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 21:55:58.915 [http-nio-8080-exec-3] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614606958913, onlTable=null)
+2021-03-01 21:56:26.646 [http-nio-8080-exec-10] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 21:56:26.651 [http-nio-8080-exec-10] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614606986648, onlTable=null)
+2021-03-01 21:56:30.955 [http-nio-8080-exec-7] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 21:56:30.955 [http-nio-8080-exec-9] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 21:56:30.967 [http-nio-8080-exec-9] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614606990958, onlTable=null)
+2021-03-01 21:56:30.967 [http-nio-8080-exec-7] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614606990958, onlTable=null)
+2021-03-01 21:56:35.991 [http-nio-8080-exec-2] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 21:56:35.994 [http-nio-8080-exec-2] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614606995991, onlTable=null)
+2021-03-01 21:56:42.172 [http-nio-8080-exec-4] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 21:56:42.172 [http-nio-8080-exec-9] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 21:56:42.180 [http-nio-8080-exec-9] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614607002176, onlTable=null)
+2021-03-01 21:56:42.180 [http-nio-8080-exec-4] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614607002176, onlTable=null)
+2021-03-01 21:56:43.803 [http-nio-8080-exec-5] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 21:56:43.807 [http-nio-8080-exec-5] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614607003804, onlTable=null)
+2021-03-01 21:56:44.743 [http-nio-8080-exec-8] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 21:56:44.746 [http-nio-8080-exec-8] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614607004743, onlTable=null)
+2021-03-01 21:56:44.753 [http-nio-8080-exec-1] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 21:56:44.755 [http-nio-8080-exec-1] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614607004753, onlTable=null)
+2021-03-01 21:56:55.823 [http-nio-8080-exec-9] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->order_id = 1366380307044900866
+2021-03-01 21:57:02.349 [http-nio-8080-exec-3] ERROR o.jeecg.common.exception.JeecgBootExceptionHandler:33 - 订单已经支付！
+org.jeecg.modules.JeecgException: 订单已经支付！
+	at org.jeecg.modules.ord.service.impl.OrderBookingServiceImpl.changePayStatus(OrderBookingServiceImpl.java:107)
+	at org.jeecg.modules.ord.service.impl.OrderBookingServiceImpl$$FastClassBySpringCGLIB$$f714d033.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:687)
+	at org.jeecg.modules.ord.service.impl.OrderBookingServiceImpl$$EnhancerBySpringCGLIB$$700c81e.changePayStatus(<generated>)
+	at org.jeecg.modules.ord.controller.OrderBookingController.changePayStatus(OrderBookingController.java:213)
+	at org.jeecg.modules.ord.controller.OrderBookingController$$FastClassBySpringCGLIB$$46d2615b.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:88)
+	at org.jeecg.common.aspect.DictAspect.doAround(DictAspect.java:50)
+	at sun.reflect.GeneratedMethodAccessor228.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:633)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:88)
+	at org.jeecg.common.aspect.AutoLogAspect.around(AutoLogAspect.java:56)
+	at sun.reflect.GeneratedMethodAccessor244.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:633)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
+	at org.jeecg.modules.ord.controller.OrderBookingController$$EnhancerBySpringCGLIB$$13e3aec1.changePayStatus(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:450)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.github.xiaoymin.knife4j.spring.filter.ProductionSecurityFilter.doFilter(ProductionSecurityFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.github.xiaoymin.knife4j.spring.filter.SecurityBasicAuthFilter.doFilter(SecurityBasicAuthFilter.java:90)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.web.trace.servlet.HttpTraceFilter.doFilterInternal(HttpTraceFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-03-01 21:57:04.162 [http-nio-8080-exec-8] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->order_id = 1366373242922721282
+2021-03-01 21:57:04.446 [http-nio-8080-exec-6] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->order_id = 1366380307044900866
+2021-03-01 21:57:07.237 [http-nio-8080-exec-7] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 21:57:07.239 [http-nio-8080-exec-7] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614607027238, onlTable=null)
+2021-03-01 22:02:17.537 [http-nio-8080-exec-7] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:02:17.541 [http-nio-8080-exec-7] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614607337539, onlTable=null)
+2021-03-01 22:02:17.547 [http-nio-8080-exec-4] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:02:17.550 [http-nio-8080-exec-4] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614607337548, onlTable=null)
+2021-03-01 22:02:19.613 [http-nio-8080-exec-3] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-01 22:02:24.602 [http-nio-8080-exec-8] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-01 22:02:24.881 [http-nio-8080-exec-9] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:02:24.887 [http-nio-8080-exec-9] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614607344882, onlTable=null)
+2021-03-01 22:02:24.892 [http-nio-8080-exec-3] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:02:24.896 [http-nio-8080-exec-3] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614607344893, onlTable=null)
+2021-03-01 22:02:27.512 [http-nio-8080-exec-8] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->order_id = 1366380307044900866
+2021-03-01 22:06:55.900 [http-nio-8080-exec-5] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:06:55.905 [http-nio-8080-exec-5] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614607615902, onlTable=null)
+2021-03-01 22:11:23.125 [http-nio-8080-exec-4] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:11:23.147 [http-nio-8080-exec-4] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614607883125, onlTable=null)
+2021-03-01 22:11:23.176 [http-nio-8080-exec-2] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:11:23.178 [http-nio-8080-exec-2] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614607883176, onlTable=null)
+2021-03-01 22:11:25.204 [http-nio-8080-exec-5] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->order_id = 1366373242922721282
+2021-03-01 22:13:02.750 [http-nio-8080-exec-4] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:13:02.757 [http-nio-8080-exec-4] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614607982753, onlTable=null)
+2021-03-01 22:13:34.638 [http-nio-8080-exec-8] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:13:34.640 [http-nio-8080-exec-8] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614608014638, onlTable=null)
+2021-03-01 22:13:34.651 [http-nio-8080-exec-10] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:13:34.655 [http-nio-8080-exec-10] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614608014652, onlTable=null)
+2021-03-01 22:13:36.788 [http-nio-8080-exec-1] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->order_id = 1366380307044900866
+2021-03-01 22:13:47.336 [http-nio-8080-exec-2] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:13:47.344 [http-nio-8080-exec-2] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614608027338, onlTable=null)
+2021-03-01 22:21:00.773 [http-nio-8080-exec-2] INFO  org.jeecg.config.shiro.ShiroRealm:155 - ——————————用户在线操作，更新token保证不掉线—————————jwtTokenRefresh——————— eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTQ2MDYyNjQsInVzZXJuYW1lIjoiYWRtaW4ifQ.gfN7AggIi41wONLpcS4LqTc3_-IAu3pXH2w51_ZPwaQ
+2021-03-01 22:21:00.774 [http-nio-8080-exec-4] INFO  org.jeecg.config.shiro.ShiroRealm:155 - ——————————用户在线操作，更新token保证不掉线—————————jwtTokenRefresh——————— eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTQ2MDYyNjQsInVzZXJuYW1lIjoiYWRtaW4ifQ.gfN7AggIi41wONLpcS4LqTc3_-IAu3pXH2w51_ZPwaQ
+2021-03-01 22:21:00.777 [http-nio-8080-exec-2] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:21:00.774 [http-nio-8080-exec-6] INFO  org.jeecg.config.shiro.ShiroRealm:155 - ——————————用户在线操作，更新token保证不掉线—————————jwtTokenRefresh——————— eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTQ2MDYyNjQsInVzZXJuYW1lIjoiYWRtaW4ifQ.gfN7AggIi41wONLpcS4LqTc3_-IAu3pXH2w51_ZPwaQ
+2021-03-01 22:21:00.777 [http-nio-8080-exec-4] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:21:00.788 [http-nio-8080-exec-2] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614608460777, onlTable=null)
+2021-03-01 22:21:00.805 [http-nio-8080-exec-4] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614608460780, onlTable=null)
+2021-03-01 22:21:03.154 [http-nio-8080-exec-5] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->order_id = 1366380307044900866
+2021-03-01 22:22:21.008 [background-preinit] INFO  org.hibernate.validator.internal.util.Version:21 - HV000001: Hibernate Validator 6.1.6.Final
+2021-03-01 22:22:21.079 [main] INFO  org.jeecg.JeecgSystemApplication:55 - Starting JeecgSystemApplication on LAPTOP-ZKS with PID 18152 (E:\Jeecg\jeecg-boot\jeecg-boot-module-system\target\classes started by Lenovo in E:\Jeecg\jeecg-boot)
+2021-03-01 22:22:21.080 [main] INFO  org.jeecg.JeecgSystemApplication:655 - The following profiles are active: dev
+2021-03-01 22:22:23.285 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-01 22:22:23.288 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:127 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-03-01 22:22:23.466 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:187 - Finished Spring Data repository scanning in 158ms. Found 0 Redis repository interfaces.
+2021-03-01 22:22:24.071 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 22:22:24.075 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 22:22:24.188 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 22:22:24.291 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 22:22:24.293 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'shiroConfig' of type [org.jeecg.config.shiro.ShiroConfig$$EnhancerBySpringCGLIB$$1ab9720d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 22:22:24.334 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'shiroRealm' of type [org.jeecg.config.shiro.ShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 22:22:24.876 [main] INFO  org.jeecg.config.shiro.ShiroConfig:207 - ===============(1)创建缓存管理器RedisCacheManager
+2021-03-01 22:22:24.879 [main] INFO  org.jeecg.config.shiro.ShiroConfig:225 - ===============(2)创建RedisManager,连接Redis..
+2021-03-01 22:22:24.884 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'redisManager' of type [org.crazycake.shiro.RedisManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 22:22:24.888 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 22:22:24.928 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 22:22:25.170 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 22:22:25.176 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$250b9ae5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 22:22:25.185 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 22:22:25.201 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'redisConfig' of type [org.jeecg.config.redis.RedisConfig$$EnhancerBySpringCGLIB$$91a26121] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 22:22:25.248 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'org.apache.shiro.spring.boot.autoconfigure.ShiroBeanAutoConfiguration' of type [org.apache.shiro.spring.boot.autoconfigure.ShiroBeanAutoConfiguration$$EnhancerBySpringCGLIB$$ce9607c4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 22:22:25.253 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'eventBus' of type [org.apache.shiro.event.support.DefaultEventBus] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 22:22:25.639 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:108 - Tomcat initialized with port(s): 8080 (http)
+2021-03-01 22:22:25.651 [main] INFO  org.apache.coyote.http11.Http11NioProtocol:173 - Initializing ProtocolHandler ["http-nio-8080"]
+2021-03-01 22:22:25.652 [main] INFO  org.apache.catalina.core.StandardService:173 - Starting service [Tomcat]
+2021-03-01 22:22:25.652 [main] INFO  org.apache.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-03-01 22:22:25.654 [main] INFO  org.apache.catalina.core.AprLifecycleListener:173 - Loaded Apache Tomcat Native library [1.2.24] using APR version [1.7.0].
+2021-03-01 22:22:25.655 [main] INFO  org.apache.catalina.core.AprLifecycleListener:173 - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-03-01 22:22:25.655 [main] INFO  org.apache.catalina.core.AprLifecycleListener:173 - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-03-01 22:22:25.660 [main] INFO  org.apache.catalina.core.AprLifecycleListener:173 - OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2021-03-01 22:22:25.908 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/jeecg-boot]:173 - Initializing Spring embedded WebApplicationContext
+2021-03-01 22:22:25.909 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext:285 - Root WebApplicationContext: initialization completed in 4763 ms
+2021-03-01 22:22:26.706 [main] INFO  com.alibaba.druid.pool.DruidDataSource:994 - {dataSource-1,master} inited
+2021-03-01 22:22:26.707 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource:132 - dynamic-datasource - load a datasource named [master] success
+2021-03-01 22:22:26.708 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource:237 - dynamic-datasource initial loaded [1] datasource,primary datasource named [master]
+2021-03-01 22:22:30.368 [main] INFO  org.jeecg.config.redis.RedisConfig:66 -  --- redis config init --- 
+2021-03-01 22:22:31.197 [main] INFO  org.quartz.impl.StdSchedulerFactory:1220 - Using default implementation for ThreadExecutor
+2021-03-01 22:22:31.199 [main] INFO  org.quartz.simpl.SimpleThreadPool:268 - Job execution threads will use class loader of thread: main
+2021-03-01 22:22:31.209 [main] INFO  org.quartz.core.SchedulerSignalerImpl:61 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-03-01 22:22:31.210 [main] INFO  org.quartz.core.QuartzScheduler:229 - Quartz Scheduler v.2.3.2 created.
+2021-03-01 22:22:31.213 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore:672 - Using db table-based data access locking (synchronization).
+2021-03-01 22:22:31.215 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore:145 - JobStoreCMT initialized.
+2021-03-01 22:22:31.216 [main] INFO  org.quartz.core.QuartzScheduler:294 - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'MyScheduler' with instanceId 'LAPTOP-ZKS1614608551199'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+2021-03-01 22:22:31.217 [main] INFO  org.quartz.impl.StdSchedulerFactory:1374 - Quartz scheduler 'MyScheduler' initialized from an externally provided properties instance.
+2021-03-01 22:22:31.217 [main] INFO  org.quartz.impl.StdSchedulerFactory:1378 - Quartz scheduler version: 2.3.2
+2021-03-01 22:22:31.217 [main] INFO  org.quartz.core.QuartzScheduler:2293 - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@f6cde7e
+2021-03-01 22:22:35.964 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver:58 - Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-03-01 22:22:36.135 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-01 22:22:36.436 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-01 22:22:37.171 [main] INFO  org.apache.coyote.http11.Http11NioProtocol:173 - Starting ProtocolHandler ["http-nio-8080"]
+2021-03-01 22:22:37.206 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:220 - Tomcat started on port(s): 8080 (http) with context path '/jeecg-boot'
+2021-03-01 22:22:37.208 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:160 - Context refreshed
+2021-03-01 22:22:37.233 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:163 - Found 1 custom documentation plugin(s)
+2021-03-01 22:22:37.335 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner:41 - Scanning for api listing references
+2021-03-01 22:22:37.534 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_1
+2021-03-01 22:22:37.536 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_1
+2021-03-01 22:22:37.538 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_1
+2021-03-01 22:22:37.541 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_1
+2021-03-01 22:22:37.543 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_1
+2021-03-01 22:22:37.550 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_1
+2021-03-01 22:22:37.558 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_2
+2021-03-01 22:22:37.563 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_2
+2021-03-01 22:22:37.566 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_2
+2021-03-01 22:22:37.568 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_2
+2021-03-01 22:22:37.570 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_2
+2021-03-01 22:22:37.576 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_2
+2021-03-01 22:22:37.585 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_3
+2021-03-01 22:22:37.592 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_3
+2021-03-01 22:22:37.595 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_3
+2021-03-01 22:22:37.599 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_3
+2021-03-01 22:22:37.611 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_3
+2021-03-01 22:22:37.618 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_4
+2021-03-01 22:22:37.620 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_4
+2021-03-01 22:22:37.622 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_4
+2021-03-01 22:22:37.624 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_4
+2021-03-01 22:22:37.625 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_3
+2021-03-01 22:22:37.632 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_4
+2021-03-01 22:22:37.647 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_5
+2021-03-01 22:22:37.649 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_5
+2021-03-01 22:22:37.651 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_5
+2021-03-01 22:22:37.652 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_5
+2021-03-01 22:22:37.654 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_4
+2021-03-01 22:22:37.659 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_5
+2021-03-01 22:22:37.670 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_6
+2021-03-01 22:22:37.673 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_6
+2021-03-01 22:22:37.675 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_6
+2021-03-01 22:22:37.677 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_6
+2021-03-01 22:22:37.679 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_5
+2021-03-01 22:22:37.683 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_6
+2021-03-01 22:22:37.692 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_7
+2021-03-01 22:22:37.693 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_7
+2021-03-01 22:22:37.696 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_7
+2021-03-01 22:22:37.698 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_7
+2021-03-01 22:22:37.708 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_6
+2021-03-01 22:22:37.737 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_8
+2021-03-01 22:22:37.740 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_8
+2021-03-01 22:22:37.743 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_8
+2021-03-01 22:22:37.745 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_8
+2021-03-01 22:22:37.747 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_7
+2021-03-01 22:22:37.754 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_7
+2021-03-01 22:22:37.761 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_9
+2021-03-01 22:22:37.763 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_9
+2021-03-01 22:22:37.765 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_9
+2021-03-01 22:22:37.767 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_9
+2021-03-01 22:22:37.768 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_8
+2021-03-01 22:22:37.773 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_8
+2021-03-01 22:22:37.783 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_10
+2021-03-01 22:22:37.795 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_10
+2021-03-01 22:22:37.799 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_10
+2021-03-01 22:22:37.804 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_10
+2021-03-01 22:22:37.816 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_9
+2021-03-01 22:22:37.830 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_11
+2021-03-01 22:22:37.833 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_11
+2021-03-01 22:22:37.836 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_11
+2021-03-01 22:22:37.839 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_11
+2021-03-01 22:22:37.842 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_9
+2021-03-01 22:22:37.849 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_10
+2021-03-01 22:22:37.859 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_12
+2021-03-01 22:22:37.861 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_12
+2021-03-01 22:22:37.864 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_12
+2021-03-01 22:22:37.866 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_12
+2021-03-01 22:22:37.869 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_10
+2021-03-01 22:22:37.874 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_11
+2021-03-01 22:22:37.882 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_13
+2021-03-01 22:22:37.884 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_13
+2021-03-01 22:22:37.886 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_13
+2021-03-01 22:22:37.888 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_13
+2021-03-01 22:22:37.889 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_11
+2021-03-01 22:22:37.893 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_12
+2021-03-01 22:22:37.900 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_14
+2021-03-01 22:22:37.901 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_14
+2021-03-01 22:22:37.903 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_14
+2021-03-01 22:22:37.904 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_14
+2021-03-01 22:22:37.905 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_12
+2021-03-01 22:22:37.909 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_13
+2021-03-01 22:22:37.914 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_15
+2021-03-01 22:22:37.916 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_15
+2021-03-01 22:22:37.917 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_15
+2021-03-01 22:22:37.917 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_15
+2021-03-01 22:22:37.919 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_13
+2021-03-01 22:22:37.922 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_14
+2021-03-01 22:22:37.928 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_16
+2021-03-01 22:22:37.930 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_16
+2021-03-01 22:22:37.931 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_16
+2021-03-01 22:22:37.933 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_16
+2021-03-01 22:22:37.934 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_14
+2021-03-01 22:22:37.939 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_15
+2021-03-01 22:22:37.949 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_17
+2021-03-01 22:22:37.950 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_17
+2021-03-01 22:22:37.951 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_17
+2021-03-01 22:22:37.953 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_17
+2021-03-01 22:22:37.956 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_15
+2021-03-01 22:22:37.965 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_16
+2021-03-01 22:22:37.972 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_18
+2021-03-01 22:22:37.974 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_18
+2021-03-01 22:22:37.975 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_18
+2021-03-01 22:22:37.976 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_18
+2021-03-01 22:22:37.978 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_16
+2021-03-01 22:22:37.982 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_17
+2021-03-01 22:22:37.997 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:727 - Starting Quartz Scheduler now
+2021-03-01 22:22:38.143 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/jeecg-boot]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-01 22:22:38.143 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet:525 - Initializing Servlet 'dispatcherServlet'
+2021-03-01 22:22:38.158 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet:547 - Completed initialization in 15 ms
+2021-03-01 22:22:38.188 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore:3644 - ClusterManager: detected 1 failed or restarted instances.
+2021-03-01 22:22:38.188 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore:3503 - ClusterManager: Scanning for instance "LAPTOP-ZKS1614606685276"'s failed in-progress jobs.
+2021-03-01 22:22:38.279 [http-nio-8080-exec-1] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-01 22:22:38.342 [main] INFO  org.quartz.core.QuartzScheduler:547 - Scheduler MyScheduler_$_LAPTOP-ZKS1614608551199 started.
+2021-03-01 22:22:38.394 [main] INFO  org.jeecg.JeecgSystemApplication:61 - Started JeecgSystemApplication in 18.528 seconds (JVM running for 20.798)
+2021-03-01 22:22:38.404 [main] INFO  org.jeecg.modules.init.SystemInitListener:27 -  服务已启动，准备初始化路由配置 ###################
+2021-03-01 22:22:40.159 [main] INFO  org.jeecg.JeecgSystemApplication:39 - 
+----------------------------------------------------------
+	Application Jeecg-Boot is running! Access URLs:
+	Local: 		http://localhost:8080/jeecg-boot/
+	External: 	http://192.168.2.1:8080/jeecg-boot/
+	Swagger文档: 	http://192.168.2.1:8080/jeecg-boot/doc.html
+----------------------------------------------------------
+2021-03-01 22:23:40.769 [http-nio-8080-exec-3] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->order_id = 1366373242922721282
+2021-03-01 22:23:42.415 [http-nio-8080-exec-5] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : sto_warehouse,house_name,id
+2021-03-01 22:23:42.435 [http-nio-8080-exec-5] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365588567270658049, text=广州仓), DictModel(value=1365588958129459201, text=柳州仓), DictModel(value=1365593172889059330, text=南宁仓)], timestamp=1614608622416, onlTable=null)
+2021-03-01 22:23:43.867 [http-nio-8080-exec-1] INFO  org.jeecg.modules.online.cgreport.a.a:290 - Online报表: 走了稳定逻辑
+2021-03-01 22:23:43.899 [http-nio-8080-exec-1] INFO  org.jeecg.common.system.query.QueryGenerator:909 - query auth sql is = 
+2021-03-01 22:23:43.900 [http-nio-8080-exec-1] INFO  org.jeecg.modules.online.cgreport.service.a.b:135 - 报表查询sql=>
+select * from (SELECT product_name,product_class,mat_len,mat_width,mat_thick,mat_no,warehouse,price FROM sto_enter_house) jeecg_rp_temp  where 1=1 
+2021-03-01 22:23:54.980 [http-nio-8080-exec-5] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->order_id = 1366373242922721282
+2021-03-01 22:24:01.072 [http-nio-8080-exec-3] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:24:01.088 [http-nio-8080-exec-3] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614608641072, onlTable=null)
+2021-03-01 22:24:22.822 [http-nio-8080-exec-7] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:24:22.822 [http-nio-8080-exec-9] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:24:22.836 [http-nio-8080-exec-7] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614608662825, onlTable=null)
+2021-03-01 22:24:22.848 [http-nio-8080-exec-9] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614608662825, onlTable=null)
+2021-03-01 22:24:24.984 [http-nio-8080-exec-1] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->order_id = 1366380307044900866
+2021-03-01 22:25:03.013 [http-nio-8080-exec-6] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:25:03.022 [http-nio-8080-exec-6] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614608703017, onlTable=null)
+2021-03-01 22:25:39.962 [http-nio-8080-exec-4] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:25:39.967 [http-nio-8080-exec-5] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:25:39.974 [http-nio-8080-exec-4] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614608739963, onlTable=null)
+2021-03-01 22:25:39.981 [http-nio-8080-exec-5] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614608739967, onlTable=null)
+2021-03-01 22:25:44.647 [http-nio-8080-exec-6] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->order_id = 1366380307044900866
+2021-03-01 22:26:01.286 [http-nio-8080-exec-9] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->order_id = 1366373242922721282
+2021-03-01 22:26:05.192 [http-nio-8080-exec-1] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->order_id = 1366380307044900866
+2021-03-01 22:26:11.438 [http-nio-8080-exec-3] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:26:11.440 [http-nio-8080-exec-3] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614608771438, onlTable=null)
+2021-03-01 22:26:23.754 [http-nio-8080-exec-1] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:26:23.753 [http-nio-8080-exec-10] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:26:23.760 [http-nio-8080-exec-1] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614608783754, onlTable=null)
+2021-03-01 22:26:23.760 [http-nio-8080-exec-10] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614608783757, onlTable=null)
+2021-03-01 22:26:34.765 [http-nio-8080-exec-8] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:26:34.770 [http-nio-8080-exec-8] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614608794766, onlTable=null)
+2021-03-01 22:27:14.862 [http-nio-8080-exec-3] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:27:14.867 [http-nio-8080-exec-3] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614608834864, onlTable=null)
+2021-03-01 22:27:27.472 [http-nio-8080-exec-1] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:27:27.482 [http-nio-8080-exec-1] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614608847475, onlTable=null)
+2021-03-01 22:27:29.926 [http-nio-8080-exec-5] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:27:29.929 [http-nio-8080-exec-5] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614608849926, onlTable=null)
+2021-03-01 22:27:52.677 [http-nio-8080-exec-3] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:27:52.680 [http-nio-8080-exec-3] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614608872679, onlTable=null)
+2021-03-01 22:27:52.681 [http-nio-8080-exec-4] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:27:52.683 [http-nio-8080-exec-4] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614608872681, onlTable=null)
+2021-03-01 22:27:54.699 [http-nio-8080-exec-5] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->order_id = 1366380307044900866
+2021-03-01 22:28:28.453 [http-nio-8080-exec-1] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:28:28.456 [http-nio-8080-exec-1] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614608908454, onlTable=null)
+2021-03-01 22:29:00.655 [http-nio-8080-exec-10] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-01 22:29:05.430 [http-nio-8080-exec-9] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-01 22:29:05.859 [http-nio-8080-exec-3] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:29:05.865 [http-nio-8080-exec-3] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614608945860, onlTable=null)
+2021-03-01 22:29:24.399 [http-nio-8080-exec-8] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:29:24.401 [http-nio-8080-exec-1] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:29:24.406 [http-nio-8080-exec-8] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614608964400, onlTable=null)
+2021-03-01 22:29:24.408 [http-nio-8080-exec-1] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614608964402, onlTable=null)
+2021-03-01 22:29:25.136 [http-nio-8080-exec-10] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:29:25.139 [http-nio-8080-exec-10] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614608965137, onlTable=null)
+2021-03-01 22:29:25.216 [http-nio-8080-exec-7] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_business,name,id
+2021-03-01 22:29:25.223 [http-nio-8080-exec-7] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365295872115507202, text=小宇), DictModel(value=1365311196995072001, text=测试), DictModel(value=1365899602443632641, text=张晓), DictModel(value=1365908249106219009, text=笑笑)], timestamp=1614608965217, onlTable=null)
+2021-03-01 22:30:37.262 [http-nio-8080-exec-8] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-01 22:30:41.685 [http-nio-8080-exec-3] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-01 22:30:41.907 [http-nio-8080-exec-2] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:30:41.911 [http-nio-8080-exec-2] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614609041908, onlTable=null)
+2021-03-01 22:30:41.915 [http-nio-8080-exec-9] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:30:41.917 [http-nio-8080-exec-9] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614609041916, onlTable=null)
+2021-03-01 22:31:26.015 [http-nio-8080-exec-6] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_business,name,id
+2021-03-01 22:31:26.021 [http-nio-8080-exec-6] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365295872115507202, text=小宇), DictModel(value=1365311196995072001, text=测试), DictModel(value=1365899602443632641, text=张晓), DictModel(value=1365908249106219009, text=笑笑)], timestamp=1614609086017, onlTable=null)
+2021-03-01 22:31:26.025 [http-nio-8080-exec-4] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:31:26.027 [http-nio-8080-exec-4] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614609086025, onlTable=null)
+2021-03-01 22:31:49.915 [http-nio-8080-exec-10] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:31:49.920 [http-nio-8080-exec-10] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614609109917, onlTable=null)
+2021-03-01 22:31:59.891 [http-nio-8080-exec-2] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:31:59.891 [http-nio-8080-exec-5] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:31:59.895 [http-nio-8080-exec-2] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614609119892, onlTable=null)
+2021-03-01 22:31:59.895 [http-nio-8080-exec-5] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614609119892, onlTable=null)
+2021-03-01 22:34:56.690 [background-preinit] INFO  org.hibernate.validator.internal.util.Version:21 - HV000001: Hibernate Validator 6.1.6.Final
+2021-03-01 22:34:56.730 [main] INFO  org.jeecg.JeecgSystemApplication:55 - Starting JeecgSystemApplication on LAPTOP-ZKS with PID 18388 (E:\Jeecg\jeecg-boot\jeecg-boot-module-system\target\classes started by Lenovo in E:\Jeecg\jeecg-boot)
+2021-03-01 22:34:56.730 [main] INFO  org.jeecg.JeecgSystemApplication:655 - The following profiles are active: dev
+2021-03-01 22:34:59.826 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-01 22:34:59.834 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:127 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-03-01 22:35:00.093 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:187 - Finished Spring Data repository scanning in 228ms. Found 0 Redis repository interfaces.
+2021-03-01 22:35:00.844 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 22:35:00.848 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 22:35:01.025 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 22:35:01.158 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 22:35:01.161 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'shiroConfig' of type [org.jeecg.config.shiro.ShiroConfig$$EnhancerBySpringCGLIB$$387b691e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 22:35:01.212 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'shiroRealm' of type [org.jeecg.config.shiro.ShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 22:35:01.776 [main] INFO  org.jeecg.config.shiro.ShiroConfig:207 - ===============(1)创建缓存管理器RedisCacheManager
+2021-03-01 22:35:01.778 [main] INFO  org.jeecg.config.shiro.ShiroConfig:225 - ===============(2)创建RedisManager,连接Redis..
+2021-03-01 22:35:01.783 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'redisManager' of type [org.crazycake.shiro.RedisManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 22:35:01.788 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 22:35:01.826 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 22:35:02.099 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 22:35:02.107 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$42cd91f6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 22:35:02.118 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 22:35:02.139 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'redisConfig' of type [org.jeecg.config.redis.RedisConfig$$EnhancerBySpringCGLIB$$af645832] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 22:35:02.195 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'org.apache.shiro.spring.boot.autoconfigure.ShiroBeanAutoConfiguration' of type [org.apache.shiro.spring.boot.autoconfigure.ShiroBeanAutoConfiguration$$EnhancerBySpringCGLIB$$ec57fed5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 22:35:02.204 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'eventBus' of type [org.apache.shiro.event.support.DefaultEventBus] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 22:35:02.661 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:108 - Tomcat initialized with port(s): 8080 (http)
+2021-03-01 22:35:02.675 [main] INFO  org.apache.coyote.http11.Http11NioProtocol:173 - Initializing ProtocolHandler ["http-nio-8080"]
+2021-03-01 22:35:02.675 [main] INFO  org.apache.catalina.core.StandardService:173 - Starting service [Tomcat]
+2021-03-01 22:35:02.676 [main] INFO  org.apache.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-03-01 22:35:02.678 [main] INFO  org.apache.catalina.core.AprLifecycleListener:173 - Loaded Apache Tomcat Native library [1.2.24] using APR version [1.7.0].
+2021-03-01 22:35:02.679 [main] INFO  org.apache.catalina.core.AprLifecycleListener:173 - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-03-01 22:35:02.679 [main] INFO  org.apache.catalina.core.AprLifecycleListener:173 - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-03-01 22:35:02.686 [main] INFO  org.apache.catalina.core.AprLifecycleListener:173 - OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2021-03-01 22:35:02.971 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/jeecg-boot]:173 - Initializing Spring embedded WebApplicationContext
+2021-03-01 22:35:02.971 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext:285 - Root WebApplicationContext: initialization completed in 6181 ms
+2021-03-01 22:35:04.204 [main] INFO  com.alibaba.druid.pool.DruidDataSource:994 - {dataSource-1,master} inited
+2021-03-01 22:35:04.206 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource:132 - dynamic-datasource - load a datasource named [master] success
+2021-03-01 22:35:04.207 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource:237 - dynamic-datasource initial loaded [1] datasource,primary datasource named [master]
+2021-03-01 22:35:08.441 [main] INFO  org.jeecg.config.redis.RedisConfig:66 -  --- redis config init --- 
+2021-03-01 22:35:09.339 [main] INFO  org.quartz.impl.StdSchedulerFactory:1220 - Using default implementation for ThreadExecutor
+2021-03-01 22:35:09.342 [main] INFO  org.quartz.simpl.SimpleThreadPool:268 - Job execution threads will use class loader of thread: main
+2021-03-01 22:35:09.354 [main] INFO  org.quartz.core.SchedulerSignalerImpl:61 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-03-01 22:35:09.355 [main] INFO  org.quartz.core.QuartzScheduler:229 - Quartz Scheduler v.2.3.2 created.
+2021-03-01 22:35:09.359 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore:672 - Using db table-based data access locking (synchronization).
+2021-03-01 22:35:09.361 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore:145 - JobStoreCMT initialized.
+2021-03-01 22:35:09.363 [main] INFO  org.quartz.core.QuartzScheduler:294 - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'MyScheduler' with instanceId 'LAPTOP-ZKS1614609309341'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+2021-03-01 22:35:09.363 [main] INFO  org.quartz.impl.StdSchedulerFactory:1374 - Quartz scheduler 'MyScheduler' initialized from an externally provided properties instance.
+2021-03-01 22:35:09.363 [main] INFO  org.quartz.impl.StdSchedulerFactory:1378 - Quartz scheduler version: 2.3.2
+2021-03-01 22:35:09.364 [main] INFO  org.quartz.core.QuartzScheduler:2293 - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@687fd6e
+2021-03-01 22:35:14.055 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver:58 - Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-03-01 22:35:14.234 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-01 22:35:14.507 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-01 22:35:15.207 [main] INFO  org.apache.coyote.http11.Http11NioProtocol:173 - Starting ProtocolHandler ["http-nio-8080"]
+2021-03-01 22:35:15.236 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:220 - Tomcat started on port(s): 8080 (http) with context path '/jeecg-boot'
+2021-03-01 22:35:15.238 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:160 - Context refreshed
+2021-03-01 22:35:15.253 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:163 - Found 1 custom documentation plugin(s)
+2021-03-01 22:35:15.334 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner:41 - Scanning for api listing references
+2021-03-01 22:35:15.432 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/jeecg-boot]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-01 22:35:15.433 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet:525 - Initializing Servlet 'dispatcherServlet'
+2021-03-01 22:35:15.450 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet:547 - Completed initialization in 17 ms
+2021-03-01 22:35:15.542 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_1
+2021-03-01 22:35:15.546 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_1
+2021-03-01 22:35:15.548 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_1
+2021-03-01 22:35:15.550 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_1
+2021-03-01 22:35:15.552 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_1
+2021-03-01 22:35:15.557 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_1
+2021-03-01 22:35:15.569 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_2
+2021-03-01 22:35:15.573 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_2
+2021-03-01 22:35:15.575 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_2
+2021-03-01 22:35:15.576 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_2
+2021-03-01 22:35:15.579 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_2
+2021-03-01 22:35:15.583 [http-nio-8080-exec-2] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-01 22:35:15.586 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_2
+2021-03-01 22:35:15.592 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_3
+2021-03-01 22:35:15.600 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_3
+2021-03-01 22:35:15.602 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_3
+2021-03-01 22:35:15.605 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_3
+2021-03-01 22:35:15.616 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_3
+2021-03-01 22:35:15.622 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_4
+2021-03-01 22:35:15.623 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_4
+2021-03-01 22:35:15.625 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_4
+2021-03-01 22:35:15.626 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_4
+2021-03-01 22:35:15.628 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_3
+2021-03-01 22:35:15.635 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_4
+2021-03-01 22:35:15.649 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_5
+2021-03-01 22:35:15.652 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_5
+2021-03-01 22:35:15.653 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_5
+2021-03-01 22:35:15.655 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_5
+2021-03-01 22:35:15.656 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_4
+2021-03-01 22:35:15.660 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_5
+2021-03-01 22:35:15.670 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_6
+2021-03-01 22:35:15.673 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_6
+2021-03-01 22:35:15.674 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_6
+2021-03-01 22:35:15.676 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_6
+2021-03-01 22:35:15.679 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_5
+2021-03-01 22:35:15.684 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_6
+2021-03-01 22:35:15.694 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_7
+2021-03-01 22:35:15.697 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_7
+2021-03-01 22:35:15.700 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_7
+2021-03-01 22:35:15.701 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_7
+2021-03-01 22:35:15.712 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_6
+2021-03-01 22:35:15.741 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_8
+2021-03-01 22:35:15.744 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_8
+2021-03-01 22:35:15.746 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_8
+2021-03-01 22:35:15.748 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_8
+2021-03-01 22:35:15.749 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_7
+2021-03-01 22:35:15.754 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_7
+2021-03-01 22:35:15.761 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_9
+2021-03-01 22:35:15.763 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_9
+2021-03-01 22:35:15.766 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_9
+2021-03-01 22:35:15.767 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_9
+2021-03-01 22:35:15.769 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_8
+2021-03-01 22:35:15.772 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_8
+2021-03-01 22:35:15.779 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_10
+2021-03-01 22:35:15.786 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_10
+2021-03-01 22:35:15.788 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_10
+2021-03-01 22:35:15.791 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_10
+2021-03-01 22:35:15.801 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_9
+2021-03-01 22:35:15.809 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_11
+2021-03-01 22:35:15.810 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_11
+2021-03-01 22:35:15.811 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_11
+2021-03-01 22:35:15.813 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_11
+2021-03-01 22:35:15.815 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_9
+2021-03-01 22:35:15.819 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_10
+2021-03-01 22:35:15.825 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_12
+2021-03-01 22:35:15.827 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_12
+2021-03-01 22:35:15.829 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_12
+2021-03-01 22:35:15.830 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_12
+2021-03-01 22:35:15.832 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_10
+2021-03-01 22:35:15.837 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_11
+2021-03-01 22:35:15.844 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_13
+2021-03-01 22:35:15.847 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_13
+2021-03-01 22:35:15.849 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_13
+2021-03-01 22:35:15.850 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_13
+2021-03-01 22:35:15.851 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_11
+2021-03-01 22:35:15.855 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_12
+2021-03-01 22:35:15.859 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_14
+2021-03-01 22:35:15.860 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_14
+2021-03-01 22:35:15.863 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_14
+2021-03-01 22:35:15.864 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_14
+2021-03-01 22:35:15.867 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_12
+2021-03-01 22:35:15.871 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_13
+2021-03-01 22:35:15.875 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_15
+2021-03-01 22:35:15.878 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_15
+2021-03-01 22:35:15.880 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_15
+2021-03-01 22:35:15.882 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_15
+2021-03-01 22:35:15.883 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_13
+2021-03-01 22:35:15.887 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_14
+2021-03-01 22:35:15.893 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_16
+2021-03-01 22:35:15.895 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_16
+2021-03-01 22:35:15.897 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_16
+2021-03-01 22:35:15.898 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_16
+2021-03-01 22:35:15.900 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_14
+2021-03-01 22:35:15.904 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_15
+2021-03-01 22:35:15.913 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_17
+2021-03-01 22:35:15.915 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_17
+2021-03-01 22:35:15.917 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_17
+2021-03-01 22:35:15.918 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_17
+2021-03-01 22:35:15.920 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_15
+2021-03-01 22:35:15.929 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_16
+2021-03-01 22:35:15.936 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_18
+2021-03-01 22:35:15.938 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_18
+2021-03-01 22:35:15.939 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_18
+2021-03-01 22:35:15.940 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_18
+2021-03-01 22:35:15.941 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_16
+2021-03-01 22:35:15.946 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_17
+2021-03-01 22:35:15.957 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:727 - Starting Quartz Scheduler now
+2021-03-01 22:35:16.135 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore:3644 - ClusterManager: detected 1 failed or restarted instances.
+2021-03-01 22:35:16.135 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore:3503 - ClusterManager: Scanning for instance "LAPTOP-ZKS1614608551199"'s failed in-progress jobs.
+2021-03-01 22:35:16.278 [main] INFO  org.quartz.core.QuartzScheduler:547 - Scheduler MyScheduler_$_LAPTOP-ZKS1614609309341 started.
+2021-03-01 22:35:16.298 [main] INFO  org.jeecg.JeecgSystemApplication:61 - Started JeecgSystemApplication in 21.01 seconds (JVM running for 23.351)
+2021-03-01 22:35:16.306 [main] INFO  org.jeecg.modules.init.SystemInitListener:27 -  服务已启动，准备初始化路由配置 ###################
+2021-03-01 22:35:18.025 [main] INFO  org.jeecg.JeecgSystemApplication:39 - 
+----------------------------------------------------------
+	Application Jeecg-Boot is running! Access URLs:
+	Local: 		http://localhost:8080/jeecg-boot/
+	External: 	http://192.168.2.1:8080/jeecg-boot/
+	Swagger文档: 	http://192.168.2.1:8080/jeecg-boot/doc.html
+----------------------------------------------------------
+2021-03-01 22:37:06.408 [http-nio-8080-exec-1] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-01 22:37:15.124 [http-nio-8080-exec-5] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-01 22:37:15.449 [http-nio-8080-exec-4] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:37:15.476 [http-nio-8080-exec-1] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:37:15.509 [http-nio-8080-exec-4] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614609435450, onlTable=null)
+2021-03-01 22:37:15.518 [http-nio-8080-exec-1] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614609435476, onlTable=null)
+2021-03-01 22:37:18.984 [http-nio-8080-exec-5] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->order_id = 1366380307044900866
+2021-03-01 22:37:19.711 [http-nio-8080-exec-2] ERROR o.jeecg.common.exception.JeecgBootExceptionHandler:33 - 订单已经支付！
+org.jeecg.modules.JeecgException: 订单已经支付！
+	at org.jeecg.modules.ord.service.impl.OrderBookingServiceImpl.changePayStatus(OrderBookingServiceImpl.java:109)
+	at org.jeecg.modules.ord.service.impl.OrderBookingServiceImpl$$FastClassBySpringCGLIB$$f714d033.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:687)
+	at org.jeecg.modules.ord.service.impl.OrderBookingServiceImpl$$EnhancerBySpringCGLIB$$319a3703.changePayStatus(<generated>)
+	at org.jeecg.modules.ord.controller.OrderBookingController.changePayStatus(OrderBookingController.java:213)
+	at org.jeecg.modules.ord.controller.OrderBookingController$$FastClassBySpringCGLIB$$46d2615b.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:88)
+	at org.jeecg.common.aspect.DictAspect.doAround(DictAspect.java:50)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:633)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:88)
+	at org.jeecg.common.aspect.AutoLogAspect.around(AutoLogAspect.java:56)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:633)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
+	at org.jeecg.modules.ord.controller.OrderBookingController$$EnhancerBySpringCGLIB$$7536c499.changePayStatus(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:450)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.github.xiaoymin.knife4j.spring.filter.ProductionSecurityFilter.doFilter(ProductionSecurityFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.github.xiaoymin.knife4j.spring.filter.SecurityBasicAuthFilter.doFilter(SecurityBasicAuthFilter.java:90)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.web.trace.servlet.HttpTraceFilter.doFilterInternal(HttpTraceFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-03-01 22:37:21.199 [http-nio-8080-exec-3] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_business,name,id
+2021-03-01 22:37:21.199 [http-nio-8080-exec-6] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:37:21.204 [http-nio-8080-exec-6] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614609441200, onlTable=null)
+2021-03-01 22:37:21.204 [http-nio-8080-exec-3] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365295872115507202, text=小宇), DictModel(value=1365311196995072001, text=测试), DictModel(value=1365899602443632641, text=张晓), DictModel(value=1365908249106219009, text=笑笑)], timestamp=1614609441199, onlTable=null)
+2021-03-01 22:37:26.481 [http-nio-8080-exec-10] INFO  org.jeecg.modules.online.cgreport.a.a:290 - Online报表: 走了稳定逻辑
+2021-03-01 22:37:26.515 [http-nio-8080-exec-10] INFO  org.jeecg.common.system.query.QueryGenerator:909 - query auth sql is = 
+2021-03-01 22:37:26.515 [http-nio-8080-exec-10] INFO  org.jeecg.modules.online.cgreport.service.a.b:135 - 报表查询sql=>
+select * from (SELECT id,name, car_no, phone FROM per_driver) jeecg_rp_temp  where 1=1 
+2021-03-01 22:37:32.179 [http-nio-8080-exec-5] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->order_id = 1366397184571981825
+2021-03-01 22:37:35.677 [http-nio-8080-exec-2] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : sto_warehouse,house_name,id
+2021-03-01 22:37:35.680 [http-nio-8080-exec-2] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365588567270658049, text=广州仓), DictModel(value=1365588958129459201, text=柳州仓), DictModel(value=1365593172889059330, text=南宁仓)], timestamp=1614609455677, onlTable=null)
+2021-03-01 22:37:37.118 [http-nio-8080-exec-3] INFO  org.jeecg.modules.online.cgreport.a.a:290 - Online报表: 走了稳定逻辑
+2021-03-01 22:37:37.131 [http-nio-8080-exec-3] INFO  org.jeecg.common.system.query.QueryGenerator:909 - query auth sql is = 
+2021-03-01 22:37:37.132 [http-nio-8080-exec-3] INFO  org.jeecg.modules.online.cgreport.service.a.b:135 - 报表查询sql=>
+select * from (SELECT product_name,product_class,mat_len,mat_width,mat_thick,mat_no,warehouse,price FROM sto_enter_house) jeecg_rp_temp  where 1=1 
+2021-03-01 22:37:43.844 [http-nio-8080-exec-2] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->order_id = 1366397184571981825
+2021-03-01 22:37:50.349 [http-nio-8080-exec-5] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:37:50.352 [http-nio-8080-exec-5] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614609470349, onlTable=null)
+2021-03-01 22:38:28.047 [http-nio-8080-exec-4] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:38:28.060 [http-nio-8080-exec-4] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614609508052, onlTable=null)
+2021-03-01 22:39:35.624 [http-nio-8080-exec-5] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:39:35.627 [http-nio-8080-exec-5] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614609575624, onlTable=null)
+2021-03-01 22:39:35.676 [http-nio-8080-exec-6] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:39:35.681 [http-nio-8080-exec-6] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614609575677, onlTable=null)
+2021-03-01 22:39:38.270 [http-nio-8080-exec-9] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->order_id = 1366397184571981825
+2021-03-01 22:39:40.719 [http-nio-8080-exec-8] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->order_id = 1366380307044900866
+2021-03-01 22:39:42.947 [http-nio-8080-exec-1] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->order_id = 1366397184571981825
+2021-03-01 22:40:05.121 [http-nio-8080-exec-9] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:40:05.126 [http-nio-8080-exec-7] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:40:05.130 [http-nio-8080-exec-9] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614609605127, onlTable=null)
+2021-03-01 22:40:05.143 [http-nio-8080-exec-7] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614609605129, onlTable=null)
+2021-03-01 22:40:33.815 [http-nio-8080-exec-4] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:40:33.816 [http-nio-8080-exec-5] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:40:33.818 [http-nio-8080-exec-5] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614609633816, onlTable=null)
+2021-03-01 22:40:33.820 [http-nio-8080-exec-4] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614609633816, onlTable=null)
+2021-03-01 22:40:46.428 [http-nio-8080-exec-7] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:40:46.429 [http-nio-8080-exec-6] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_business,name,id
+2021-03-01 22:40:46.435 [http-nio-8080-exec-7] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614609646430, onlTable=null)
+2021-03-01 22:40:46.435 [http-nio-8080-exec-6] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365295872115507202, text=小宇), DictModel(value=1365311196995072001, text=测试), DictModel(value=1365899602443632641, text=张晓), DictModel(value=1365908249106219009, text=笑笑)], timestamp=1614609646431, onlTable=null)
+2021-03-01 22:40:49.646 [http-nio-8080-exec-1] INFO  org.jeecg.modules.online.cgreport.a.a:290 - Online报表: 走了稳定逻辑
+2021-03-01 22:40:49.658 [http-nio-8080-exec-1] INFO  org.jeecg.common.system.query.QueryGenerator:909 - query auth sql is = 
+2021-03-01 22:40:49.659 [http-nio-8080-exec-1] INFO  org.jeecg.modules.online.cgreport.service.a.b:135 - 报表查询sql=>
+select * from (SELECT id,name, car_no, phone FROM per_driver) jeecg_rp_temp  where 1=1 
+2021-03-01 22:40:57.910 [http-nio-8080-exec-8] INFO  org.jeecg.modules.online.cgreport.a.a:290 - Online报表: 走了稳定逻辑
+2021-03-01 22:40:57.918 [http-nio-8080-exec-8] INFO  org.jeecg.common.system.query.QueryGenerator:909 - query auth sql is = 
+2021-03-01 22:40:57.919 [http-nio-8080-exec-8] INFO  org.jeecg.modules.online.cgreport.service.a.b:135 - 报表查询sql=>
+select * from (SELECT id,name, car_no, phone FROM per_driver) jeecg_rp_temp  where 1=1 
+2021-03-01 22:42:08.959 [http-nio-8080-exec-7] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,customer_name
+2021-03-01 22:42:08.989 [http-nio-8080-exec-7] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=佳佳建公司, text=佳佳建公司), DictModel(value=广钢集团, text=广钢集团), DictModel(value=申科重工, text=申科重工), DictModel(value=中建经销公司, text=中建经销公司), DictModel(value=广州科技, text=广州科技)], timestamp=1614609728962, onlTable=null)
+2021-03-01 22:42:15.444 [http-nio-8080-exec-3] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,customer_name
+2021-03-01 22:42:15.457 [http-nio-8080-exec-3] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=佳佳建公司, text=佳佳建公司), DictModel(value=广钢集团, text=广钢集团), DictModel(value=申科重工, text=申科重工), DictModel(value=中建经销公司, text=中建经销公司), DictModel(value=广州科技, text=广州科技)], timestamp=1614609735445, onlTable=null)
+2021-03-01 22:42:20.378 [http-nio-8080-exec-1] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,customer_name
+2021-03-01 22:42:20.381 [http-nio-8080-exec-1] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=佳佳建公司, text=佳佳建公司), DictModel(value=广钢集团, text=广钢集团), DictModel(value=申科重工, text=申科重工), DictModel(value=中建经销公司, text=中建经销公司), DictModel(value=广州科技, text=广州科技)], timestamp=1614609740378, onlTable=null)
+2021-03-01 22:42:23.150 [http-nio-8080-exec-10] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:2
+2021-03-01 22:42:23.450 [http-nio-8080-exec-9] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,customer_name
+2021-03-01 22:42:23.457 [http-nio-8080-exec-9] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=佳佳建公司, text=佳佳建公司), DictModel(value=广钢集团, text=广钢集团), DictModel(value=申科重工, text=申科重工), DictModel(value=中建经销公司, text=中建经销公司), DictModel(value=广州科技, text=广州科技)], timestamp=1614609743451, onlTable=null)
+2021-03-01 22:42:23.607 [http-nio-8080-exec-6] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:1
+2021-03-01 22:44:48.189 [http-nio-8080-exec-2] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:44:48.194 [http-nio-8080-exec-2] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614609888191, onlTable=null)
+2021-03-01 22:44:52.261 [http-nio-8080-exec-8] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:44:52.263 [http-nio-8080-exec-4] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:44:52.264 [http-nio-8080-exec-8] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614609892262, onlTable=null)
+2021-03-01 22:44:52.268 [http-nio-8080-exec-4] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614609892263, onlTable=null)
+2021-03-01 22:44:53.787 [http-nio-8080-exec-9] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->order_id = 1366397184571981825
+2021-03-01 22:44:55.818 [http-nio-8080-exec-2] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:44:55.821 [http-nio-8080-exec-2] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614609895819, onlTable=null)
+2021-03-01 22:45:31.386 [http-nio-8080-exec-4] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,customer_name
+2021-03-01 22:45:31.390 [http-nio-8080-exec-4] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=佳佳建公司, text=佳佳建公司), DictModel(value=广钢集团, text=广钢集团), DictModel(value=申科重工, text=申科重工), DictModel(value=中建经销公司, text=中建经销公司), DictModel(value=广州科技, text=广州科技)], timestamp=1614609931388, onlTable=null)
+2021-03-01 22:46:55.759 [http-nio-8080-exec-6] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->copy_type = 0
+2021-03-01 22:47:04.221 [http-nio-8080-exec-10] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:47:04.224 [http-nio-8080-exec-10] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614610024222, onlTable=null)
+2021-03-01 22:47:06.340 [http-nio-8080-exec-7] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:47:06.340 [http-nio-8080-exec-1] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:47:06.343 [http-nio-8080-exec-7] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614610026341, onlTable=null)
+2021-03-01 22:47:06.346 [http-nio-8080-exec-1] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614610026342, onlTable=null)
+2021-03-01 22:47:08.102 [http-nio-8080-exec-2] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,id
+2021-03-01 22:47:08.105 [http-nio-8080-exec-2] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365307079249637378, text=佳佳建公司), DictModel(value=1365536781067436033, text=广钢集团), DictModel(value=1365619643196129282, text=申科重工), DictModel(value=1365622533272911874, text=中建经销公司), DictModel(value=1365625196047777794, text=广州科技)], timestamp=1614610028102, onlTable=null)
+2021-03-01 22:47:08.110 [http-nio-8080-exec-8] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_business,name,id
+2021-03-01 22:47:08.112 [http-nio-8080-exec-8] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1365295872115507202, text=小宇), DictModel(value=1365311196995072001, text=测试), DictModel(value=1365899602443632641, text=张晓), DictModel(value=1365908249106219009, text=笑笑)], timestamp=1614610028110, onlTable=null)
+2021-03-01 22:47:34.868 [http-nio-8080-exec-4] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->copy_type = 0
+2021-03-01 22:48:07.850 [http-nio-8080-exec-3] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->copy_type = 0
+2021-03-01 22:52:18.466 [http-nio-8080-exec-7] INFO  org.jeecg.config.shiro.ShiroRealm:155 - ——————————用户在线操作，更新token保证不掉线—————————jwtTokenRefresh——————— eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTQ2MDYyNjQsInVzZXJuYW1lIjoiYWRtaW4ifQ.gfN7AggIi41wONLpcS4LqTc3_-IAu3pXH2w51_ZPwaQ
+2021-03-01 22:52:20.014 [http-nio-8080-exec-2] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->copy_type = 0
+2021-03-01 22:52:23.407 [http-nio-8080-exec-5] INFO  org.jeecg.modules.online.cgform.service.impl.d:298 - ==判断表是否存在消耗时间2毫秒
+2021-03-01 22:52:23.862 [http-nio-8080-exec-5] INFO  org.jeecg.modules.online.config.b.c:85 - <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="order_consignee" table="order_consignee" optimistic-lock="version">
+						<id name="id" type="java.lang.String" length="36" unsaved-value="null">
+							<generator class="uuid" />
+						</id>
+					
+					<property name="create_by"
+								type="java.lang.String"
+ access="property">
+						<column name="create_by" 
+							                               
+length="50"
+							
+							not-null="false" unique="false">
+							<comment>创建人</comment>
+						</column>
+					</property>
+					<property name="create_time"
+									type="java.util.Date"
+ access="property">
+						<column name="create_time" 
+							                               
+length="20"
+							
+							not-null="false" unique="false">
+							<comment>创建日期</comment>
+						</column>
+					</property>
+					<property name="update_by"
+								type="java.lang.String"
+ access="property">
+						<column name="update_by" 
+							                               
+length="50"
+							
+							not-null="false" unique="false">
+							<comment>更新人</comment>
+						</column>
+					</property>
+					<property name="update_time"
+									type="java.util.Date"
+ access="property">
+						<column name="update_time" 
+							                               
+length="20"
+							
+							not-null="false" unique="false">
+							<comment>更新日期</comment>
+						</column>
+					</property>
+					<property name="sys_org_code"
+								type="java.lang.String"
+ access="property">
+						<column name="sys_org_code" 
+							                               
+length="64"
+							
+							not-null="false" unique="false">
+							<comment>所属部门</comment>
+						</column>
+					</property>
+					<property name="consignee"
+								type="java.lang.String"
+ access="property">
+						<column name="consignee" 
+							                               
+length="32"
+							
+							not-null="false" unique="false">
+							<comment>姓名</comment>
+						</column>
+					</property>
+					<property name="address"
+								type="java.lang.String"
+ access="property">
+						<column name="address" 
+							                               
+length="32"
+							
+							not-null="false" unique="false">
+							<comment>地址</comment>
+						</column>
+					</property>
+					<property name="phone"
+								type="java.lang.String"
+ access="property">
+						<column name="phone" 
+							                               
+length="32"
+							
+							not-null="false" unique="false">
+							<comment>电话号码</comment>
+						</column>
+					</property>
+					<property name="age"
+								type="java.lang.Integer"
+ access="property">
+						<column name="age" 
+							                               
+length="3"
+							
+							not-null="false" unique="false">
+							<comment>年龄</comment>
+						</column>
+					</property>
+	</class>
+	
+	
+	
+	
+	
+	
+</hibernate-mapping>
+2021-03-01 22:52:24.065 [http-nio-8080-exec-5] INFO  org.hibernate.Version:44 - HHH000412: Hibernate ORM core version 5.4.22.Final
+2021-03-01 22:52:26.674 [http-nio-8080-exec-5] INFO  org.hibernate.annotations.common.Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-03-01 22:52:26.873 [http-nio-8080-exec-5] INFO  org.hibernate.dialect.Dialect:170 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-03-01 22:52:27.050 [http-nio-8080-exec-5] WARN  org.hibernate.id.UUIDHexGenerator:42 - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2021-03-01 22:52:27.056 [http-nio-8080-exec-5] INFO  org.hibernate.tool.hbm2ddl.SchemaExport:245 - HHH000227: Running hbm2ddl schema export
+2021-03-01 22:52:27.085 [http-nio-8080-exec-5] WARN  org.hibernate.orm.connections.pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-03-01 22:52:27.087 [http-nio-8080-exec-5] INFO  org.hibernate.orm.connections.pooling:115 - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai]
+2021-03-01 22:52:27.088 [http-nio-8080-exec-5] INFO  org.hibernate.orm.connections.pooling:124 - HHH10001001: Connection properties: {user=root, password=****}
+2021-03-01 22:52:27.088 [http-nio-8080-exec-5] INFO  org.hibernate.orm.connections.pooling:129 - HHH10001003: Autocommit mode: false
+2021-03-01 22:52:27.095 [http-nio-8080-exec-5] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-03-01 22:52:27.117 [http-nio-8080-exec-5] INFO  org.hibernate.orm.connections.access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@47497ac] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-03-01 22:52:27.182 [http-nio-8080-exec-5] INFO  org.hibernate.orm.connections.access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3f753d2a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-03-01 22:52:27.566 [http-nio-8080-exec-5] INFO  org.jeecg.modules.online.cgform.b.a:552 - ==同步数据库消耗时间4178毫秒
+2021-03-01 22:52:27.748 [http-nio-8080-exec-10] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->copy_type = 0
+2021-03-01 22:52:58.959 [http-nio-8080-exec-10] INFO  org.jeecg.modules.online.cgform.util.b:1026 - --动态表单保存sql-->insert into order_consignee(id,age,create_by,consignee,address,create_time,phone,sys_org_code) values('1366401081281724418',#{age,jdbcType=INTEGER},#{create_by,jdbcType=VARCHAR},#{consignee,jdbcType=VARCHAR},#{address,jdbcType=VARCHAR},#{create_time},#{phone,jdbcType=VARCHAR},#{sys_org_code,jdbcType=VARCHAR})
+2021-03-01 22:53:21.767 [http-nio-8080-exec-1] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,customer_name
+2021-03-01 22:53:21.775 [http-nio-8080-exec-1] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=佳佳建公司, text=佳佳建公司), DictModel(value=广钢集团, text=广钢集团), DictModel(value=申科重工, text=申科重工), DictModel(value=中建经销公司, text=中建经销公司), DictModel(value=广州科技, text=广州科技)], timestamp=1614610401769, onlTable=null)
+2021-03-01 22:53:25.108 [http-nio-8080-exec-6] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->main_id = 1365619643196129282
+2021-03-01 22:53:27.558 [http-nio-8080-exec-8] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->main_id = 1365625196047777794
+2021-03-01 22:53:29.022 [http-nio-8080-exec-10] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->main_id = 1365622533272911874
+2021-03-01 22:53:44.758 [http-nio-8080-exec-6] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->copy_type = 0
+2021-03-01 22:54:08.579 [http-nio-8080-exec-6] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->copy_type = 0
+2021-03-01 22:54:37.473 [http-nio-8080-exec-1] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : per_customer,customer_name,customer_name
+2021-03-01 22:54:37.479 [http-nio-8080-exec-1] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=佳佳建公司, text=佳佳建公司), DictModel(value=广钢集团, text=广钢集团), DictModel(value=申科重工, text=申科重工), DictModel(value=中建经销公司, text=中建经销公司), DictModel(value=广州科技, text=广州科技)], timestamp=1614610477475, onlTable=null)
+2021-03-01 22:54:40.432 [http-nio-8080-exec-7] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->main_id = 1365625196047777794
+2021-03-01 22:56:43.518 [lettuce-nioEventLoop-4-2] INFO  io.lettuce.core.protocol.CommandHandler:217 - null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1134)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2021-03-01 22:56:43.521 [lettuce-nioEventLoop-4-1] INFO  io.lettuce.core.protocol.CommandHandler:217 - null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1134)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2021-03-01 22:56:43.756 [lettuce-eventExecutorLoop-1-4] INFO  io.lettuce.core.protocol.ConnectionWatchdog:171 - Reconnecting, last destination was /127.0.0.1:6379
+2021-03-01 22:56:43.756 [lettuce-eventExecutorLoop-1-2] INFO  io.lettuce.core.protocol.ConnectionWatchdog:171 - Reconnecting, last destination was /127.0.0.1:6379
+2021-03-01 22:56:45.774 [lettuce-nioEventLoop-4-3] WARN  io.lettuce.core.protocol.ConnectionWatchdog:151 - Cannot reconnect to [127.0.0.1:6379]: Connection refused: no further information: /127.0.0.1:6379
+2021-03-01 22:56:45.774 [lettuce-nioEventLoop-4-4] WARN  io.lettuce.core.protocol.ConnectionWatchdog:151 - Cannot reconnect to [127.0.0.1:6379]: Connection refused: no further information: /127.0.0.1:6379
