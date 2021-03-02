@@ -109,4 +109,13 @@ public class OrderBill implements Serializable {
     @Excel(name = "车牌号", width = 15)
     @ApiModelProperty(value = "车牌号")
     private java.lang.String carNo;
+    /**银行*/
+    @Excel(name = "银行", width = 15)
+    @Dict(dicCode = "bank")
+    @ApiModelProperty(value = "银行")
+    private java.lang.String bank;
+    /**银行账户*/
+    @Excel(name = "银行账户", width = 15)
+    @ApiModelProperty(value = "银行账户")
+    private java.lang.String bankAccount;
 }

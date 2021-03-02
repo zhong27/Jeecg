@@ -15,6 +15,8 @@ import org.jeecg.modules.ord.mapper.OrderDetMapper;
 import org.jeecg.modules.ord.mapper.OrderBookingMapper;
 import org.jeecg.modules.ord.service.IOrderBillService;
 import org.jeecg.modules.ord.service.IOrderBookingService;
+import org.jeecg.modules.sto.entity.EnterHouse;
+import org.jeecg.modules.sto.service.impl.EnterHouseServiceImpl;
 import org.springframework.stereotype.Service;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,6 +47,9 @@ public class OrderBookingServiceImpl extends ServiceImpl<OrderBookingMapper, Ord
     private CashBalanceServiceImpl cashBalanceService;
     @Autowired
     private OrderBillServiceImpl orderBillService;
+    @Autowired
+    private EnterHouseServiceImpl enterHouseService;
+
 
     @Override
     @Transactional
@@ -68,8 +73,10 @@ public class OrderBookingServiceImpl extends ServiceImpl<OrderBookingMapper, Ord
             orderBookingMapper.deleteById(id);
         }
     }
+    @Transactional
+    public void calculateBooking(OrderDet orderDet) {
 
-    public void calculateTotal(OrderDet orderDet) {
+        orderDet.setTotal(orderDet.getPrice().multiply(orderDet.getWeight()));
         //计算订单总价
         OrderBooking orderBooking = getById(orderDet.getOrderId());
         if (NumberUtil.equals(orderBooking.getOrderTotal(), BigDecimal.ZERO)) {
@@ -79,9 +86,8 @@ public class OrderBookingServiceImpl extends ServiceImpl<OrderBookingMapper, Ord
         }
         updateById(orderBooking);
     }
-
-    public void subTotal(OrderDet orderDet) {
-
+    @Transactional
+    public void updateOrderDetAndEnterHouse(OrderDet orderDet) {
 
         //获取订单主表实体
         OrderBooking orderBooking = getById(orderDet.getOrderId());
@@ -94,14 +100,30 @@ public class OrderBookingServiceImpl extends ServiceImpl<OrderBookingMapper, Ord
         //计算订单明细总价
         orderDet.setTotal(orderDet.getPrice().multiply(orderDet.getWeight()));
 
-        //查询更新前的订单明细
+        //查询编辑前的订单明细
         OrderDet updateBeforeOrderDet = orderDetService.getById(orderDet);
-        orderBooking.setOrderTotal(orderBooking.getOrderTotal().subtract(updateBeforeOrderDet.getTotal()).add(orderDet.getTotal()));
+        orderBooking.setOrderTotal(orderBooking.getOrderTotal().subtract(
+                updateBeforeOrderDet.getTotal()).add(orderDet.getTotal()));
+
+        //通过仓库、长度、宽度、厚度、材料号、产品大类、产品名称，校验库存
+        QueryWrapper<EnterHouse> queryWrapperOrderDet = new QueryWrapper<>();
+        queryWrapperOrderDet.lambda().eq(EnterHouse::getMatWidth,orderDet.getMatWidth())
+                .eq(EnterHouse::getMatLen,orderDet.getMatLen())
+                .eq(EnterHouse::getMatThick,orderDet.getMatThick())
+                .eq(EnterHouse::getMatNo,orderDet.getMatNo())
+                .eq(EnterHouse::getProductClass,orderDet.getProductClass())
+                .eq(EnterHouse::getProductName,orderDet.getProductName())
+                .eq(EnterHouse::getWarehouse,orderDet.getWarehouse());
+        EnterHouse selectEnterHouse = enterHouseService.getOne(queryWrapperOrderDet);
+        selectEnterHouse.setMatWeight(selectEnterHouse.getMatWeight().subtract(orderDet.getWeight())
+                .add(updateBeforeOrderDet.getWeight()));
+
+        enterHouseService.updateById(selectEnterHouse);
         orderDetService.updateById(orderDet);
         updateById(orderBooking);
-
     }
 
+    @Transactional
     public void changePayStatus(String orderId) {
         OrderBooking orderBooking = getById(orderId);
         //校验订单支付状态
@@ -119,6 +141,7 @@ public class OrderBookingServiceImpl extends ServiceImpl<OrderBookingMapper, Ord
             cashBalanceService.payOrder(orderBooking);
             //订单生成提单
             orderBillService.addBill(orderBooking);
+
             orderBooking.setPayStatus(PayStatusEnum.PAY.getValue());
 
             updateById(orderBooking);

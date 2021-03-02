@@ -11,6 +11,7 @@ import org.jeecg.modules.ord.entity.OrderDet;
 import org.jeecg.modules.ord.mapper.OrderDetMapper;
 import org.jeecg.modules.ord.service.IOrderBookingService;
 import org.jeecg.modules.ord.service.IOrderDetService;
+import org.jeecg.modules.sto.service.impl.EnterHouseServiceImpl;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -30,9 +31,10 @@ public class OrderDetServiceImpl extends ServiceImpl<OrderDetMapper, OrderDet> i
 
     @Autowired
     private OrderDetMapper orderDetMapper;
-
     @Autowired
     private OrderBookingServiceImpl orderBookingService;
+    @Autowired
+    EnterHouseServiceImpl enterHouseService;
 
 
     @Override
@@ -40,19 +42,18 @@ public class OrderDetServiceImpl extends ServiceImpl<OrderDetMapper, OrderDet> i
         return orderDetMapper.selectByMainId(mainId);
     }
 
-    public boolean saveMain(@Param("entity") OrderDet entity) {
+    public boolean saveMain(@Param("orderDet") OrderDet orderDet) {
+
+        //校验材料库存
+        enterHouseService.inventoryCheck(orderDet);
+
         //计算订单明细总价
-        entity.setTotal(entity.getPrice().multiply(entity.getWeight()));
-        orderBookingService.calculateTotal(entity);
-        return save(entity);
+        orderBookingService.calculateBooking(orderDet);
+        return save(orderDet);
 
     }
 
-    public void updateOrderDet(OrderDet orderDet) {
 
-        //更新订单总价
-        orderBookingService.subTotal(orderDet);
-    }
 
     public void deleteOrderDet(String id) {
 

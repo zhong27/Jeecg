@@ -197,7 +197,8 @@ public class OrderBookingController extends JeecgController<OrderBooking, IOrder
 	@ApiOperation(value="订单明细表-编辑", notes="订单明细表-编辑")
 	@PutMapping(value = "/editOrderDet")
 	public Result<?> editOrderDet(@RequestBody OrderDet orderDet) {
-		orderDetServiceImpl.updateOrderDet(orderDet);
+		//更新订单总价、订单明细、库存重量
+		orderBookingServiceImpl.updateOrderDetAndEnterHouse(orderDet);
 		return Result.OK("编辑成功!");
 	}
 
