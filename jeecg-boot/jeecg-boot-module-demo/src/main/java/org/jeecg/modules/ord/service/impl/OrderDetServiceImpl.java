@@ -20,6 +20,8 @@ import java.util.List;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import javax.transaction.Transactional;
+
 /**
  * @Description: 订单明细表
  * @Author: jeecg-boot
@@ -34,14 +36,15 @@ public class OrderDetServiceImpl extends ServiceImpl<OrderDetMapper, OrderDet> i
     @Autowired
     private OrderBookingServiceImpl orderBookingService;
     @Autowired
-    EnterHouseServiceImpl enterHouseService;
+    private EnterHouseServiceImpl enterHouseService;
+
 
 
     @Override
     public List<OrderDet> selectByMainId(String mainId) {
         return orderDetMapper.selectByMainId(mainId);
     }
-
+    @Transactional
     public boolean saveMain(@Param("orderDet") OrderDet orderDet) {
 
         //校验材料库存
@@ -54,7 +57,7 @@ public class OrderDetServiceImpl extends ServiceImpl<OrderDetMapper, OrderDet> i
     }
 
 
-
+    @Transactional
     public void deleteOrderDet(String id) {
 
         //删除订单明细、减扣订单明细总价
@@ -68,12 +71,15 @@ public class OrderDetServiceImpl extends ServiceImpl<OrderDetMapper, OrderDet> i
         orderBooking.setOrderTotal(orderBooking.getOrderTotal().subtract(orderDet.getTotal()));
 
         if (ObjectUtil.equal(orderBooking.getPayStatus(), PayStatusEnum.UN_PAY.getValue())) {
+
+            enterHouseService.updateEnterHouse(orderDet);
             orderBookingService.updateById(orderBooking);
             removeById(id);
         }
 
     }
     //批量删除提单明细
+    @Transactional
     public void deleteBatchById(List<String> orderDetIds) {
         List<OrderDet> orderDetList = listByIds(orderDetIds);
         OrderBooking orderBooking = orderBookingService.getById(orderDetList.get(0).getOrderId());

@@ -83,4 +83,13 @@ public class CashIncome implements Serializable {
 	@Excel(name = "备注", width = 15)
     @ApiModelProperty(value = "备注")
     private java.lang.String remark;
+    /**来款编号*/
+    @Excel(name = "来款编号", width = 15)
+    @ApiModelProperty(value = "来款编号")
+    private java.lang.String incomeNo;
+    /**审核人*/
+    @Excel(name = "审核人", width = 15, dictTable = "sys_user", dicText = "realname", dicCode = "id")
+    @Dict(dictTable = "sys_user", dicText = "realname", dicCode = "id")
+    @ApiModelProperty(value = "审核人")
+    private java.lang.String checker;
 }

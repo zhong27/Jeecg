@@ -3,6 +3,8 @@ package org.jeecg.modules.cash.service.impl;
 import cn.hutool.core.util.ObjectUtil;
 import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import org.apache.shiro.SecurityUtils;
+import org.jeecg.common.system.vo.LoginUser;
 import org.jeecg.modules.JeecgException;
 import org.jeecg.modules.cash.CheckStatus;
 import org.jeecg.modules.cash.entity.CashBalance;
@@ -14,6 +16,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+
+import javax.transaction.Transactional;
 
 /**
  * @Description: 来款管理
@@ -27,7 +31,7 @@ public class CashIncomeServiceImpl extends ServiceImpl<CashIncomeMapper, CashInc
     @Autowired
     CashBalanceServiceImpl cashBalanceService;
 
-
+    @Transactional
     //来款审核
     public void checkIncome(String id){
         CashIncome cashIncome = getById(id);
@@ -37,6 +41,8 @@ public class CashIncomeServiceImpl extends ServiceImpl<CashIncomeMapper, CashInc
             throw new JeecgException("来款已审核！");
         }
         cashIncome.setStatus(CheckStatus.FINISH.getValue());
+        LoginUser sysUser = (LoginUser) SecurityUtils.getSubject().getPrincipal();
+        cashIncome.setChecker(sysUser.getId());
         updateById(cashIncome);
         cashBalanceService.addBlance(cashIncome);
     }

@@ -9,9 +9,12 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import cn.hutool.core.date.DateUtil;
 import org.jeecg.common.api.vo.Result;
 import org.jeecg.common.system.query.QueryGenerator;
 import org.jeecg.common.util.oConvertUtils;
+import org.jeecg.modules.cash.IncomePreEnum;
 import org.jeecg.modules.cash.entity.CashIncome;
 import org.jeecg.modules.cash.service.ICashIncomeService;
 
@@ -84,6 +87,10 @@ public class CashIncomeController extends JeecgController<CashIncome, ICashIncom
 	@ApiOperation(value="来款管理-添加", notes="来款管理-添加")
 	@PostMapping(value = "/add")
 	public Result<?> add(@RequestBody CashIncome cashIncome) {
+		//设置来款编号
+		String incomeNo = DateUtil.format(DateUtil.date(),"yyyyMMddHHmmss");
+		incomeNo = IncomePreEnum.CE.getValue() + incomeNo;
+		cashIncome.setIncomeNo(incomeNo);
 		cashIncomeService.save(cashIncome);
 		return Result.OK("添加成功！");
 	}

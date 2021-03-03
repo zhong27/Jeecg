@@ -9,6 +9,8 @@ import org.jeecg.modules.ord.entity.OrderDet;
 import org.jeecg.modules.ord.entity.OrderBooking;
 import com.baomidou.mybatisplus.extension.service.IService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
+
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Collection;
@@ -35,6 +37,7 @@ public interface IOrderBookingService extends IService<OrderBooking> {
 
 	@Override
 	//订单add方法重写
+	@Transactional
 	default boolean save(OrderBooking orderBooking) {
 		//订单编号
 		String orderNo = DateUtil.format(DateUtil.date(),"yyyyMMddHHmmss");

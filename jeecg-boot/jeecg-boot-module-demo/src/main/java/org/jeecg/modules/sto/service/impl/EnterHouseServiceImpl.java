@@ -19,6 +19,8 @@ import org.springframework.stereotype.Service;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 
+import javax.transaction.Transactional;
+
 /**
  * @Description: 材料入库
  * @Author: jeecg-boot
@@ -33,7 +35,7 @@ public class EnterHouseServiceImpl extends ServiceImpl<EnterHouseMapper, EnterHo
 
     @Autowired
     private OrderDetServiceImpl orderDetService;
-
+    @Transactional
     public void inventoryCheck(OrderDet orderDet) {
 
         //通过仓库、长度、宽度、厚度、材料号、产品大类、产品名称，校验库存
@@ -53,5 +55,21 @@ public class EnterHouseServiceImpl extends ServiceImpl<EnterHouseMapper, EnterHo
         selectEnterHouse.setMatWeight(selectEnterHouse.getMatWeight().subtract(orderDet.getWeight()));
        updateById(selectEnterHouse);
 
+    }
+
+    @Transactional
+    public void updateEnterHouse(OrderDet orderDet) {
+        //通过仓库、长度、宽度、厚度、材料号、产品大类、产品名称，校验库存
+        QueryWrapper<EnterHouse> queryWrapperOrderDet = new QueryWrapper<>();
+        queryWrapperOrderDet.lambda().eq(EnterHouse::getMatWidth,orderDet.getMatWidth())
+                .eq(EnterHouse::getMatLen,orderDet.getMatLen())
+                .eq(EnterHouse::getMatThick,orderDet.getMatThick())
+                .eq(EnterHouse::getMatNo,orderDet.getMatNo())
+                .eq(EnterHouse::getProductClass,orderDet.getProductClass())
+                .eq(EnterHouse::getProductName,orderDet.getProductName())
+                .eq(EnterHouse::getWarehouse,orderDet.getWarehouse());
+        EnterHouse enterHouse = getBaseMapper().selectOne(queryWrapperOrderDet);
+        enterHouse.setMatWeight(enterHouse.getMatWeight().add(orderDet.getWeight()));
+        updateById(enterHouse);
     }
 }

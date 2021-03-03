@@ -1,5 +1,6 @@
 package org.jeecg.modules.ord.controller;
 
+import cn.hutool.core.date.DateUtil;
 import org.jeecg.common.system.query.QueryGenerator;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -7,6 +8,8 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import lombok.extern.slf4j.Slf4j;
 import org.jeecg.common.system.base.controller.JeecgController;
 import org.jeecg.common.api.vo.Result;
+import org.jeecg.modules.cash.IncomePreEnum;
+import org.jeecg.modules.ord.OrderNo;
 import org.jeecg.modules.ord.service.impl.OrderBookingServiceImpl;
 import org.jeecg.modules.ord.service.impl.OrderDetServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -237,7 +240,11 @@ public class OrderBookingController extends JeecgController<OrderBooking, IOrder
 	@ApiOperation(value="订单明细表-批量删除", notes="订单明细表-批量删除")
 	@DeleteMapping(value = "/deleteBatchOrderDet")
 	public Result<?> deleteBatchOrderDet(@RequestParam(name="ids",required=true) String ids) {
-		orderDetServiceImpl.deleteBatchById(Arrays.asList(ids.split(",")));
+		List<String> idList = Arrays.asList(ids.split(","));
+		for (String id:idList){
+			orderDetServiceImpl.deleteOrderDet(id);
+		}
+//		orderDetServiceImpl.deleteBatchById(Arrays.asList(ids.split(",")));
 		return Result.OK("批量删除成功!");
 	}
 

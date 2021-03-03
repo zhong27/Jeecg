@@ -18,6 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -37,6 +38,7 @@ public class OrderBillServiceImpl extends ServiceImpl<OrderBillMapper, OrderBill
     @Autowired
     CustomerServiceImpl customerService;
 
+    @Transactional
     //提单生成
     public void addBill(OrderBooking orderBooking) {
 
