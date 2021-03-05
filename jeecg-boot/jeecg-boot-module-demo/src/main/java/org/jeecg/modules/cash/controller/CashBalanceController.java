@@ -12,7 +12,9 @@ import javax.servlet.http.HttpServletResponse;
 import org.jeecg.common.api.vo.Result;
 import org.jeecg.common.system.query.QueryGenerator;
 import org.jeecg.common.util.oConvertUtils;
+import org.jeecg.modules.JeecgException;
 import org.jeecg.modules.cash.entity.CashBalance;
+import org.jeecg.modules.cash.mapper.CashBalanceMapper;
 import org.jeecg.modules.cash.service.ICashBalanceService;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -49,7 +51,9 @@ import org.jeecg.common.aspect.annotation.AutoLog;
 public class CashBalanceController extends JeecgController<CashBalance, ICashBalanceService> {
 	@Autowired
 	private ICashBalanceService cashBalanceService;
-	
+	 @Autowired
+	 private CashBalanceMapper cashBalanceMapper;
+
 	/**
 	 * 分页列表查询
 	 *
@@ -144,6 +148,19 @@ public class CashBalanceController extends JeecgController<CashBalance, ICashBal
 		}
 		return Result.OK(cashBalance);
 	}
+
+	 /**
+	  * 订单支付
+	  * @param id
+	  * @return
+	  */
+	 @AutoLog(value = "查询客户可用余额")
+	 @ApiOperation(value="查询客户可用余额", notes="查询客户可用余额")
+	 @GetMapping(value = "/queryRemainMoney")
+	 public Result<?> queryRemainMoney(@RequestParam(name="id",required=true) String id) {
+		 CashBalance cashBalance = cashBalanceMapper.selectByCusotmerId(id);
+		 return Result.OK(cashBalance);
+	 }
 
     /**
     * 导出excel

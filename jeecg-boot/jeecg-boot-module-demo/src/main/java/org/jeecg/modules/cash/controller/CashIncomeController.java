@@ -134,7 +134,7 @@ public class CashIncomeController extends JeecgController<CashIncome, ICashIncom
 	@ApiOperation(value="来款管理-通过id删除", notes="来款管理-通过id删除")
 	@DeleteMapping(value = "/delete")
 	public Result<?> delete(@RequestParam(name="id",required=true) String id) {
-		cashIncomeService.removeById(id);
+		cashIncomeServiceImpl.removeById(id);
 		return Result.OK("删除成功!");
 	}
 	

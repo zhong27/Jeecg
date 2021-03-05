@@ -3,6 +3,8 @@
 <mapper namespace="org.jeecg.modules.cash.mapper.CashBalanceMapper">
 
     <select id="selectByCusotmerId" parameterType="java.lang.String" resultType="org.jeecg.modules.cash.entity.CashBalance">
-        select * from cash_balance where customer_name = #{id}
+        select *
+        from cash_balance
+        where customer_name = #{id}
     </select>
 </mapper>

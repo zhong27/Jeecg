@@ -47,6 +47,10 @@ public class OrderDetServiceImpl extends ServiceImpl<OrderDetMapper, OrderDet> i
     @Transactional
     public boolean saveMain(@Param("orderDet") OrderDet orderDet) {
 
+        OrderBooking orderBooking = orderBookingService.getById(orderDet.getOrderId());
+        if (StrUtil.equals(orderBooking.getPayStatus(),PayStatusEnum.PAY.getValue())){
+            throw new JeecgException("订单已支付，不可新增！");
+        }
         //校验材料库存
         enterHouseService.inventoryCheck(orderDet);
 

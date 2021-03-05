@@ -62,7 +62,7 @@ public class CashBalanceServiceImpl extends ServiceImpl<CashBalanceMapper, CashB
         if (cashBalance.getRemainMoney().compareTo(orderBooking.getOrderTotal()) == -1){
             Customer customer = customerService.getById(orderBooking.getCustomer());
             throw new JeecgException(StrUtil.format("支付失败！可用余额不足，超：{}元，账户：{}",
-                    customer.getCustomerName(), orderBooking.getOrderTotal().subtract(cashBalance.getRemainMoney()) ) );
+                     orderBooking.getOrderTotal().subtract(cashBalance.getRemainMoney()),customer.getCustomerName() ) );
         }
         //设置可用余额、已用金额
         cashBalance.setRemainMoney(cashBalance.getRemainMoney().subtract(orderBooking.getOrderTotal()));

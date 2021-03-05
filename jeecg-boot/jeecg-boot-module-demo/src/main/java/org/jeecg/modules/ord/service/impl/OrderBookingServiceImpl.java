@@ -55,12 +55,10 @@ public class OrderBookingServiceImpl extends ServiceImpl<OrderBookingMapper, Ord
     @Transactional
     public void delMain(String id) {
         //订单主表删除
-/*
         OrderBooking orderBooking = getById(id);
         if (StrUtil.equals(orderBooking.getPayStatus(),PayStatusEnum.PAY.getValue())){
             throw new JeecgException("订单已支付，不可删除！");
         }
-*/
         orderDetMapper.deleteByMainId(id);
         orderBookingMapper.deleteById(id);
     }

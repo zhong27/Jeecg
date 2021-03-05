@@ -3,6 +3,8 @@ package org.jeecg.modules.cash.service.impl;
 import cn.hutool.core.util.ObjectUtil;
 import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.service.IService;
+import com.baomidou.mybatisplus.extension.toolkit.SqlHelper;
 import org.apache.shiro.SecurityUtils;
 import org.jeecg.common.system.vo.LoginUser;
 import org.jeecg.modules.JeecgException;
@@ -18,6 +20,7 @@ import org.springframework.stereotype.Service;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 
 import javax.transaction.Transactional;
+import java.io.Serializable;
 
 /**
  * @Description: 来款管理
@@ -45,6 +48,16 @@ public class CashIncomeServiceImpl extends ServiceImpl<CashIncomeMapper, CashInc
         cashIncome.setChecker(sysUser.getId());
         updateById(cashIncome);
         cashBalanceService.addBlance(cashIncome);
+    }
+
+    @Override
+    @Transactional
+    public boolean removeById(Serializable id) {
+        CashIncome cashIncome = getById(id);
+        if (StrUtil.equals(cashIncome.getStatus(),CheckStatus.FINISH.getValue())){
+            throw new JeecgException("来款已审核，不可删除！");
+        }
+        return super.removeById(id);
     }
 
 }
