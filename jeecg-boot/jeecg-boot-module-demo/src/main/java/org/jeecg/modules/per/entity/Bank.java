@@ -20,7 +20,7 @@ import io.swagger.annotations.ApiModelProperty;
  * @Version: V1.0
  */
 @Data
-@TableName("per_bank")
+@TableName("man_bank")
 @ApiModel(value="per_customer对象", description="客户信息")
 public class Bank implements Serializable {
     private static final long serialVersionUID = 1L;

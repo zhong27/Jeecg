@@ -20,7 +20,7 @@ import io.swagger.annotations.ApiModelProperty;
  * @Version: V1.0
  */
 @Data
-@TableName("per_customer")
+@TableName("man_customer")
 @ApiModel(value="per_customer对象", description="客户信息")
 public class Customer implements Serializable {
     private static final long serialVersionUID = 1L;
@@ -59,7 +59,7 @@ public class Customer implements Serializable {
 	/** 电话号码*/
     @Excel(name = " 电话号码", width = 15)
     @ApiModelProperty(value = " 电话号码")
-    private java.lang.String number;
+    private java.lang.String phone;
 	/**客户类型   */
     @Excel(name = "客户类型   ", width = 15, dicCode = "customer_type")
     @Dict(dicCode = "customer_type")
@@ -73,5 +73,5 @@ public class Customer implements Serializable {
 	/**营业执照*/
     @Excel(name = "营业执照", width = 15)
     @ApiModelProperty(value = "营业执照")
-    private java.lang.String price;
+    private java.lang.String picture;
 }

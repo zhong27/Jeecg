@@ -155,6 +155,7 @@ spring:
     password: ''
     port: 6379
 #mybatis plus 设置
+
 mybatis-plus:
   mapper-locations: classpath*:org/jeecg/modules/**/xml/*Mapper.xml
   global-config:
@@ -165,9 +166,14 @@ mybatis-plus:
       id-type: ASSIGN_ID
       # 默认数据库表下划线命名
       table-underline: true
+
+      #逻辑删除
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
   configuration:
     # 这个配置会将执行的sql打印出来，在开发或测试的时候可以用
-    #log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     # 返回类型为Map,显示null对应的字段
     call-setters-on-nulls: true
 #jeecg专用配置
@@ -248,7 +254,7 @@ cas:
 #Mybatis输出sql日志
 logging:
   level:
-    org.jeecg.modules.system.mapper : info
+    org.jeecg.modules.system.mapper: debug
 #enable swagger
 swagger:
   enable: true
