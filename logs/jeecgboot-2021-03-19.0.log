@@ -8263,3 +8263,198 @@ org.jeecg.modules.JeecgException: 生日大于当前时间!
 	Swagger文档: 	http://192.168.2.1:8080/jeecg-boot/doc.html
 ----------------------------------------------------------
 2021-03-19 23:03:13.949 [http-nio-8080-exec-2] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-19 23:05:11.123 [background-preinit] INFO  org.hibernate.validator.internal.util.Version:21 - HV000001: Hibernate Validator 6.1.6.Final
+2021-03-19 23:05:11.150 [main] INFO  org.jeecg.JeecgSystemApplication:55 - Starting JeecgSystemApplication on LAPTOP-ZKS with PID 7696 (E:\Jeecg\jeecg-boot\jeecg-boot-module-system\target\classes started by Lenovo in E:\Jeecg\jeecg-boot)
+2021-03-19 23:05:11.150 [main] INFO  org.jeecg.JeecgSystemApplication:655 - The following profiles are active: dev
+2021-03-19 23:05:13.225 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-19 23:05:13.227 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:127 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-03-19 23:05:13.375 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:187 - Finished Spring Data repository scanning in 132ms. Found 0 Redis repository interfaces.
+2021-03-19 23:05:13.872 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 23:05:13.877 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 23:05:13.992 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 23:05:14.081 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 23:05:14.084 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'shiroConfig' of type [org.jeecg.config.shiro.ShiroConfig$$EnhancerBySpringCGLIB$$64537549] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 23:05:14.119 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'shiroRealm' of type [org.jeecg.config.shiro.ShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 23:05:14.662 [main] INFO  org.jeecg.config.shiro.ShiroConfig:207 - ===============(1)创建缓存管理器RedisCacheManager
+2021-03-19 23:05:14.664 [main] INFO  org.jeecg.config.shiro.ShiroConfig:225 - ===============(2)创建RedisManager,连接Redis..
+2021-03-19 23:05:14.667 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'redisManager' of type [org.crazycake.shiro.RedisManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 23:05:14.677 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 23:05:14.711 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 23:05:14.931 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 23:05:14.938 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$6ea59e21] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 23:05:14.949 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 23:05:14.966 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'redisConfig' of type [org.jeecg.config.redis.RedisConfig$$EnhancerBySpringCGLIB$$db3c645d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 23:05:15.008 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'org.apache.shiro.spring.boot.autoconfigure.ShiroBeanAutoConfiguration' of type [org.apache.shiro.spring.boot.autoconfigure.ShiroBeanAutoConfiguration$$EnhancerBySpringCGLIB$$18300b00] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 23:05:15.014 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'eventBus' of type [org.apache.shiro.event.support.DefaultEventBus] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 23:05:15.367 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:108 - Tomcat initialized with port(s): 8080 (http)
+2021-03-19 23:05:15.377 [main] INFO  org.apache.coyote.http11.Http11NioProtocol:173 - Initializing ProtocolHandler ["http-nio-8080"]
+2021-03-19 23:05:15.378 [main] INFO  org.apache.catalina.core.StandardService:173 - Starting service [Tomcat]
+2021-03-19 23:05:15.379 [main] INFO  org.apache.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-03-19 23:05:15.381 [main] INFO  org.apache.catalina.core.AprLifecycleListener:173 - Loaded Apache Tomcat Native library [1.2.24] using APR version [1.7.0].
+2021-03-19 23:05:15.382 [main] INFO  org.apache.catalina.core.AprLifecycleListener:173 - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-03-19 23:05:15.382 [main] INFO  org.apache.catalina.core.AprLifecycleListener:173 - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-03-19 23:05:15.386 [main] INFO  org.apache.catalina.core.AprLifecycleListener:173 - OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2021-03-19 23:05:15.615 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/jeecg-boot]:173 - Initializing Spring embedded WebApplicationContext
+2021-03-19 23:05:15.616 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext:285 - Root WebApplicationContext: initialization completed in 4419 ms
+2021-03-19 23:05:16.407 [main] INFO  com.alibaba.druid.pool.DruidDataSource:994 - {dataSource-1,master} inited
+2021-03-19 23:05:16.408 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource:132 - dynamic-datasource - load a datasource named [master] success
+2021-03-19 23:05:16.408 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource:237 - dynamic-datasource initial loaded [1] datasource,primary datasource named [master]
+2021-03-19 23:05:19.991 [main] INFO  org.jeecg.config.redis.RedisConfig:66 -  --- redis config init --- 
+2021-03-19 23:05:20.820 [main] INFO  org.quartz.impl.StdSchedulerFactory:1220 - Using default implementation for ThreadExecutor
+2021-03-19 23:05:20.822 [main] INFO  org.quartz.simpl.SimpleThreadPool:268 - Job execution threads will use class loader of thread: main
+2021-03-19 23:05:20.833 [main] INFO  org.quartz.core.SchedulerSignalerImpl:61 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-03-19 23:05:20.833 [main] INFO  org.quartz.core.QuartzScheduler:229 - Quartz Scheduler v.2.3.2 created.
+2021-03-19 23:05:20.837 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore:672 - Using db table-based data access locking (synchronization).
+2021-03-19 23:05:20.839 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore:145 - JobStoreCMT initialized.
+2021-03-19 23:05:20.840 [main] INFO  org.quartz.core.QuartzScheduler:294 - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'MyScheduler' with instanceId 'LAPTOP-ZKS1616166320821'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+2021-03-19 23:05:20.841 [main] INFO  org.quartz.impl.StdSchedulerFactory:1374 - Quartz scheduler 'MyScheduler' initialized from an externally provided properties instance.
+2021-03-19 23:05:20.841 [main] INFO  org.quartz.impl.StdSchedulerFactory:1378 - Quartz scheduler version: 2.3.2
+2021-03-19 23:05:20.841 [main] INFO  org.quartz.core.QuartzScheduler:2293 - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@44587c44
+2021-03-19 23:05:24.887 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver:58 - Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-03-19 23:05:25.064 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-19 23:05:25.310 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-19 23:05:26.044 [main] INFO  org.apache.coyote.http11.Http11NioProtocol:173 - Starting ProtocolHandler ["http-nio-8080"]
+2021-03-19 23:05:26.072 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:220 - Tomcat started on port(s): 8080 (http) with context path '/jeecg-boot'
+2021-03-19 23:05:26.074 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:160 - Context refreshed
+2021-03-19 23:05:26.092 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:163 - Found 1 custom documentation plugin(s)
+2021-03-19 23:05:26.188 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner:41 - Scanning for api listing references
+2021-03-19 23:05:26.421 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_1
+2021-03-19 23:05:26.426 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_1
+2021-03-19 23:05:26.429 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_1
+2021-03-19 23:05:26.434 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_1
+2021-03-19 23:05:26.437 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_1
+2021-03-19 23:05:26.442 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_1
+2021-03-19 23:05:26.453 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_2
+2021-03-19 23:05:26.457 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_2
+2021-03-19 23:05:26.459 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_2
+2021-03-19 23:05:26.462 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_2
+2021-03-19 23:05:26.463 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_2
+2021-03-19 23:05:26.471 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_2
+2021-03-19 23:05:26.482 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_3
+2021-03-19 23:05:26.491 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_3
+2021-03-19 23:05:26.495 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_3
+2021-03-19 23:05:26.498 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_3
+2021-03-19 23:05:26.512 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_3
+2021-03-19 23:05:26.521 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_4
+2021-03-19 23:05:26.523 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_4
+2021-03-19 23:05:26.525 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_4
+2021-03-19 23:05:26.526 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_4
+2021-03-19 23:05:26.528 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_3
+2021-03-19 23:05:26.535 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_4
+2021-03-19 23:05:26.548 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_5
+2021-03-19 23:05:26.551 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_5
+2021-03-19 23:05:26.553 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_5
+2021-03-19 23:05:26.555 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_5
+2021-03-19 23:05:26.556 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_4
+2021-03-19 23:05:26.561 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_5
+2021-03-19 23:05:26.569 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_6
+2021-03-19 23:05:26.572 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_6
+2021-03-19 23:05:26.574 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_6
+2021-03-19 23:05:26.576 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_6
+2021-03-19 23:05:26.578 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_5
+2021-03-19 23:05:26.584 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_6
+2021-03-19 23:05:26.595 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_7
+2021-03-19 23:05:26.597 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_7
+2021-03-19 23:05:26.600 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_7
+2021-03-19 23:05:26.601 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_7
+2021-03-19 23:05:26.609 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_6
+2021-03-19 23:05:26.641 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_8
+2021-03-19 23:05:26.645 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_8
+2021-03-19 23:05:26.647 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_8
+2021-03-19 23:05:26.648 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_8
+2021-03-19 23:05:26.650 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_7
+2021-03-19 23:05:26.654 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_7
+2021-03-19 23:05:26.663 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_9
+2021-03-19 23:05:26.664 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_9
+2021-03-19 23:05:26.666 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_9
+2021-03-19 23:05:26.667 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_9
+2021-03-19 23:05:26.668 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_8
+2021-03-19 23:05:26.673 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_8
+2021-03-19 23:05:26.681 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_10
+2021-03-19 23:05:26.688 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_10
+2021-03-19 23:05:26.690 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_10
+2021-03-19 23:05:26.693 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_10
+2021-03-19 23:05:26.701 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_9
+2021-03-19 23:05:26.710 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_11
+2021-03-19 23:05:26.711 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_11
+2021-03-19 23:05:26.712 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_11
+2021-03-19 23:05:26.713 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_11
+2021-03-19 23:05:26.714 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_9
+2021-03-19 23:05:26.717 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_10
+2021-03-19 23:05:26.723 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_12
+2021-03-19 23:05:26.725 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_12
+2021-03-19 23:05:26.726 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_12
+2021-03-19 23:05:26.727 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_12
+2021-03-19 23:05:26.728 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_10
+2021-03-19 23:05:26.731 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_11
+2021-03-19 23:05:26.738 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_13
+2021-03-19 23:05:26.739 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_13
+2021-03-19 23:05:26.740 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_13
+2021-03-19 23:05:26.742 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_13
+2021-03-19 23:05:26.743 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_11
+2021-03-19 23:05:26.747 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_12
+2021-03-19 23:05:26.751 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_14
+2021-03-19 23:05:26.753 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_14
+2021-03-19 23:05:26.754 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_14
+2021-03-19 23:05:26.755 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_14
+2021-03-19 23:05:26.756 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_12
+2021-03-19 23:05:26.759 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_13
+2021-03-19 23:05:26.763 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_15
+2021-03-19 23:05:26.765 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_15
+2021-03-19 23:05:26.766 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_15
+2021-03-19 23:05:26.767 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_15
+2021-03-19 23:05:26.768 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_13
+2021-03-19 23:05:26.772 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_14
+2021-03-19 23:05:26.776 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_16
+2021-03-19 23:05:26.777 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_16
+2021-03-19 23:05:26.778 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_16
+2021-03-19 23:05:26.779 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_16
+2021-03-19 23:05:26.780 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_14
+2021-03-19 23:05:26.783 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_15
+2021-03-19 23:05:26.790 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_17
+2021-03-19 23:05:26.792 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_17
+2021-03-19 23:05:26.793 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_17
+2021-03-19 23:05:26.794 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_17
+2021-03-19 23:05:26.796 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_15
+2021-03-19 23:05:26.803 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_16
+2021-03-19 23:05:26.808 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_18
+2021-03-19 23:05:26.809 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_18
+2021-03-19 23:05:26.810 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_18
+2021-03-19 23:05:26.811 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_18
+2021-03-19 23:05:26.812 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_16
+2021-03-19 23:05:26.815 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_17
+2021-03-19 23:05:26.826 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:727 - Starting Quartz Scheduler now
+2021-03-19 23:05:27.017 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore:3644 - ClusterManager: detected 1 failed or restarted instances.
+2021-03-19 23:05:27.017 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore:3503 - ClusterManager: Scanning for instance "LAPTOP-ZKS1616166185104"'s failed in-progress jobs.
+2021-03-19 23:05:27.216 [main] INFO  org.quartz.core.QuartzScheduler:547 - Scheduler MyScheduler_$_LAPTOP-ZKS1616166320821 started.
+2021-03-19 23:05:27.245 [main] INFO  org.jeecg.JeecgSystemApplication:61 - Started JeecgSystemApplication in 17.406 seconds (JVM running for 19.242)
+2021-03-19 23:05:27.254 [main] INFO  org.jeecg.modules.init.SystemInitListener:27 -  服务已启动，准备初始化路由配置 ###################
+2021-03-19 23:05:28.240 [RMI TCP Connection(3)-192.168.2.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/jeecg-boot]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-19 23:05:28.241 [RMI TCP Connection(3)-192.168.2.1] INFO  org.springframework.web.servlet.DispatcherServlet:525 - Initializing Servlet 'dispatcherServlet'
+2021-03-19 23:05:28.258 [RMI TCP Connection(3)-192.168.2.1] INFO  org.springframework.web.servlet.DispatcherServlet:547 - Completed initialization in 16 ms
+2021-03-19 23:05:28.919 [main] INFO  org.jeecg.JeecgSystemApplication:39 - 
+----------------------------------------------------------
+	Application Jeecg-Boot is running! Access URLs:
+	Local: 		http://localhost:8080/jeecg-boot/
+	External: 	http://192.168.2.1:8080/jeecg-boot/
+	Swagger文档: 	http://192.168.2.1:8080/jeecg-boot/doc.html
+----------------------------------------------------------
+2021-03-19 23:05:30.184 [http-nio-8080-exec-1] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-19 23:05:53.433 [http-nio-8080-exec-6] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->sex = 1
+2021-03-19 23:05:53.435 [http-nio-8080-exec-6] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->del_flag = 0
+2021-03-19 23:06:10.211 [http-nio-8080-exec-10] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->sex = 1
+2021-03-19 23:06:10.212 [http-nio-8080-exec-10] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->del_flag = 0
+2021-03-19 23:07:42.652 [http-nio-8080-exec-7] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-19 23:07:47.069 [http-nio-8080-exec-1] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-19 23:07:51.280 [http-nio-8080-exec-10] INFO  o.j.m.system.controller.SysPermissionController:73 - ======获取全部菜单数据=====耗时:43毫秒
+2021-03-19 23:08:07.694 [http-nio-8080-exec-4] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->del_flag = 0
+2021-03-19 23:08:09.808 [http-nio-8080-exec-5] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-19 23:08:13.484 [http-nio-8080-exec-9] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-19 23:08:13.913 [http-nio-8080-exec-2] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->del_flag = 0
