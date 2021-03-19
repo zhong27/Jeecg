@@ -44,6 +44,8 @@ public class MybatisPlusConfig {
     static {
         tenantTable.add("jee_bug_danbiao");
         tenantTable.add("man_customer");
+        tenantTable.add("man_driver");
+        tenantTable.add("man_business");
         DDL_KEYWORD.add("alter");
     }
 
