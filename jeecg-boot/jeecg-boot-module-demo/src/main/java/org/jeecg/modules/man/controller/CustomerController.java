@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import lombok.extern.slf4j.Slf4j;
 import org.jeecg.common.system.base.controller.JeecgController;
 import org.jeecg.common.api.vo.Result;
+import org.jeecg.config.mybatis.TenantContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
@@ -43,7 +44,7 @@ import java.util.stream.Collectors;
  */
 @Api(tags="客户信息")
 @RestController
-@RequestMapping("/per/customer")
+@RequestMapping("/man/customer")
 @Slf4j
 public class CustomerController extends JeecgController<Customer, ICustomerService> {
 
@@ -74,6 +75,7 @@ public class CustomerController extends JeecgController<Customer, ICustomerServi
 		QueryWrapper<Customer> queryWrapper = QueryGenerator.initQueryWrapper(customer, req.getParameterMap());
 		Page<Customer> page = new Page<Customer>(pageNo, pageSize);
 		IPage<Customer> pageList = customerService.page(page, queryWrapper);
+		System.out.println("tenantId:"+ TenantContext.getTenant());
 		return Result.OK(pageList);
 	}
 

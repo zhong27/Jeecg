@@ -43,6 +43,7 @@ public class MybatisPlusConfig {
     private static final List<String> DDL_KEYWORD = new ArrayList<String>();
     static {
         tenantTable.add("jee_bug_danbiao");
+        tenantTable.add("man_customer");
         DDL_KEYWORD.add("alter");
     }
 

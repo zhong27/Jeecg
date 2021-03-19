@@ -2,10 +2,7 @@ package org.jeecg.modules.man.entity;
 
 import java.io.Serializable;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableLogic;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import org.jeecg.common.system.base.entity.JeecgEntity;
@@ -24,7 +21,7 @@ import lombok.experimental.Accessors;
  * @Version: V1.0
  */
 @Data
-@TableName("per_driver")
+@TableName("man_driver")
 @Accessors(chain = true)
 @EqualsAndHashCode(callSuper = false)
 @ApiModel(value="per_driver对象", description="司机")
@@ -72,8 +69,11 @@ public class Driver extends JeecgEntity implements Serializable{
     @ApiModelProperty(value = "电话号码")
     private java.lang.String phone;
     /**逻辑删除*/
-    @TableLogic
     @Excel(name = "逻辑删除", width = 15)
     @ApiModelProperty(value = "逻辑删除")
-    private java.lang.Integer delFlag;
+    private int delFlag;
+    /**租户id*/
+    @Excel(name = "租户id", width = 15)
+    @ApiModelProperty(value = "租户id")
+    private java.lang.String tenantId;
 }

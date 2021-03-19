@@ -74,4 +74,12 @@ public class Customer implements Serializable {
     @Excel(name = "营业执照", width = 15)
     @ApiModelProperty(value = "营业执照")
     private java.lang.String picture;
+    /**逻辑删除*/
+    @Excel(name = "逻辑删除", width = 15)
+    @ApiModelProperty(value = "逻辑删除")
+    private int delFlag;
+    /**租户id*/
+    @Excel(name = "租户id", width = 15)
+    @ApiModelProperty(value = "租户id")
+    private java.lang.String tenantId;
 }

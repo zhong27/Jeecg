@@ -170,6 +170,7 @@ mybatis-plus:
       #逻辑删除
       logic-delete-value: 1
       logic-not-delete-value: 0
+      logic-delete-field: delFlag
 
   configuration:
     # 这个配置会将执行的sql打印出来，在开发或测试的时候可以用

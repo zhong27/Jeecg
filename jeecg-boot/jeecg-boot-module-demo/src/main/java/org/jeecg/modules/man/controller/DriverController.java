@@ -29,7 +29,7 @@ import org.jeecg.common.aspect.annotation.AutoLog;
  */
 @Api(tags="司机")
 @RestController
-@RequestMapping("/per/driver")
+@RequestMapping("/man/driver")
 @Slf4j
 public class DriverController extends JeecgController<Driver, IDriverService> {
 	@Autowired

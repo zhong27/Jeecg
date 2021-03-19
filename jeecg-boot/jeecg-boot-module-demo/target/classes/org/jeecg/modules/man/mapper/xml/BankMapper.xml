@@ -4,14 +4,14 @@
 
 	<delete id="deleteByMainId" parameterType="java.lang.String">
 		DELETE 
-		FROM  per_bank 
+		FROM  man_bank
 		WHERE
 			 main_id = #{mainId} 
 	</delete>
 	
 	<select id="selectByMainId" parameterType="java.lang.String" resultType="org.jeecg.modules.man.entity.Bank">
 		SELECT * 
-		FROM  per_bank
+		FROM  man_bank
 		WHERE
 			 main_id = #{mainId} 
 	</select>
