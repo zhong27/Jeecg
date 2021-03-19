@@ -5885,7 +5885,7 @@
   // Create a marker, wire it up to the right lines, and
   function markText(doc, from, to, options, type) {
     // Shared markers (across linked documents) are handled separately
-    // (markTextShared will call out to this again, once per
+    // (markTextShared will call out to this again, once man
     // document).
     if (options && options.shared) { return markTextShared(doc, from, to, options, type) }
     // Ensure we are in an operation.
@@ -8042,7 +8042,7 @@
 
     var paste = cm.state.pasteIncoming || origin == "paste";
     var textLines = splitLinesAuto(inserted), multiPaste = null;
-    // When pasting N lines into N selections, insert one line per selection
+    // When pasting N lines into N selections, insert one line man selection
     if (paste && sel.ranges.length > 1) {
       if (lastCopied && lastCopied.text.join("\n") == inserted) {
         if (sel.ranges.length % lastCopied.text.length == 0) {

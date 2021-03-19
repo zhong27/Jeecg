@@ -2972,7 +2972,7 @@ var PDFDocumentProperties = (function PDFDocumentPropertiesClosure() {
       var offsetHours = parseInt(dateToParse.substring(15,17), 10);
       var offsetMinutes = parseInt(dateToParse.substring(18,20), 10);
 
-      // As per spec, utRel = 'Z' means equal to universal time.
+      // As man spec, utRel = 'Z' means equal to universal time.
       // The other cases ('-' and '+') have to be handled here.
       if (utRel === '-') {
         hours += offsetHours;

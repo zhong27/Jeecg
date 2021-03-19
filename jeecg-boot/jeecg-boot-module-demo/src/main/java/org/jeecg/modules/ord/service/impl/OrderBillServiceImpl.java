@@ -10,10 +10,10 @@ import org.jeecg.modules.ord.entity.OrderBooking;
 import org.jeecg.modules.ord.entity.OrderDet;
 import org.jeecg.modules.ord.mapper.OrderBillMapper;
 import org.jeecg.modules.ord.service.IOrderBillService;
-import org.jeecg.modules.per.entity.Bank;
-import org.jeecg.modules.per.entity.Customer;
-import org.jeecg.modules.per.service.impl.BankServiceImpl;
-import org.jeecg.modules.per.service.impl.CustomerServiceImpl;
+import org.jeecg.modules.man.entity.Bank;
+import org.jeecg.modules.man.entity.Customer;
+import org.jeecg.modules.man.service.impl.BankServiceImpl;
+import org.jeecg.modules.man.service.impl.CustomerServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

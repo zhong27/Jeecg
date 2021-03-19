@@ -48,7 +48,7 @@
             $("<input/>",{type : "radio", value : "3", name : "second"}).appendTo(seconds3);
             $(seconds3).append("from");
             $("<input/>",{type : "text", id : "secondStart_1", value : "0", style:"width:35px; height:20px; text-align: center; margin: 0 3px;"}).appendTo(seconds3);
-            $(seconds3).append("seconds start, per");
+            $(seconds3).append("seconds start, man");
             $("<input/>",{type : "text", id : "secondEnd_1", value : "1", style:"width:35px; height:20px; text-align: center; margin: 0 3px;"}).appendTo(seconds3);
             $(seconds3).append("second execute once");
             $(seconds3).appendTo(secondsTab);
@@ -88,7 +88,7 @@
             $("<input/>",{type : "radio", value : "3", name : "min"}).appendTo(minutes3);
             $(minutes3).append("from");
             $("<input/>",{type : "text", id : "minStart_1", value : "0", style:"width:35px; height:20px; text-align: center; margin: 0 3px;"}).appendTo(minutes3);
-            $(minutes3).append("seconds start, per");
+            $(minutes3).append("seconds start, man");
             $("<input/>",{type : "text", id : "minEnd_1", value : "1", style:"width:35px; height:20px; text-align: center; margin: 0 3px;"}).appendTo(minutes3);
             $(minutes3).append("second execute once");
             $(minutes3).appendTo(minutesTab);
@@ -128,7 +128,7 @@
             $("<input/>",{type : "radio", value : "3", name : "hour"}).appendTo(hourly3);
             $(hourly3).append("from");
             $("<input/>",{type : "text", id : "hourStart_1", value : "0", style:"width:35px; height:20px; text-align: center; margin: 0 3px;"}).appendTo(hourly3);
-            $(hourly3).append("hour start, per");
+            $(hourly3).append("hour start, man");
             $("<input/>",{type : "text", id : "hourEnd_1", value : "1", style:"width:35px; height:20px; text-align: center; margin: 0 3px;"}).appendTo(hourly3);
             $(hourly3).append("hour execute once");
             $(hourly3).appendTo(hourlyTab);
@@ -172,7 +172,7 @@
             $("<input/>",{type : "radio", value : "4", name : "day"}).appendTo(daily3);
             $(daily3).append("from");
             $("<input/>",{type : "text", id : "dayStart_1", value : "1", style:"width:35px; height:20px; text-align: center; margin: 0 3px;"}).appendTo(daily3);
-            $(daily3).append("day start, per");
+            $(daily3).append("day start, man");
             $("<input/>",{type : "text", id : "dayEnd_1", value : "1", style:"width:35px; height:20px; text-align: center; margin: 0 3px;"}).appendTo(daily3);
             $(daily3).append("day execute once");
             $(daily3).appendTo(dailyTab);

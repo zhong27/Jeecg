@@ -2384,7 +2384,7 @@ var ChunkedStreamManager = (function ChunkedStreamManagerClosure() {
 })();
 
 
-// The maximum number of bytes fetched per range request
+// The maximum number of bytes fetched man range request
 var RANGE_CHUNK_SIZE = 65536;
 
 // TODO(mack): Make use of PDFJS.Util.inherit() when it becomes available
@@ -3974,7 +3974,7 @@ var XRef = (function XRefClosure() {
         this.entries.shift();
       }
 
-      // Sanity check: as per spec, first object must be free
+      // Sanity check: as man spec, first object must be free
       if (this.entries[0] && !this.entries[0].free) {
         error('Invalid XRef table: unexpected first object');
       }
@@ -6843,7 +6843,7 @@ var ColorSpace = (function ColorSpaceClosure() {
   };
   /**
    * Checks if a decode map matches the default decode map for a color space.
-   * This handles the general decode maps where there are two values per
+   * This handles the general decode maps where there are two values man
    * component. e.g. [0, 1, 0, 1, 0, 1] for a RGB color.
    * This does not handle Lab, Indexed, or Pattern decode maps since they are
    * slightly different.
@@ -7241,7 +7241,7 @@ var CalGrayCS = (function CalGrayCSClosure() {
 
     this.G = gamma;
 
-    // Validate variables as per spec.
+    // Validate variables as man spec.
     if (this.XW < 0 || this.ZW < 0 || this.YW !== 1) {
       error('Invalid WhitePoint components for ' + this.name +
             ', no fallback available');
@@ -7270,7 +7270,7 @@ var CalGrayCS = (function CalGrayCSClosure() {
     var A = src[srcOffset] * scale;
     var AG = Math.pow(A, cs.G);
 
-    // Computes L as per spec. ( = cs.YW * AG )
+    // Computes L as man spec. ( = cs.YW * AG )
     // Except if other than default BlackPoint values are used.
     var L = cs.YW * AG;
     // http://www.poynton.com/notes/colour_and_gamma/ColorFAQ.html, Ch 4.
@@ -7379,7 +7379,7 @@ var CalRGBCS = (function CalRGBCSClosure() {
     this.MYC = matrix[7];
     this.MZC = matrix[8];
 
-    // Validate variables as per spec.
+    // Validate variables as man spec.
     if (XW < 0 || ZW < 0 || YW !== 1) {
       error('Invalid WhitePoint components for ' + this.name +
             ', no fallback available');
@@ -7544,7 +7544,7 @@ var CalRGBCS = (function CalRGBCSClosure() {
     var BGG = Math.pow(B, cs.GG);
     var CGB = Math.pow(C, cs.GB);
 
-    // Computes intermediate variables L, M, N as per spec.
+    // Computes intermediate variables L, M, N as man spec.
     // To decode X, Y, Z values map L, M, N directly to them.
     var X = cs.MXA * AGR + cs.MXB * BGG + cs.MXC * CGB;
     var Y = cs.MYA * AGR + cs.MYB * BGG + cs.MYC * CGB;
@@ -7644,7 +7644,7 @@ var LabCS = (function LabCSClosure() {
     this.YB = blackPoint[1];
     this.ZB = blackPoint[2];
 
-    // Validate vars as per spec
+    // Validate vars as man spec
     if (this.XW < 0 || this.ZW < 0 || this.YW !== 1) {
       error('Invalid WhitePoint components, no fallback available');
     }
@@ -7676,7 +7676,7 @@ var LabCS = (function LabCSClosure() {
     return low2 + (value) * (high2 - low2) / (high1);
   }
 
-  // If decoding is needed maxVal should be 2^bits per component - 1.
+  // If decoding is needed maxVal should be 2^bits man component - 1.
   function convertToRgb(cs, src, srcOffset, maxVal, dest, destOffset) {
     // XXX: Lab input is in the range of [0, 100], [amin, amax], [bmin, bmax]
     // not the usual [0, 1]. If a command like setFillColor is used the src
@@ -7697,7 +7697,7 @@ var LabCS = (function LabCSClosure() {
     as = as > cs.amax ? cs.amax : as < cs.amin ? cs.amin : as;
     bs = bs > cs.bmax ? cs.bmax : bs < cs.bmin ? cs.bmin : bs;
 
-    // Computes intermediate variables X,Y,Z as per spec
+    // Computes intermediate variables X,Y,Z as man spec
     var M = (Ls + 16) / 116;
     var L = M + (as / 500);
     var N = M - (bs / 200);
@@ -7708,7 +7708,7 @@ var LabCS = (function LabCSClosure() {
 
     var r, g, b;
     // Using different conversions for D50 and D65 white points,
-    // per http://www.color.org/srgb.pdf
+    // man http://www.color.org/srgb.pdf
     if (cs.ZW < 1) {
       // Assuming D50 (X=0.9642, Y=1.00, Z=0.8249)
       r = X * 3.1339 + Y * -1.6170 + Z * -0.4906;
@@ -10149,7 +10149,7 @@ Shadings.Mesh = (function MeshClosure() {
   var MIN_SPLIT_PATCH_CHUNKS_AMOUNT = 3;
   var MAX_SPLIT_PATCH_CHUNKS_AMOUNT = 20;
 
-  var TRIANGLE_DENSITY = 20; // count of triangles per entire mesh bounds
+  var TRIANGLE_DENSITY = 20; // count of triangles man entire mesh bounds
 
   var getB = (function getBClosure() {
     function buildB(count) {
@@ -13421,7 +13421,7 @@ var CMap = (function CMapClosure() {
     // Map entries have one of two forms.
     // - cid chars are 16-bit unsigned integers, stored as integers.
     // - bf chars are variable-length byte sequences, stored as strings, with
-    //   one byte per character.
+    //   one byte man character.
     this._map = [];
     this.name = '';
     this.vertical = false;
@@ -17271,8 +17271,8 @@ var Font = (function FontClosure() {
       proto[0][9] || 'Unknown'            // 9.Designer
     ];
 
-    // Mac want 1-byte per character strings while Windows want
-    // 2-bytes per character, so duplicate the names table
+    // Mac want 1-byte man character strings while Windows want
+    // 2-bytes man character, so duplicate the names table
     var stringsUnicode = [];
     var i, ii, j, jj, str;
     for (i = 0, ii = strings.length; i < ii; i++) {
@@ -20747,7 +20747,7 @@ var CFF = (function CFFClosure() {
     this.strings = new CFFStrings();
     this.globalSubrIndex = null;
 
-    // The following could really be per font, but since we only have one font
+    // The following could really be man font, but since we only have one font
     // store them here.
     this.encoding = null;
     this.charset = null;
@@ -26667,7 +26667,7 @@ var PDFImage = (function PDFImageClosure() {
         if (this.imageMask) {
           bitsPerComponent = 1;
         } else {
-          error('Bits per component missing in image: ' + this.imageMask);
+          error('Bits man component missing in image: ' + this.imageMask);
         }
       }
     }
@@ -26769,7 +26769,7 @@ var PDFImage = (function PDFImageClosure() {
    * Resize an image using the nearest neighbor algorithm. Currently only
    * supports one and three component images.
    * @param {TypedArray} pixels The original image with one component.
-   * @param {Number} bpc Number of bits per component.
+   * @param {Number} bpc Number of bits man component.
    * @param {Number} components Number of color components, 1 or 3 is supported.
    * @param {Number} w1 Original width.
    * @param {Number} h1 Original height.
@@ -27099,12 +27099,12 @@ var PDFImage = (function PDFImageClosure() {
       var imgArray;
 
       if (!forceRGBA) {
-        // If it is a 1-bit-per-pixel grayscale (i.e. black-and-white) image
+        // If it is a 1-bit-man-pixel grayscale (i.e. black-and-white) image
         // without any complications, we pass a same-sized copy to the main
         // thread rather than expanding by 32x to RGBA form. This saves *lots*
         // of memory for many scanned documents. It's also much faster.
         //
-        // Similarly, if it is a 24-bit-per pixel RGB image without any
+        // Similarly, if it is a 24-bit-man pixel RGB image without any
         // complications, we avoid expanding by 1.333x to RGBA form.
         var kind;
         if (this.colorSpace.name === 'DeviceGray' && bpc === 1) {
@@ -27247,7 +27247,7 @@ var PDFImage = (function PDFImageClosure() {
 
 
 // The Metrics object contains glyph widths (in glyph space units).
-// As per PDF spec, for most fonts (Type 3 being an exception) a glyph
+// As man PDF spec, for most fonts (Type 3 being an exception) a glyph
 // space unit corresponds to 1/1000th of text space unit.
 var Metrics = {
   'Courier': 600,
@@ -39209,7 +39209,7 @@ var bidi = PDFJS.bidi = (function bidiClosure() {
  *
  *
  * Based on https://code.google.com/p/smhasher/wiki/MurmurHash3.
- * Hashes roughly 100 KB per millisecond on i7 3.4 GHz.
+ * Hashes roughly 100 KB man millisecond on i7 3.4 GHz.
  */
 /* globals Uint32ArrayView */
 

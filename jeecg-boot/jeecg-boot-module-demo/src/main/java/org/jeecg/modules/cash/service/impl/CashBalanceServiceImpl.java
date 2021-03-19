@@ -9,8 +9,8 @@ import org.jeecg.modules.cash.entity.CashIncome;
 import org.jeecg.modules.cash.mapper.CashBalanceMapper;
 import org.jeecg.modules.cash.service.ICashBalanceService;
 import org.jeecg.modules.ord.entity.OrderBooking;
-import org.jeecg.modules.per.entity.Customer;
-import org.jeecg.modules.per.service.impl.CustomerServiceImpl;
+import org.jeecg.modules.man.entity.Customer;
+import org.jeecg.modules.man.service.impl.CustomerServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

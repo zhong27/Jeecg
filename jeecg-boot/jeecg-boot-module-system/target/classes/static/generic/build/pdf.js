@@ -3765,7 +3765,7 @@ var CanvasGraphics = (function CanvasGraphicsClosure() {
     // There are multiple forms in which the pixel data can be passed, and
     // imgData.kind tells us which one this is.
     if (imgData.kind === ImageKind.GRAYSCALE_1BPP) {
-      // Grayscale, 1 bit per pixel (i.e. black-and-white).
+      // Grayscale, 1 bit man pixel (i.e. black-and-white).
       var srcLength = src.byteLength;
       var dest32 = PDFJS.hasCanvasTypedArrays ? new Uint32Array(dest.buffer) :
         new Uint32ArrayView(dest);
@@ -3814,7 +3814,7 @@ var CanvasGraphics = (function CanvasGraphicsClosure() {
         ctx.putImageData(chunkImgData, 0, i * FULL_CHUNK_HEIGHT);
       }
     } else if (imgData.kind === ImageKind.RGBA_32BPP) {
-      // RGBA, 32-bits per pixel.
+      // RGBA, 32-bits man pixel.
 
       j = 0;
       elemsInThisChunk = width * FULL_CHUNK_HEIGHT * 4;
@@ -3832,7 +3832,7 @@ var CanvasGraphics = (function CanvasGraphicsClosure() {
       }
 
     } else if (imgData.kind === ImageKind.RGB_24BPP) {
-      // RGB, 24-bits per pixel.
+      // RGB, 24-bits man pixel.
       thisChunkHeight = FULL_CHUNK_HEIGHT;
       elemsInThisChunk = width * thisChunkHeight;
       for (i = 0; i < totalChunks; i++) {
@@ -4724,7 +4724,7 @@ var CanvasGraphics = (function CanvasGraphicsClosure() {
 
         if (font.remeasure && width > 0 && this.isFontSubpixelAAEnabled) {
           // some standard fonts may not have the exact width, trying to
-          // rescale per character
+          // rescale man character
           var measuredWidth = ctx.measureText(character).width * 1000 /
             fontSize * fontSizeScale;
           var characterScaleX = width / measuredWidth;
