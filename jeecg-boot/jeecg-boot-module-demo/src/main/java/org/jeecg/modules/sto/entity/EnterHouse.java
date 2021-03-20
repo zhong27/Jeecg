@@ -54,15 +54,15 @@ public class EnterHouse implements Serializable {
 	/**所属部门*/
     @ApiModelProperty(value = "所属部门")
     private java.lang.String sysOrgCode;
-	/**产品大类*/
-	@Excel(name = "产品大类", width = 15)
-    @Dict(dicCode = "product_class")
-    @ApiModelProperty(value = "产品大类")
-    private java.lang.String productClass;
+	/**物料种类*/
+	@Excel(name = "物料种类", width = 15)
+    @Dict(dicCode = "mat_type")
+    @ApiModelProperty(value = "物料种类")
+    private java.lang.String matType;
 	/**材料名称*/
 	@Excel(name = "材料名称", width = 15)
     @ApiModelProperty(value = "材料名称")
-    private java.lang.String productName;
+    private java.lang.String matName;
 	/**材料长度*/
 	@Excel(name = "材料长度", width = 15)
     @ApiModelProperty(value = "材料长度")

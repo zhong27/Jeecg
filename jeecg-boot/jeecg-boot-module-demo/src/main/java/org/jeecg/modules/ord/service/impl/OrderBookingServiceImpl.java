@@ -109,8 +109,8 @@ public class OrderBookingServiceImpl extends ServiceImpl<OrderBookingMapper, Ord
                 .eq(EnterHouse::getMatLen,orderDet.getMatLen())
                 .eq(EnterHouse::getMatThick,orderDet.getMatThick())
                 .eq(EnterHouse::getMatNo,orderDet.getMatNo())
-                .eq(EnterHouse::getProductClass,orderDet.getProductClass())
-                .eq(EnterHouse::getProductName,orderDet.getProductName())
+                .eq(EnterHouse::getMatType,orderDet.getProductClass())
+                .eq(EnterHouse::getMatName,orderDet.getProductName())
                 .eq(EnterHouse::getWarehouse,orderDet.getWarehouse());
         EnterHouse selectEnterHouse = enterHouseService.getOne(queryWrapperOrderDet);
         selectEnterHouse.setMatWeight(selectEnterHouse.getMatWeight().subtract(orderDet.getWeight())

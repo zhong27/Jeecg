@@ -23,8 +23,8 @@ public interface IEnterHouseService extends IService<EnterHouse> {
         //库存根据长、宽、厚、材料号、单价、产品大类、材料名称校验、仓库
         QueryWrapper<EnterHouse> enterHouseQuery = new QueryWrapper<>();
         enterHouseQuery.lambda()
-                .eq(EnterHouse::getProductClass, entity.getProductClass())
-                .eq(EnterHouse::getProductName, entity.getProductName())
+                .eq(EnterHouse::getMatType, entity.getMatType())
+                .eq(EnterHouse::getMatName, entity.getMatName())
                 .eq(EnterHouse::getMatLen, entity.getMatLen())
                 .eq(EnterHouse::getMatNo, entity.getMatNo())
                 .eq(EnterHouse::getMatThick, entity.getMatThick())

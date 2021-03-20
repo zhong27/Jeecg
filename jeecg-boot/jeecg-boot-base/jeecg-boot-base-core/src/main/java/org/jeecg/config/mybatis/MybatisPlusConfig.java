@@ -46,6 +46,9 @@ public class MybatisPlusConfig {
         tenantTable.add("man_customer");
         tenantTable.add("man_driver");
         tenantTable.add("man_business");
+        tenantTable.add("sto_warehouse");
+        tenantTable.add("sto_material_information");
+        tenantTable.add("cash_balance");
         DDL_KEYWORD.add("alter");
     }
 

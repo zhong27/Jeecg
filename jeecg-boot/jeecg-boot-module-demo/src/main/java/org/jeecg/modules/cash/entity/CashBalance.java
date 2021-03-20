@@ -55,8 +55,8 @@ public class CashBalance implements Serializable {
     @ApiModelProperty(value = "所属部门")
     private java.lang.String sysOrgCode;
 	/**资金账户*/
-	@Excel(name = "资金账户", width = 15, dictTable = "per_customer", dicText = "customer_name", dicCode = "id")
-	@Dict(dictTable = "per_customer", dicText = "customer_name", dicCode = "id")
+	@Excel(name = "资金账户", width = 15, dictTable = "man_customer", dicText = "customer_name", dicCode = "id")
+	@Dict(dictTable = "man_customer", dicText = "customer_name", dicCode = "id")
     @ApiModelProperty(value = "资金账户")
     private java.lang.String customerName;
 	/**总金额*/
@@ -71,4 +71,16 @@ public class CashBalance implements Serializable {
     @Excel(name = "已用金额", width = 15)
     @ApiModelProperty(value = "已用金额")
     private java.math.BigDecimal amountUsed;
+    /**退款金额*/
+    @Excel(name = "退款金额", width = 15)
+    @ApiModelProperty(value = "退款金额")
+    private java.math.BigDecimal refundAmount;
+    /**逻辑删除*/
+    @Excel(name = "逻辑删除", width = 15)
+    @ApiModelProperty(value = "逻辑删除")
+    private int delFlag;
+    /**租户id*/
+    @Excel(name = "租户id", width = 15)
+    @ApiModelProperty(value = "租户id")
+    private java.lang.String tenantId;
 }

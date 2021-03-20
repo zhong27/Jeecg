@@ -67,6 +67,7 @@ public class WarehouseController extends JeecgController<Warehouse, IWarehouseSe
 								   @RequestParam(name="pageSize", defaultValue="10") Integer pageSize,
 								   HttpServletRequest req) {
 		QueryWrapper<Warehouse> queryWrapper = QueryGenerator.initQueryWrapper(warehouse, req.getParameterMap());
+
 		Page<Warehouse> page = new Page<Warehouse>(pageNo, pageSize);
 		IPage<Warehouse> pageList = warehouseService.page(page, queryWrapper);
 		return Result.OK(pageList);
