@@ -52,6 +52,7 @@ public class MybatisPlusConfig {
         tenantTable.add("cash_income");
         tenantTable.add("order_booking");
         tenantTable.add("order_det");
+        tenantTable.add("man_consignee");
         DDL_KEYWORD.add("alter");
     }
 
