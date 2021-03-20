@@ -54,12 +54,12 @@ public class OrderDet implements Serializable {
 	/**材料名称*/
 	@Excel(name = "材料名称", width = 15)
 	@ApiModelProperty(value = "材料名称")
-	private java.lang.String productName;
-	/**产品大类*/
-	@Excel(name = "产品大类", width = 15)
-    @Dict(dicCode = "product_class")
-	@ApiModelProperty(value = "产品大类")
-	private java.lang.String productClass;
+	private java.lang.String matName;
+	/**物料种类*/
+	@Excel(name = "物料种类", width = 15)
+    @Dict(dicCode = "mat_type")
+	@ApiModelProperty(value = "物料种类")
+	private java.lang.String matType;
 	/**材料长度*/
 	@Excel(name = "材料长度", width = 15)
 	@ApiModelProperty(value = "材料长度")
@@ -97,4 +97,12 @@ public class OrderDet implements Serializable {
 	@Excel(name = "总价", width = 15)
 	@ApiModelProperty(value = "总价")
 	private java.math.BigDecimal total;
+	/**逻辑删除*/
+	@Excel(name = "逻辑删除", width = 15)
+	@ApiModelProperty(value = "逻辑删除")
+	private int delFlag;
+	/**租户id*/
+	@Excel(name = "租户id", width = 15)
+	@ApiModelProperty(value = "租户id")
+	private java.lang.String tenantId;
 }

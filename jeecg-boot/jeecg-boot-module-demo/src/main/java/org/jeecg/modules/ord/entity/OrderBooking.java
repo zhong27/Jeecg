@@ -49,13 +49,13 @@ public class OrderBooking implements Serializable {
     @ApiModelProperty(value = "所属部门")
     private java.lang.String sysOrgCode;
 	/**客户名称*/
-    @Excel(name = "客户名称", width = 15, dictTable = "per_customer", dicText = "customer_name", dicCode = "id")
-    @Dict(dictTable = "per_customer", dicText = "customer_name", dicCode = "id")
+    @Excel(name = "客户名称", width = 15, dictTable = "man_customer", dicText = "customer_name", dicCode = "id")
+    @Dict(dictTable = "man_customer", dicText = "customer_name", dicCode = "id")
     @ApiModelProperty(value = "客户名称")
     private java.lang.String customer;
     /**业务员*/
-    @Excel(name = "业务员", width = 15, dictTable = "per_business", dicText = "name", dicCode = "id")
-    @Dict(dictTable = "per_business", dicText = "name", dicCode = "id")
+    @Excel(name = "业务员", width = 15, dictTable = "man_business", dicText = "name", dicCode = "id")
+    @Dict(dictTable = "man_business", dicText = "name", dicCode = "id")
     @ApiModelProperty(value = "业务员")
     private java.lang.String business;
 	/**订单编号*/
@@ -83,4 +83,12 @@ public class OrderBooking implements Serializable {
     @Dict(dicCode = "pay_status")
     @ApiModelProperty(value = "支付状态")
     private java.lang.String payStatus;
+    /**逻辑删除*/
+    @Excel(name = "逻辑删除", width = 15)
+    @ApiModelProperty(value = "逻辑删除")
+    private int delFlag;
+    /**租户id*/
+    @Excel(name = "租户id", width = 15)
+    @ApiModelProperty(value = "租户id")
+    private java.lang.String tenantId;
 }
