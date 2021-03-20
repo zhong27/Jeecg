@@ -55,8 +55,8 @@ public class CashIncome implements Serializable {
     @ApiModelProperty(value = "所属部门")
     private java.lang.String sysOrgCode;
 	/**客户*/
-	@Excel(name = "客户", width = 15, dictTable = "per_customer", dicText = "customer_name", dicCode = "id")
-	@Dict(dictTable = "per_customer", dicText = "customer_name", dicCode = "id")
+	@Excel(name = "客户", width = 15, dictTable = "man_customer", dicText = "customer_name", dicCode = "id")
+	@Dict(dictTable = "man_customer", dicText = "customer_name", dicCode = "id")
     @ApiModelProperty(value = "客户")
     private java.lang.String customerName;
 	/**来款金额*/
@@ -92,4 +92,12 @@ public class CashIncome implements Serializable {
     @Dict(dictTable = "sys_user", dicText = "realname", dicCode = "id")
     @ApiModelProperty(value = "审核人")
     private java.lang.String checker;
+    /**逻辑删除*/
+    @Excel(name = "逻辑删除", width = 15)
+    @ApiModelProperty(value = "逻辑删除")
+    private int delFlag;
+    /**租户id*/
+    @Excel(name = "租户id", width = 15)
+    @ApiModelProperty(value = "租户id")
+    private java.lang.String tenantId;
 }

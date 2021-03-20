@@ -49,6 +49,7 @@ public class MybatisPlusConfig {
         tenantTable.add("sto_warehouse");
         tenantTable.add("sto_material_information");
         tenantTable.add("cash_balance");
+        tenantTable.add("cash_income");
         DDL_KEYWORD.add("alter");
     }
 
