@@ -11,6 +11,7 @@ import org.jeecg.modules.cash.service.impl.CashBalanceServiceImpl;
 import org.jeecg.modules.ord.PayStatusEnum;
 import org.jeecg.modules.ord.entity.OrderBooking;
 import org.jeecg.modules.ord.entity.OrderDet;
+import org.jeecg.modules.ord.entity.OrderMater;
 import org.jeecg.modules.ord.mapper.OrderDetMapper;
 import org.jeecg.modules.ord.mapper.OrderBookingMapper;
 import org.jeecg.modules.ord.service.IOrderBillService;
@@ -49,6 +50,8 @@ public class OrderBookingServiceImpl extends ServiceImpl<OrderBookingMapper, Ord
     private OrderBillServiceImpl orderBillService;
     @Autowired
     private EnterHouseServiceImpl enterHouseService;
+    @Autowired
+    OrderMaterServiceImpl orderMaterService;
 
 
     @Override
@@ -139,6 +142,8 @@ public class OrderBookingServiceImpl extends ServiceImpl<OrderBookingMapper, Ord
             cashBalanceService.payOrder(orderBooking);
             //订单生成提单
             orderBillService.addBill(orderBooking);
+            //提单材料明细生成
+            orderMaterService.addOrderMater(orderId);
 
             orderBooking.setPayStatus(PayStatusEnum.PAY.getValue());
 

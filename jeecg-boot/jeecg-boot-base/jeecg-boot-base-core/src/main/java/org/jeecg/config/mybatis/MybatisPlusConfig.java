@@ -53,6 +53,7 @@ public class MybatisPlusConfig {
         tenantTable.add("order_booking");
         tenantTable.add("order_det");
         tenantTable.add("man_consignee");
+        tenantTable.add("order_bill");
         DDL_KEYWORD.add("alter");
     }
 
