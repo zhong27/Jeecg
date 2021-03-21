@@ -4,6 +4,7 @@ import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.collection.CollectionUtil;
 import cn.hutool.core.util.ObjectUtil;
 import org.jeecg.modules.JeecgException;
+import org.jeecg.modules.ord.entity.OrderBill;
 import org.jeecg.modules.ord.entity.OrderDet;
 import org.jeecg.modules.ord.entity.OrderMater;
 import org.jeecg.modules.ord.mapper.OrderBillMapper;
@@ -44,7 +45,7 @@ public class OrderMaterServiceImpl extends ServiceImpl<OrderMaterMapper, OrderMa
 		if (CollectionUtil.isEmpty(orderDetList)){
 			throw new JeecgException("订单材料明细为空！");
 		}
-		OrderMater selectOrderMater = orderBillMapper.selectByOrderId(orderId);
+		OrderBill selectOrderBill = orderBillMapper.selectByOrderId(orderId);
 
 		List<OrderMater> orderMaterList = new ArrayList<>();
 		for (OrderDet orderDet:orderDetList){
@@ -57,7 +58,7 @@ public class OrderMaterServiceImpl extends ServiceImpl<OrderMaterMapper, OrderMa
 			orderMater.setUpdateTime(null);
 			orderMater.setSysOrgCode(null);
 			orderMater.setSysOrgCode(null);
-			orderMater.setBillId(selectOrderMater.getId());
+			orderMater.setBillId(selectOrderBill.getId());
 			orderMaterList.add(orderMater);
 		}
 		saveBatch(orderMaterList);

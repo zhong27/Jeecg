@@ -15,6 +15,6 @@ import org.jeecg.modules.ord.entity.OrderMater;
  */
 public interface OrderBillMapper extends BaseMapper<OrderBill> {
 
-    public OrderMater selectByOrderId(@Param("orderId") String orderId);
+    public OrderBill selectByOrderId(@Param("orderId") String orderId);
 
 }

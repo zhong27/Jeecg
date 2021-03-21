@@ -51,7 +51,7 @@ public class OrderConsignee implements Serializable {
 	/**逻辑删除*/
 	@Excel(name = "逻辑删除", width = 15)
 	@ApiModelProperty(value = "逻辑删除")
-	private java.lang.Integer delFlag;
+	private int delFlag;
 	/**姓名*/
 	@Excel(name = "姓名", width = 15)
 	@ApiModelProperty(value = "姓名")
@@ -84,4 +84,7 @@ public class OrderConsignee implements Serializable {
 	/**提单id*/
 	@ApiModelProperty(value = "提单id")
 	private java.lang.String billId;
+	/**收货人id*/
+	@ApiModelProperty(value = "收货人id")
+	private java.lang.String consigneeId;
 }

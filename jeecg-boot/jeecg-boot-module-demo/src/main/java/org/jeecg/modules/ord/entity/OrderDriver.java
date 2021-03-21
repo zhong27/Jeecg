@@ -53,8 +53,9 @@ public class OrderDriver implements Serializable {
 	@ApiModelProperty(value = "姓名")
 	private java.lang.String name;
 	/**性别*/
-	@Excel(name = "性别", width = 15)
+	@Excel(name = "性别", width = 15,dicCode = "sex")
 	@ApiModelProperty(value = "性别")
+	@Dict(dicCode = "sex")
 	private java.lang.String sex;
 	/**车牌号*/
 	@Excel(name = "车牌号", width = 15)
@@ -67,8 +68,11 @@ public class OrderDriver implements Serializable {
 	/**逻辑删除*/
 	@Excel(name = "逻辑删除", width = 15)
 	@ApiModelProperty(value = "逻辑删除")
-	private java.lang.String delFlag;
+	private int delFlag;
 	/**提单id*/
 	@ApiModelProperty(value = "提单id")
 	private java.lang.String billId;
+	/**司机id*/
+	@ApiModelProperty(value = "司机id")
+	private java.lang.String driverId;
 }

@@ -1,6 +1,12 @@
 package org.jeecg.modules.ord.service.impl;
 
+import cn.hutool.core.bean.BeanUtil;
+import org.jeecg.modules.man.entity.Consignee;
+import org.jeecg.modules.man.service.impl.ConsigneeServiceImpl;
+import org.jeecg.modules.ord.entity.OrderBill;
+import org.jeecg.modules.ord.entity.OrderBooking;
 import org.jeecg.modules.ord.entity.OrderConsignee;
+import org.jeecg.modules.ord.mapper.OrderBillMapper;
 import org.jeecg.modules.ord.mapper.OrderConsigneeMapper;
 import org.jeecg.modules.ord.service.IOrderConsigneeService;
 import org.springframework.stereotype.Service;
@@ -19,9 +25,32 @@ public class OrderConsigneeServiceImpl extends ServiceImpl<OrderConsigneeMapper,
 	
 	@Autowired
 	private OrderConsigneeMapper orderConsigneeMapper;
+	@Autowired
+	private OrderBillMapper orderBillMapper;
+	@Autowired
+	private ConsigneeServiceImpl consigneeService;
 	
 	@Override
 	public List<OrderConsignee> selectByMainId(String mainId) {
 		return orderConsigneeMapper.selectByMainId(mainId);
+	}
+
+    public void addConsignee(OrderBooking orderBooking) {
+		Consignee getByConsignee = consigneeService.getById(orderBooking.getConsignee());
+		OrderConsignee consignee = new OrderConsignee();
+
+		//查询提单主表id
+		OrderBill selectOrderBill = orderBillMapper.selectByOrderId(orderBooking.getId());
+
+		BeanUtil.copyProperties(getByConsignee,consignee);
+		consignee.setId(null);
+		consignee.setCreateBy(null);
+		consignee.setCreateTime(null);
+		consignee.setUpdateBy(null);
+		consignee.setUpdateTime(null);
+		consignee.setSysOrgCode(null);
+		consignee.setBillId(selectOrderBill.getId());
+		consignee.setConsigneeId(getByConsignee.getId());
+		save(consignee);
 	}
 }

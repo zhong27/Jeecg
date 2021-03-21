@@ -67,7 +67,8 @@ public class OrderBooking implements Serializable {
     @ApiModelProperty(value = "订单总价")
     private java.math.BigDecimal orderTotal;
 	/**司机*/
-    @Excel(name = "司机", width = 15)
+    @Excel(name = "司机", width = 15, dictTable = "man_driver", dicCode = "id", dicText = "name")
+    @Dict(dictTable = "man_driver", dicCode = "id", dicText = "name")
     @ApiModelProperty(value = "司机")
     private java.lang.String driver;
 	/**车牌号*/
@@ -91,4 +92,10 @@ public class OrderBooking implements Serializable {
     @Excel(name = "租户id", width = 15)
     @ApiModelProperty(value = "租户id")
     private java.lang.String tenantId;
+    /**收货人*/
+    @Excel(name = "收货人", width = 15, dictTable = "man_consignee", dicCode = "id", dicText = "name")
+    @Dict(dictTable = "man_consignee", dicCode = "id", dicText = "name")
+    @ApiModelProperty(value = "支付状态")
+    private java.lang.String consignee;
+
 }

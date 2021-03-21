@@ -51,7 +51,11 @@ public class OrderBookingServiceImpl extends ServiceImpl<OrderBookingMapper, Ord
     @Autowired
     private EnterHouseServiceImpl enterHouseService;
     @Autowired
-    OrderMaterServiceImpl orderMaterService;
+    private OrderMaterServiceImpl orderMaterService;
+    @Autowired
+    private OrderDriverServiceImpl orderDriverService;
+    @Autowired
+    private OrderConsigneeServiceImpl orderConsigneeService;
 
 
     @Override
@@ -144,6 +148,10 @@ public class OrderBookingServiceImpl extends ServiceImpl<OrderBookingMapper, Ord
             orderBillService.addBill(orderBooking);
             //提单材料明细生成
             orderMaterService.addOrderMater(orderId);
+            //提单材料司机信息赋值
+            orderDriverService.addDriver(orderBooking);
+            //提单材料收货人信息赋值
+            orderConsigneeService.addConsignee(orderBooking);
 
             orderBooking.setPayStatus(PayStatusEnum.PAY.getValue());
 
