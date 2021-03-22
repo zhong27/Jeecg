@@ -86,4 +86,9 @@ public class OrderBill implements Serializable {
     @Excel(name = "订单id", width = 15)
     @ApiModelProperty(value = "订单id")
     private java.lang.String orderId;
+    /**提单状态*/
+    @Excel(name = "提单状态", width = 15,dicCode = "bill_status")
+    @ApiModelProperty(value = "提单状态")
+    @Dict(dicCode = "bill_status")
+    private java.lang.String billStatus;
 }
