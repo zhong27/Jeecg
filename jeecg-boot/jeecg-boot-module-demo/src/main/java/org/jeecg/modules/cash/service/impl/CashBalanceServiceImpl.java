@@ -41,6 +41,7 @@ public class CashBalanceServiceImpl extends ServiceImpl<CashBalanceMapper, CashB
             cashBalance.setTotalMoney(cashIncome.getIncome());
             cashBalance.setRemainMoney(cashIncome.getIncome());
             cashBalance.setAmountUsed(BigDecimal.ZERO);
+            cashBalance.setRefundAmount(BigDecimal.ZERO);
             save(cashBalance);
         }
         //来款更新账户金额
