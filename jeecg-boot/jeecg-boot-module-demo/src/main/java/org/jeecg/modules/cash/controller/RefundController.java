@@ -26,6 +26,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import lombok.extern.slf4j.Slf4j;
 
 import org.jeecg.modules.cash.service.impl.RefundServiceImpl;
+import org.jeecg.modules.ord.BillStatusEnum;
 import org.jeecg.modules.ord.entity.OrderBill;
 import org.jeecg.modules.ord.mapper.OrderBillMapper;
 import org.jeecgframework.poi.excel.ExcelImportUtil;
@@ -123,6 +124,10 @@ public class RefundController extends JeecgController<Refund, IRefundService> {
 	 @GetMapping(value = "/refundBill")
 	 public Result<?> refundBill(@RequestParam(name="id",required=true) String id) {
 		 String result = refundServiceimp.addRefund(id);
+		 //更新提单状态
+		 OrderBill orderBill = orderBillMapper.selectById(id);
+		 orderBill.setBillStatus(BillStatusEnum.REFUNDING.getValue());
+		 orderBillMapper.updateById(orderBill);
 		 return Result.OK(result);
 	 }
 	

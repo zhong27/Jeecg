@@ -6,13 +6,15 @@
 		DELETE 
 		FROM  order_det 
 		WHERE
-			 order_id = #{mainId} 
+			 order_id = #{mainId}
+		and del_falg = 0
 	</delete>
 	
 	<select id="selectByMainId" parameterType="java.lang.String" resultType="org.jeecg.modules.ord.entity.OrderDet">
 		SELECT * 
 		FROM  order_det
 		WHERE
-			 order_id = #{mainId} 
+			 order_id = #{mainId}
+		and del_flag = 0
 	</select>
 </mapper>

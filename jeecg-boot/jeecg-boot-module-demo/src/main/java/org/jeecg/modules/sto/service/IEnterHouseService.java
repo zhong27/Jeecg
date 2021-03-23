@@ -45,4 +45,5 @@ public interface IEnterHouseService extends IService<EnterHouse> {
         }
         return flag;
     }
+
 }

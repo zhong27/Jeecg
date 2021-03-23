@@ -20,6 +20,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import lombok.extern.slf4j.Slf4j;
 
+import org.jeecg.modules.sto.service.impl.EnterHouseServiceImpl;
 import org.jeecgframework.poi.excel.ExcelImportUtil;
 import org.jeecgframework.poi.excel.def.NormalExcelConstants;
 import org.jeecgframework.poi.excel.entity.ExportParams;
@@ -49,6 +50,8 @@ import org.jeecg.common.aspect.annotation.AutoLog;
 public class EnterHouseController extends JeecgController<EnterHouse, IEnterHouseService> {
 	@Autowired
 	private IEnterHouseService enterHouseService;
+	@Autowired
+	private EnterHouseServiceImpl enterHouseServiceImpl;
 	
 	/**
 	 * 分页列表查询
@@ -127,6 +130,20 @@ public class EnterHouseController extends JeecgController<EnterHouse, IEnterHous
 		this.enterHouseService.removeByIds(Arrays.asList(ids.split(",")));
 		return Result.OK("批量删除成功!");
 	}
+
+	 /**
+	  * 通过退款id退货确认
+	  *
+	  * @param ids
+	  * @return
+	  */
+	 @AutoLog(value = "通过退款id退货确认")
+	 @ApiOperation(value="通过退款id退货确认", notes="通过退款id退货确认")
+	 @GetMapping(value = "/refundGoods")
+	 public Result<?> refundGoods(@RequestParam(name="id",required=true) String ids) {
+		 enterHouseServiceImpl.refundGoods(ids);
+		 return Result.OK(ids);
+	 }
 	
 	/**
 	 * 通过id查询

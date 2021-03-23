@@ -17,4 +17,5 @@ public interface OrderBillMapper extends BaseMapper<OrderBill> {
 
     public OrderBill selectByOrderId(@Param("orderId") String orderId);
 
+    public OrderBill selectByBillNo(@Param("billNo")String billNo);
 }
