@@ -1,11 +1,17 @@
 package org.jeecg;
 
 import cn.hutool.json.JSONObject;
+
+
+import org.jeecg.common.system.api.ISysBaseAPI;
 import org.jeecg.common.util.security.SecurityTools;
 import org.jeecg.common.util.security.entity.*;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class SecurityToolsTest {
+    @Autowired
+    private ISysBaseAPI sysBaseAPI;
     @Test
     public void Test(){
         MyKeyPair mkeyPair = SecurityTools.generateKeyPair();
@@ -46,4 +52,7 @@ public class SecurityToolsTest {
         //sucess 为验签成功失败标志 true代码验签成功，false代表失败
         System.out.println(new JSONObject(securityResp).toStringPretty());
     }
+
+
+
 }

@@ -13,9 +13,11 @@ import javax.servlet.http.HttpServletResponse;
 import cn.hutool.core.collection.CollectionUtil;
 import cn.hutool.core.util.StrUtil;
 import org.jeecg.common.api.vo.Result;
+import org.jeecg.common.system.api.ISysBaseAPI;
 import org.jeecg.common.system.query.QueryGenerator;
 import org.jeecg.common.util.oConvertUtils;
 import org.jeecg.modules.JeecgException;
+import org.jeecg.modules.cash.RefundCheckEnum;
 import org.jeecg.modules.cash.entity.Refund;
 import org.jeecg.modules.cash.mapper.RefundMapper;
 import org.jeecg.modules.cash.service.IRefundService;
@@ -62,6 +64,8 @@ public class RefundController extends JeecgController<Refund, IRefundService> {
 	private OrderBillMapper orderBillMapper;
 	@Autowired
 	private RefundServiceImpl refundServiceimp;
+	 @Autowired
+	 private ISysBaseAPI sysBaseAPI;
 	
 	/**
 	 * 分页列表查询
@@ -130,7 +134,21 @@ public class RefundController extends JeecgController<Refund, IRefundService> {
 		 orderBillMapper.updateById(orderBill);
 		 return Result.OK(result);
 	 }
-	
+
+	 /**
+	  * 退款确认
+	  *
+	  * @param id
+	  * @return
+	  */
+	 @AutoLog(value = "退款确认")
+	 @ApiOperation(value="退款确认", notes="退款确认")
+	 @GetMapping(value = "/refundVerify")
+	 public Result<?> refundVerify(@RequestParam(name="id",required=true) String id,String status) {
+		 refundServiceimp.refundVerify(id, status);
+		 return Result.OK();
+	 }
+
 	/**
 	 *   通过id删除
 	 *

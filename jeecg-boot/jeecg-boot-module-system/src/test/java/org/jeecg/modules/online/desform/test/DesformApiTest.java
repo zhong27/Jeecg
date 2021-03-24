@@ -2,6 +2,7 @@ package org.jeecg.modules.online.desform.test;
 
 import com.alibaba.fastjson.JSONObject;
 import org.jeecg.common.constant.CommonConstant;
+import org.jeecg.common.system.api.ISysBaseAPI;
 import org.jeecg.common.system.util.JwtUtil;
 import org.jeecg.common.util.RedisUtil;
 import org.jeecg.common.util.RestUtil;
@@ -25,6 +26,7 @@ public class DesformApiTest {
 
     @Autowired
     private RedisUtil redisUtil;
+
 
     /**
      * 测试地址：实际使用时替换成你自己的地址
