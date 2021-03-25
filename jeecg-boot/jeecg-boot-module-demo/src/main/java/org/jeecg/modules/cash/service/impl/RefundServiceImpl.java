@@ -101,7 +101,7 @@ public class RefundServiceImpl extends ServiceImpl<RefundMapper, Refund> impleme
                 refund.setRefundDate(new Date());
                 refund.setRefundStatus(status);
                 OrderBill orderBill = orderBillService.getBaseMapper().selectByBillNo(refund.getBillNo());
-                orderBill.setBillStatus(BillStatusEnum.REDUNDED.getValue());
+                orderBill.setBillStatus(BillStatusEnum.REFUNDED.getValue());
                 orderBillService.updateById(orderBill);
             }
         }

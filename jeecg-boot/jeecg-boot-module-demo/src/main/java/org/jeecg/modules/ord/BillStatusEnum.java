@@ -4,7 +4,7 @@ public enum BillStatusEnum {
     TAKING("taking","未取件"),
     PICKED_UP("pickedup","已取件") ,
     REFUNDING("refunding","退单中"),
-    REDUNDED("refunded","已退单");
+    REFUNDED("refunded","已退单");
 
     private String value;
     private String name;

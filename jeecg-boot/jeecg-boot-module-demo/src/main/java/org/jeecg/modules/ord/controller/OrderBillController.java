@@ -1,5 +1,6 @@
 package org.jeecg.modules.ord.controller;
 
+import cn.hutool.core.util.StrUtil;
 import org.jeecg.common.system.query.QueryGenerator;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -7,6 +8,8 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import lombok.extern.slf4j.Slf4j;
 import org.jeecg.common.system.base.controller.JeecgController;
 import org.jeecg.common.api.vo.Result;
+import org.jeecg.modules.ord.BillRefundEnum;
+import org.jeecg.modules.ord.BillStatusEnum;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
@@ -82,6 +85,15 @@ public class OrderBillController extends JeecgController<OrderBill, IOrderBillSe
 								   @RequestParam(name="pageSize", defaultValue="10") Integer pageSize,
 								   HttpServletRequest req) {
 		QueryWrapper<OrderBill> queryWrapper = QueryGenerator.initQueryWrapper(orderBill, req.getParameterMap());
+		if (StrUtil.equals(BillRefundEnum.UN_REFUND.getValue(),orderBill.getQueryType())){
+			queryWrapper.lambda().eq(OrderBill::getBillStatus, BillStatusEnum.TAKING.getValue()).or()
+					.eq(OrderBill::getBillStatus, BillStatusEnum.PICKED_UP.getValue());
+		}
+		if (StrUtil.equals(BillRefundEnum.REFUND.getValue(),orderBill.getQueryType())){
+			queryWrapper.lambda().eq(OrderBill::getBillStatus, BillStatusEnum.REFUNDING.getValue()).or()
+					.eq(OrderBill::getBillStatus, BillStatusEnum.REFUNDED.getValue());
+		}
+
 		Page<OrderBill> page = new Page<OrderBill>(pageNo, pageSize);
 		IPage<OrderBill> pageList = orderBillService.page(page, queryWrapper);
 		return Result.OK(pageList);

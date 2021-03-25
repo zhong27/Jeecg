@@ -3,6 +3,7 @@ package org.jeecg.modules.ord.entity;
 import java.io.Serializable;
 import java.util.Date;
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import org.jeecgframework.poi.excel.annotation.Excel;
@@ -91,4 +92,9 @@ public class OrderBill implements Serializable {
     @ApiModelProperty(value = "提单状态")
     @Dict(dicCode = "bill_status")
     private java.lang.String billStatus;
+    /**查询类型*/
+    @Excel(name = "查询类型", width = 15)
+    @ApiModelProperty(value = "查询类型")
+    @TableField(exist = false)
+    private java.lang.String queryType;
 }
