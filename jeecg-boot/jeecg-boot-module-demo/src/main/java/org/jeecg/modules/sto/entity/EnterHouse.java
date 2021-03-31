@@ -79,10 +79,15 @@ public class EnterHouse implements Serializable {
 	@Excel(name = "材料重量", width = 15)
     @ApiModelProperty(value = "材料重量")
     private java.math.BigDecimal matWeight;
-	/**材料数量*/
-	@Excel(name = "材料数量", width = 15)
-    @ApiModelProperty(value = "材料数量")
+	/**材料总件数*/
+	@Excel(name = "材料总件数", width = 15)
+    @ApiModelProperty(value = "材料总件数")
     private java.lang.Integer matNumber;
+    /**材料总重量*/
+    @Excel(name = "材料总重量", width = 15)
+    @ApiModelProperty(value = "材料总重量")
+    private java.math.BigDecimal totalWeight;
+
 	/**材料号*/
 	@Excel(name = "材料号", width = 15)
     @ApiModelProperty(value = "材料号")

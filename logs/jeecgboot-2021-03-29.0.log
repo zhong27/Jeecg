@@ -1,0 +1,605 @@
+2021-03-29 22:18:29.552 [background-preinit] INFO  org.hibernate.validator.internal.util.Version:21 - HV000001: Hibernate Validator 6.1.6.Final
+2021-03-29 22:18:29.826 [main] INFO  org.jeecg.JeecgSystemApplication:55 - Starting JeecgSystemApplication on LAPTOP-ZKS with PID 16492 (E:\Jeecg\jeecg-boot\jeecg-boot-module-system\target\classes started by Lenovo in E:\Jeecg\jeecg-boot)
+2021-03-29 22:18:29.827 [main] INFO  org.jeecg.JeecgSystemApplication:655 - The following profiles are active: dev
+2021-03-29 22:18:49.135 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-29 22:18:49.141 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:127 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-03-29 22:18:49.739 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:187 - Finished Spring Data repository scanning in 564ms. Found 0 Redis repository interfaces.
+2021-03-29 22:18:51.000 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-29 22:18:51.005 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-29 22:18:51.392 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-29 22:18:51.904 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-29 22:18:51.907 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'shiroConfig' of type [org.jeecg.config.shiro.ShiroConfig$$EnhancerBySpringCGLIB$$ea048a69] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-29 22:18:51.991 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'shiroRealm' of type [org.jeecg.config.shiro.ShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-29 22:18:53.458 [main] INFO  org.jeecg.config.shiro.ShiroConfig:207 - ===============(1)创建缓存管理器RedisCacheManager
+2021-03-29 22:18:53.464 [main] INFO  org.jeecg.config.shiro.ShiroConfig:225 - ===============(2)创建RedisManager,连接Redis..
+2021-03-29 22:18:53.492 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'redisManager' of type [org.crazycake.shiro.RedisManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-29 22:18:53.501 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-29 22:18:53.564 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-29 22:18:54.386 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-29 22:18:54.397 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$f456b341] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-29 22:18:54.411 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-29 22:18:54.425 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'dynamicDatasourceAnnotationAdvisor' of type [com.baomidou.dynamic.datasource.aop.DynamicDataSourceAnnotationAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-29 22:18:54.441 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'redisConfig' of type [org.jeecg.config.redis.RedisConfig$$EnhancerBySpringCGLIB$$60ed797d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-29 22:18:54.557 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'org.apache.shiro.spring.boot.autoconfigure.ShiroBeanAutoConfiguration' of type [org.apache.shiro.spring.boot.autoconfigure.ShiroBeanAutoConfiguration$$EnhancerBySpringCGLIB$$9de12020] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-29 22:18:54.563 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335 - Bean 'eventBus' of type [org.apache.shiro.event.support.DefaultEventBus] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-29 22:18:55.637 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:108 - Tomcat initialized with port(s): 8080 (http)
+2021-03-29 22:18:55.656 [main] INFO  org.apache.coyote.http11.Http11NioProtocol:173 - Initializing ProtocolHandler ["http-nio-8080"]
+2021-03-29 22:18:55.657 [main] INFO  org.apache.catalina.core.StandardService:173 - Starting service [Tomcat]
+2021-03-29 22:18:55.658 [main] INFO  org.apache.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-03-29 22:18:55.685 [main] INFO  org.apache.catalina.core.AprLifecycleListener:173 - Loaded Apache Tomcat Native library [1.2.24] using APR version [1.7.0].
+2021-03-29 22:18:55.687 [main] INFO  org.apache.catalina.core.AprLifecycleListener:173 - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-03-29 22:18:55.688 [main] INFO  org.apache.catalina.core.AprLifecycleListener:173 - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-03-29 22:18:55.744 [main] INFO  org.apache.catalina.core.AprLifecycleListener:173 - OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2021-03-29 22:18:56.443 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/jeecg-boot]:173 - Initializing Spring embedded WebApplicationContext
+2021-03-29 22:18:56.443 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext:285 - Root WebApplicationContext: initialization completed in 26398 ms
+2021-03-29 22:18:57.801 [main] INFO  c.b.dynamic.datasource.DynamicDataSourceCreator:113 - 动态数据源-检测到druid存在,如配置中未指定type,druid会默认配置
+2021-03-29 22:18:58.942 [main] INFO  com.alibaba.druid.pool.DruidDataSource:985 - {dataSource-1,master} inited
+2021-03-29 22:18:58.943 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource:203 - 初始共加载 1 个数据源
+2021-03-29 22:18:58.943 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource:142 - 动态数据源-加载 master 成功
+2021-03-29 22:18:58.944 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource:212 - 当前的默认数据源是单数据源，数据源名为 master
+2021-03-29 22:19:05.215 [main] INFO  org.jeecg.config.redis.RedisConfig:66 -  --- redis config init --- 
+2021-03-29 22:19:06.506 [main] INFO  org.quartz.impl.StdSchedulerFactory:1220 - Using default implementation for ThreadExecutor
+2021-03-29 22:19:06.509 [main] INFO  org.quartz.simpl.SimpleThreadPool:268 - Job execution threads will use class loader of thread: main
+2021-03-29 22:19:06.522 [main] INFO  org.quartz.core.SchedulerSignalerImpl:61 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-03-29 22:19:06.523 [main] INFO  org.quartz.core.QuartzScheduler:229 - Quartz Scheduler v.2.3.2 created.
+2021-03-29 22:19:06.529 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore:672 - Using db table-based data access locking (synchronization).
+2021-03-29 22:19:06.531 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore:145 - JobStoreCMT initialized.
+2021-03-29 22:19:06.532 [main] INFO  org.quartz.core.QuartzScheduler:294 - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'MyScheduler' with instanceId 'LAPTOP-ZKS1617027546508'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+2021-03-29 22:19:06.533 [main] INFO  org.quartz.impl.StdSchedulerFactory:1374 - Quartz scheduler 'MyScheduler' initialized from an externally provided properties instance.
+2021-03-29 22:19:06.533 [main] INFO  org.quartz.impl.StdSchedulerFactory:1378 - Quartz scheduler version: 2.3.2
+2021-03-29 22:19:06.533 [main] INFO  org.quartz.core.QuartzScheduler:2293 - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@31a024ea
+2021-03-29 22:19:12.386 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver:58 - Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-03-29 22:19:12.689 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-29 22:19:13.083 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-29 22:19:14.030 [main] INFO  org.apache.coyote.http11.Http11NioProtocol:173 - Starting ProtocolHandler ["http-nio-8080"]
+2021-03-29 22:19:14.149 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:220 - Tomcat started on port(s): 8080 (http) with context path '/jeecg-boot'
+2021-03-29 22:19:14.151 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:160 - Context refreshed
+2021-03-29 22:19:14.175 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:163 - Found 1 custom documentation plugin(s)
+2021-03-29 22:19:14.321 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner:41 - Scanning for api listing references
+2021-03-29 22:19:14.616 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_1
+2021-03-29 22:19:14.618 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_1
+2021-03-29 22:19:14.621 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_1
+2021-03-29 22:19:14.623 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_1
+2021-03-29 22:19:14.625 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_1
+2021-03-29 22:19:14.632 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_1
+2021-03-29 22:19:14.643 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_2
+2021-03-29 22:19:14.647 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_2
+2021-03-29 22:19:14.648 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_2
+2021-03-29 22:19:14.652 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_2
+2021-03-29 22:19:14.654 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_2
+2021-03-29 22:19:14.662 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_2
+2021-03-29 22:19:14.672 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_3
+2021-03-29 22:19:14.674 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_3
+2021-03-29 22:19:14.676 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_3
+2021-03-29 22:19:14.677 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_3
+2021-03-29 22:19:14.679 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_3
+2021-03-29 22:19:14.685 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_3
+2021-03-29 22:19:14.693 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_4
+2021-03-29 22:19:14.698 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_4
+2021-03-29 22:19:14.702 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_4
+2021-03-29 22:19:14.704 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_4
+2021-03-29 22:19:14.716 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_4
+2021-03-29 22:19:14.722 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_5
+2021-03-29 22:19:14.724 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_5
+2021-03-29 22:19:14.726 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_5
+2021-03-29 22:19:14.727 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_5
+2021-03-29 22:19:14.729 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_4
+2021-03-29 22:19:14.735 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_5
+2021-03-29 22:19:14.748 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_6
+2021-03-29 22:19:14.750 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_6
+2021-03-29 22:19:14.751 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_6
+2021-03-29 22:19:14.753 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_6
+2021-03-29 22:19:14.754 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_5
+2021-03-29 22:19:14.759 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_6
+2021-03-29 22:19:14.767 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_7
+2021-03-29 22:19:14.770 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_7
+2021-03-29 22:19:14.771 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_7
+2021-03-29 22:19:14.773 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_7
+2021-03-29 22:19:14.774 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_6
+2021-03-29 22:19:14.780 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_7
+2021-03-29 22:19:14.789 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_8
+2021-03-29 22:19:14.790 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_8
+2021-03-29 22:19:14.792 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_8
+2021-03-29 22:19:14.793 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_8
+2021-03-29 22:19:14.802 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_7
+2021-03-29 22:19:14.862 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_9
+2021-03-29 22:19:14.864 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_9
+2021-03-29 22:19:14.866 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_9
+2021-03-29 22:19:14.868 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_9
+2021-03-29 22:19:14.870 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_8
+2021-03-29 22:19:14.876 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_8
+2021-03-29 22:19:14.887 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_10
+2021-03-29 22:19:14.910 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_10
+2021-03-29 22:19:14.912 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_10
+2021-03-29 22:19:14.922 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_10
+2021-03-29 22:19:14.951 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_9
+2021-03-29 22:19:14.958 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_11
+2021-03-29 22:19:14.966 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_11
+2021-03-29 22:19:14.967 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_11
+2021-03-29 22:19:14.970 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_11
+2021-03-29 22:19:14.982 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_10
+2021-03-29 22:19:14.990 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_12
+2021-03-29 22:19:14.991 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_12
+2021-03-29 22:19:14.992 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_12
+2021-03-29 22:19:14.994 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_12
+2021-03-29 22:19:14.995 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_9
+2021-03-29 22:19:15.000 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_11
+2021-03-29 22:19:15.006 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_13
+2021-03-29 22:19:15.008 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_13
+2021-03-29 22:19:15.010 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_13
+2021-03-29 22:19:15.011 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_13
+2021-03-29 22:19:15.012 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_10
+2021-03-29 22:19:15.016 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_12
+2021-03-29 22:19:15.021 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_14
+2021-03-29 22:19:15.024 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_14
+2021-03-29 22:19:15.025 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_14
+2021-03-29 22:19:15.026 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_14
+2021-03-29 22:19:15.027 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_11
+2021-03-29 22:19:15.031 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_13
+2021-03-29 22:19:15.037 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_15
+2021-03-29 22:19:15.038 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_15
+2021-03-29 22:19:15.040 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_15
+2021-03-29 22:19:15.041 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_15
+2021-03-29 22:19:15.042 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_12
+2021-03-29 22:19:15.047 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_14
+2021-03-29 22:19:15.051 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_16
+2021-03-29 22:19:15.052 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_16
+2021-03-29 22:19:15.053 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_16
+2021-03-29 22:19:15.054 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_16
+2021-03-29 22:19:15.055 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_13
+2021-03-29 22:19:15.060 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_15
+2021-03-29 22:19:15.064 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_17
+2021-03-29 22:19:15.066 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_17
+2021-03-29 22:19:15.069 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_17
+2021-03-29 22:19:15.070 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_17
+2021-03-29 22:19:15.072 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_14
+2021-03-29 22:19:15.078 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_16
+2021-03-29 22:19:15.083 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_18
+2021-03-29 22:19:15.087 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_18
+2021-03-29 22:19:15.090 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_18
+2021-03-29 22:19:15.091 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_18
+2021-03-29 22:19:15.092 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_15
+2021-03-29 22:19:15.097 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_17
+2021-03-29 22:19:15.108 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_19
+2021-03-29 22:19:15.113 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_19
+2021-03-29 22:19:15.115 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_19
+2021-03-29 22:19:15.118 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_19
+2021-03-29 22:19:15.122 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_16
+2021-03-29 22:19:15.132 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_18
+2021-03-29 22:19:15.139 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: addUsingPOST_20
+2021-03-29 22:19:15.140 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_20
+2021-03-29 22:19:15.142 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: deleteBatchUsingDELETE_20
+2021-03-29 22:19:15.144 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: editUsingPUT_20
+2021-03-29 22:19:15.145 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryByIdUsingGET_17
+2021-03-29 22:19:15.151 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:40 - Generating unique operation named: queryPageListUsingGET_19
+2021-03-29 22:19:15.173 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean:727 - Starting Quartz Scheduler now
+2021-03-29 22:19:16.153 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore:3644 - ClusterManager: detected 1 failed or restarted instances.
+2021-03-29 22:19:16.154 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore:3503 - ClusterManager: Scanning for instance "LAPTOP-ZKS1616643655457"'s failed in-progress jobs.
+2021-03-29 22:19:16.286 [main] INFO  org.quartz.core.QuartzScheduler:547 - Scheduler MyScheduler_$_LAPTOP-ZKS1617027546508 started.
+2021-03-29 22:19:16.342 [main] INFO  org.jeecg.JeecgSystemApplication:61 - Started JeecgSystemApplication in 50.805 seconds (JVM running for 56.487)
+2021-03-29 22:19:16.349 [main] INFO  org.jeecg.modules.init.SystemInitListener:27 -  服务已启动，准备初始化路由配置 ###################
+2021-03-29 22:19:17.411 [RMI TCP Connection(11)-192.168.2.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/jeecg-boot]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-29 22:19:17.431 [RMI TCP Connection(11)-192.168.2.1] INFO  org.springframework.web.servlet.DispatcherServlet:525 - Initializing Servlet 'dispatcherServlet'
+2021-03-29 22:19:17.452 [RMI TCP Connection(11)-192.168.2.1] INFO  org.springframework.web.servlet.DispatcherServlet:547 - Completed initialization in 21 ms
+2021-03-29 22:19:19.037 [main] INFO  org.jeecg.JeecgSystemApplication:39 - 
+----------------------------------------------------------
+	Application Jeecg-Boot is running! Access URLs:
+	Local: 		http://localhost:8080/jeecg-boot/
+	External: 	http://192.168.2.1:8080/jeecg-boot/
+	Swagger文档: 	http://192.168.2.1:8080/jeecg-boot/doc.html
+----------------------------------------------------------
+2021-03-29 22:19:44.245 [http-nio-8080-exec-2] ERROR o.a.c.c.C.[.[.[/jeecg-boot].[dispatcherServlet]:175 - Servlet.service() for servlet [dispatcherServlet] in context with path [/jeecg-boot] threw exception [org.apache.shiro.authc.AuthenticationException: Token失效，请重新登录] with root cause
+org.apache.shiro.authc.AuthenticationException: Token失效，请重新登录!
+	at org.jeecg.config.shiro.ShiroRealm.checkUserTokenIsEffect(ShiroRealm.java:127)
+	at org.jeecg.config.shiro.ShiroRealm.doGetAuthenticationInfo(ShiroRealm.java:99)
+	at org.apache.shiro.realm.AuthenticatingRealm.getAuthenticationInfo(AuthenticatingRealm.java:571)
+	at org.apache.shiro.authc.pam.ModularRealmAuthenticator.doSingleRealmAuthentication(ModularRealmAuthenticator.java:180)
+	at org.apache.shiro.authc.pam.ModularRealmAuthenticator.doAuthenticate(ModularRealmAuthenticator.java:273)
+	at org.apache.shiro.authc.AbstractAuthenticator.authenticate(AbstractAuthenticator.java:198)
+	at org.apache.shiro.mgt.AuthenticatingSecurityManager.authenticate(AuthenticatingSecurityManager.java:106)
+	at org.apache.shiro.mgt.DefaultSecurityManager.login(DefaultSecurityManager.java:275)
+	at org.apache.shiro.subject.support.DelegatingSubject.login(DelegatingSubject.java:260)
+	at org.jeecg.config.shiro.filters.JwtFilter.executeLogin(JwtFilter.java:60)
+	at org.jeecg.config.shiro.filters.JwtFilter.isAccessAllowed(JwtFilter.java:43)
+	at org.apache.shiro.web.filter.AccessControlFilter.onPreHandle(AccessControlFilter.java:162)
+	at org.apache.shiro.web.filter.PathMatchingFilter.isFilterChainContinued(PathMatchingFilter.java:214)
+	at org.apache.shiro.web.filter.PathMatchingFilter.preHandle(PathMatchingFilter.java:189)
+	at org.jeecg.config.shiro.filters.JwtFilter.preHandle(JwtFilter.java:90)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:131)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.github.xiaoymin.knife4j.spring.filter.ProductionSecurityFilter.doFilter(ProductionSecurityFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.github.xiaoymin.knife4j.spring.filter.SecurityBasicAuthFilter.doFilter(SecurityBasicAuthFilter.java:90)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.web.trace.servlet.HttpTraceFilter.doFilterInternal(HttpTraceFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-03-29 22:19:45.096 [http-nio-8080-exec-4] INFO  o.jeecg.modules.system.controller.LoginController:139 -  用户名:  管理员,退出成功！ 
+2021-03-29 22:19:56.282 [http-nio-8080-exec-3] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 22:20:04.956 [http-nio-8080-exec-3] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : sys_user,realname,id,username!='admin' order by create_time
+2021-03-29 22:20:04.955 [http-nio-8080-exec-1] INFO  o.j.modules.system.controller.SysDictController:122 -  dictCode : sys_user,realname,id
+2021-03-29 22:20:04.977 [http-nio-8080-exec-1] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=1372901225481121793, text=钟科胜), DictModel(value=3d464b4ea0d2491aab8a7bde74c57e95, text=张三), DictModel(value=a75d45a015c44384a04449ee80dc3503, text=jeecg), DictModel(value=e9ca23d68d884d4ebb19d07889727dae, text=管理员), DictModel(value=f0019fdebedb443c98dcb17d88222c38, text=张小红)], timestamp=1617027604962, onlTable=null)
+2021-03-29 22:20:04.987 [http-nio-8080-exec-3] INFO  o.j.modules.system.controller.SysDictController:155 - Result(success=true, message=操作成功！, code=0, result=[DictModel(value=a75d45a015c44384a04449ee80dc3503, text=jeecg), DictModel(value=3d464b4ea0d2491aab8a7bde74c57e95, text=张三), DictModel(value=f0019fdebedb443c98dcb17d88222c38, text=张小红), DictModel(value=1372901225481121793, text=钟科胜)], timestamp=1617027604958, onlTable=null)
+2021-03-29 22:20:05.064 [http-nio-8080-exec-8] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 66180
+2021-03-29 22:20:05.064 [http-nio-8080-exec-10] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 66101
+2021-03-29 22:20:05.257 [http-nio-8080-exec-8] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->username IN [Ljava.lang.String;@7e361873
+2021-03-29 22:20:05.280 [http-nio-8080-exec-8] INFO  o.j.modules.system.controller.SysUserController:128 - com.baomidou.mybatisplus.extension.plugins.pagination.Page@2db749d9
+2021-03-29 22:20:05.312 [http-nio-8080-exec-5] INFO  o.j.modules.system.controller.SysUserController:128 - com.baomidou.mybatisplus.extension.plugins.pagination.Page@5ca311e9
+2021-03-29 22:20:05.338 [http-nio-8080-exec-7] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->username IN [Ljava.lang.String;@3cebe729
+2021-03-29 22:20:05.349 [http-nio-8080-exec-7] INFO  o.j.modules.system.controller.SysUserController:128 - com.baomidou.mybatisplus.extension.plugins.pagination.Page@afa29cf
+2021-03-29 22:20:05.398 [http-nio-8080-exec-6] INFO  o.j.modules.system.controller.SysUserController:128 - com.baomidou.mybatisplus.extension.plugins.pagination.Page@26d805f4
+2021-03-29 22:21:35.834 [http-nio-8080-exec-7] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 90474
+2021-03-29 22:21:35.836 [http-nio-8080-exec-6] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 90486
+2021-03-29 22:21:35.837 [http-nio-8080-exec-6] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 90490
+2021-03-29 22:21:35.838 [http-nio-8080-exec-7] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 90493
+2021-03-29 22:21:35.840 [http-nio-8080-exec-7] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 90570
+2021-03-29 22:21:35.840 [http-nio-8080-exec-6] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 90701
+2021-03-29 22:21:35.844 [http-nio-8080-exec-7] INFO  o.j.modules.system.controller.SysDictController:249 - Result(success=true, message=操作成功！, code=0, result=[jeecg], timestamp=1617027695828, onlTable=null)
+2021-03-29 22:21:35.846 [http-nio-8080-exec-6] INFO  o.j.modules.system.controller.SysDictController:249 - Result(success=true, message=操作成功！, code=0, result=[管理员], timestamp=1617027695828, onlTable=null)
+2021-03-29 22:21:35.848 [http-nio-8080-exec-1] INFO  o.j.modules.system.controller.SysDictController:249 - Result(success=true, message=操作成功！, code=0, result=[jeecg], timestamp=1617027695845, onlTable=null)
+2021-03-29 22:21:35.848 [http-nio-8080-exec-8] INFO  o.j.modules.system.controller.SysDictController:249 - Result(success=true, message=操作成功！, code=0, result=[jeecg], timestamp=1617027695829, onlTable=null)
+2021-03-29 22:21:35.852 [http-nio-8080-exec-10] INFO  o.j.modules.system.controller.SysDictController:249 - Result(success=true, message=操作成功！, code=0, result=[管理员], timestamp=1617027695848, onlTable=null)
+2021-03-29 22:22:02.240 [http-nio-8080-exec-1] INFO  o.jeecg.modules.demo.mock.vxe.websocket.VXESocket:157 - 【vxeSocket】有新的连接，总数为:1
+2021-03-29 22:22:24.468 [http-nio-8080-exec-8] INFO  o.j.m.demo.test.controller.JeecgDemoController:67 - 查询当前页：1
+2021-03-29 22:22:24.469 [http-nio-8080-exec-8] INFO  o.j.m.demo.test.controller.JeecgDemoController:68 - 查询当前页数量：10
+2021-03-29 22:22:24.469 [http-nio-8080-exec-8] INFO  o.j.m.demo.test.controller.JeecgDemoController:69 - 查询结果数量：10
+2021-03-29 22:22:24.470 [http-nio-8080-exec-8] INFO  o.j.m.demo.test.controller.JeecgDemoController:70 - 数据总数：18
+2021-03-29 22:23:14.313 [http-nio-8080-exec-4] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 98469
+2021-03-29 22:23:15.674 [http-nio-8080-exec-2] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->order_id = 9a57c850e4f68cf94ef7d8585dbaf7e6
+2021-03-29 22:23:15.675 [http-nio-8080-exec-7] INFO  org.jeecg.common.system.query.QueryGenerator:458 - --查询规则-->order_id = 9a57c850e4f68cf94ef7d8585dbaf7e6
+2021-03-29 22:24:16.289 [QuartzScheduler_MyScheduler-LAPTOP-ZKS1617027546508_MisfireHandler] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 60602
+2021-03-29 22:25:35.506 [http-nio-8080-exec-3] INFO  o.j.m.system.controller.SysPermissionController:73 - ======获取全部菜单数据=====耗时:22毫秒
+2021-03-29 22:26:16.289 [QuartzScheduler_MyScheduler-LAPTOP-ZKS1617027546508_MisfireHandler] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 60000
+2021-03-29 22:26:29.652 [http-nio-8080-exec-9] INFO  org.jeecg.interceptor.a:50 - ===== online 菜单访问拦截器 =====
+2021-03-29 22:26:29.652 [http-nio-8080-exec-4] INFO  org.jeecg.interceptor.a:50 - ===== online 菜单访问拦截器 =====
+2021-03-29 22:26:29.652 [http-nio-8080-exec-5] INFO  org.jeecg.interceptor.a:50 - ===== online 菜单访问拦截器 =====
+2021-03-29 22:26:29.653 [http-nio-8080-exec-5] INFO  org.jeecg.interceptor.a:56 - 拦截请求(GET)：/online/cgform/api/getColumns/56efb74326e74064b60933f6f8af30ea,
+2021-03-29 22:26:29.653 [http-nio-8080-exec-4] INFO  org.jeecg.interceptor.a:56 - 拦截请求(GET)：/online/cgform/api/getFormItem/56efb74326e74064b60933f6f8af30ea,
+2021-03-29 22:26:29.653 [http-nio-8080-exec-9] INFO  org.jeecg.interceptor.a:56 - 拦截请求(GET)：/online/cgform/api/getQueryInfo/56efb74326e74064b60933f6f8af30ea,
+2021-03-29 22:26:30.004 [http-nio-8080-exec-4] INFO  org.jeecg.modules.online.cgform.util.EnhanceJsUtil:198 - one enhanceJs begin==>  ces_order_goods_onlChange(){
+    return {
+        num(){
+           
+            let id = event.row.id
+            let num = event.row.num
+            let price = event.row.price
+
+            let targrt = event.target
+            
+            let nval = price*num
+            console.log('row',event.row);
+            console.log('num',num);
+            console.log('that',that);
+            let otherValues = {'zong_price': nval}
+              
+            that.triggleChangeValues(otherValues,id,targrt)
+   
+
+        }
+    }
+}
+2021-03-29 22:26:30.005 [http-nio-8080-exec-4] INFO  org.jeecg.modules.online.cgform.util.EnhanceJsUtil:210 - one enhanceJs end==>  ces_order_goods_onlChange(){
+    return {
+        num(){
+           
+            let id = event.row.id
+            let num = event.row.num
+            let price = event.row.price
+
+            let targrt = event.target
+            
+            let nval = price*num
+            console.log('row',event.row);
+            console.log('num',num);
+            console.log('that',that);
+            let otherValues = {'zong_price': nval}
+              
+            that.triggleChangeValues(otherValues,id,targrt)
+   
+
+        }
+    }
+}
+2021-03-29 22:26:30.044 [http-nio-8080-exec-4] INFO  org.jeecg.modules.online.cgform.util.EnhanceJsUtil:150 - 最终的增强JS
+2021-03-29 22:26:30.100 [http-nio-8080-exec-4] INFO  org.jeecg.modules.online.cgform.util.EnhanceJsUtil:222 -  sub enhanceJs begin==> OnlCgformEnhanceJs(id=6dd82d8eac166627302230a809233481, cgformHeadId=56efb74326e74064b60933f6f8af30ea, cgJsType=form, cgJs= ces_order_goods_onlChange(){
+    return {
+        num(){
+           
+            let id = event.row.id
+            let num = event.row.num
+            let price = event.row.price
+
+            let targrt = event.target
+            
+            let nval = price*num
+            console.log('row',event.row);
+            console.log('num',num);
+            console.log('that',that);
+            let otherValues = {'zong_price': nval}
+              
+            that.triggleChangeValues(otherValues,id,targrt)
+   
+
+        }
+    }
+}, content=null)
+2021-03-29 22:26:30.100 [http-nio-8080-exec-4] INFO  org.jeecg.modules.online.cgform.util.EnhanceJsUtil:233 - ---JS 增强转换-sub-- enhanceJsFunctionName----ces_order_goods_onlChange
+2021-03-29 22:26:30.102 [http-nio-8080-exec-4] INFO  org.jeecg.modules.online.cgform.util.EnhanceJsUtil:240 -  sub enhanceJs end==>  ces_order_goods_onlChange:function(that){const getAction=this._getAction,postAction=this._postAction,deleteAction=this._deleteAction;
+    return {num:function(that,event){
+           
+            let id = event.row.id
+            let num = event.row.num
+            let price = event.row.price
+
+            let targrt = event.target
+            
+            let nval = price*num
+            console.log('row',event.row);
+            console.log('num',num);
+            console.log('that',that);
+            let otherValues = {'zong_price': nval}
+              
+            that.triggleChangeValues(otherValues,id,targrt)
+   
+
+        }
+    }
+}
+2021-03-29 22:26:30.113 [http-nio-8080-exec-4] INFO  org.jeecg.modules.online.cgform.util.EnhanceJsUtil:222 -  sub enhanceJs begin==> OnlCgformEnhanceJs(id=6dd82d8eac166627302230a809233481, cgformHeadId=56efb74326e74064b60933f6f8af30ea, cgJsType=form, cgJs= ces_order_goods_onlChange:function(that){const getAction=this._getAction,postAction=this._postAction,deleteAction=this._deleteAction;
+    return {num:function(that,event){
+           
+            let id = event.row.id
+            let num = event.row.num
+            let price = event.row.price
+
+            let targrt = event.target
+            
+            let nval = price*num
+            console.log('row',event.row);
+            console.log('num',num);
+            console.log('that',that);
+            let otherValues = {'zong_price': nval}
+              
+            that.triggleChangeValues(otherValues,id,targrt)
+   
+
+        }
+    }
+}, content=null)
+2021-03-29 22:26:30.114 [http-nio-8080-exec-4] INFO  org.jeecg.modules.online.cgform.util.EnhanceJsUtil:240 -  sub enhanceJs end==>  ces_order_goods_onlChange:function(that){const getAction=this._getAction,postAction=this._postAction,deleteAction=this._deleteAction;
+    return {num:function(that,event){
+           
+            let id = event.row.id
+            let num = event.row.num
+            let price = event.row.price
+
+            let targrt = event.target
+            
+            let nval = price*num
+            console.log('row',event.row);
+            console.log('num',num);
+            console.log('that',that);
+            let otherValues = {'zong_price': nval}
+              
+            that.triggleChangeValues(otherValues,id,targrt)
+   
+
+        }
+    }
+}
+2021-03-29 22:26:30.127 [http-nio-8080-exec-4] INFO  org.jeecg.modules.online.cgform.util.EnhanceJsUtil:150 - 最终的增强JS
+2021-03-29 22:26:30.184 [http-nio-8080-exec-2] INFO  org.jeecg.interceptor.a:50 - ===== online 菜单访问拦截器 =====
+2021-03-29 22:26:30.184 [http-nio-8080-exec-2] INFO  org.jeecg.interceptor.a:56 - 拦截请求(GET)：/online/cgform/api/getData/56efb74326e74064b60933f6f8af30ea,
+2021-03-29 22:26:30.253 [http-nio-8080-exec-2] INFO  org.jeecg.modules.online.cgform.service.a.b:127 - ---Online查询sql:>>SELECT order_code,xd_date,money,remark ,id FROM ces_order_main where 1=1   ORDER BY create_time desc
+2021-03-29 22:26:32.499 [http-nio-8080-exec-8] INFO  org.jeecg.interceptor.a:50 - ===== online 菜单访问拦截器 =====
+2021-03-29 22:26:32.499 [http-nio-8080-exec-5] INFO  org.jeecg.interceptor.a:50 - ===== online 菜单访问拦截器 =====
+2021-03-29 22:26:32.500 [http-nio-8080-exec-5] INFO  org.jeecg.interceptor.a:56 - 拦截请求(GET)：/online/cgform/api/getColumns/09fd28e4b7184c1a9668496a5c496450,
+2021-03-29 22:26:32.501 [http-nio-8080-exec-4] INFO  org.jeecg.interceptor.a:50 - ===== online 菜单访问拦截器 =====
+2021-03-29 22:26:32.502 [http-nio-8080-exec-4] INFO  org.jeecg.interceptor.a:56 - 拦截请求(GET)：/online/cgform/api/getColumns/09fd28e4b7184c1a9668496a5c496450,
+2021-03-29 22:26:32.500 [http-nio-8080-exec-8] INFO  org.jeecg.interceptor.a:56 - 拦截请求(GET)：/online/cgform/api/getColumns/86bf17839a904636b7ed96201b2fa6ea,
+2021-03-29 22:26:32.505 [http-nio-8080-exec-9] INFO  org.jeecg.interceptor.a:50 - ===== online 菜单访问拦截器 =====
+2021-03-29 22:26:32.505 [http-nio-8080-exec-9] INFO  org.jeecg.interceptor.a:56 - 拦截请求(GET)：/online/cgform/api/getColumns/86bf17839a904636b7ed96201b2fa6ea,
+2021-03-29 22:26:32.530 [http-nio-8080-exec-4] INFO  org.jeecg.modules.online.cgform.util.EnhanceJsUtil:163 - 最终的增强JS
+2021-03-29 22:26:32.530 [http-nio-8080-exec-5] INFO  org.jeecg.modules.online.cgform.util.EnhanceJsUtil:163 - 最终的增强JS
+2021-03-29 22:26:40.424 [http-nio-8080-exec-7] INFO  org.jeecg.modules.online.cgreport.a.a:280 - Online报表: 走了稳定逻辑
+2021-03-29 22:26:40.471 [http-nio-8080-exec-7] INFO  org.jeecg.common.system.query.QueryGenerator:909 - query auth sql is = 
+2021-03-29 22:26:40.471 [http-nio-8080-exec-7] INFO  org.jeecg.modules.online.cgreport.service.a.b:122 - 报表查询sql=>
+select * from (select * from sys_user) jeecg_rp_temp  where 1=1 
+2021-03-29 22:26:40.634 [http-nio-8080-exec-1] INFO  org.jeecg.modules.online.cgreport.a.a:280 - Online报表: 走了稳定逻辑
+2021-03-29 22:26:40.639 [http-nio-8080-exec-1] INFO  org.jeecg.common.system.query.QueryGenerator:909 - query auth sql is = 
+2021-03-29 22:26:40.640 [http-nio-8080-exec-1] INFO  org.jeecg.modules.online.cgreport.service.a.b:122 - 报表查询sql=>
+select * from (select * from sys_user) jeecg_rp_temp  where 1=1 
+2021-03-29 22:27:19.692 [http-nio-8080-exec-5] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 22:27:19.693 [http-nio-8080-exec-9] INFO  o.jeecg.modules.demo.mock.vxe.websocket.VXESocket:171 - 【vxeSocket】连接断开，总数为:0
+2021-03-29 22:27:25.484 [http-nio-8080-exec-2] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 22:30:07.378 [http-nio-8080-exec-10] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 22:30:13.707 [http-nio-8080-exec-7] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 22:30:14.030 [http-nio-8080-exec-5] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 221302
+2021-03-29 22:30:14.043 [http-nio-8080-exec-5] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 221317
+2021-03-29 22:32:16.293 [QuartzScheduler_MyScheduler-LAPTOP-ZKS1617027546508_MisfireHandler] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 122225
+2021-03-29 22:32:16.296 [QuartzScheduler_MyScheduler-LAPTOP-ZKS1617027546508_MisfireHandler] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 122232
+2021-03-29 22:35:01.364 [http-nio-8080-exec-6] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 22:35:07.289 [http-nio-8080-exec-10] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 22:35:40.551 [http-nio-8080-exec-4] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 22:35:46.265 [http-nio-8080-exec-1] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 22:37:16.419 [QuartzScheduler_MyScheduler-LAPTOP-ZKS1617027546508_MisfireHandler] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 60125
+2021-03-29 22:39:16.296 [QuartzScheduler_MyScheduler-LAPTOP-ZKS1617027546508_ClusterManager] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 60000
+2021-03-29 22:39:16.299 [QuartzScheduler_MyScheduler-LAPTOP-ZKS1617027546508_ClusterManager] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 209785
+2021-03-29 22:41:39.424 [http-nio-8080-exec-6] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 143121
+2021-03-29 22:42:31.405 [http-nio-8080-exec-4] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 22:42:37.386 [http-nio-8080-exec-7] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 22:43:34.074 [http-nio-8080-exec-3] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 22:43:39.898 [http-nio-8080-exec-10] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 22:45:48.995 [http-nio-8080-exec-7] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 22:45:53.229 [http-nio-8080-exec-6] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 22:45:53.674 [http-nio-8080-exec-7] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 133400
+2021-03-29 22:45:53.678 [http-nio-8080-exec-7] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 133456
+2021-03-29 22:47:35.814 [http-nio-8080-exec-5] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 22:47:40.430 [http-nio-8080-exec-2] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 22:49:09.876 [http-nio-8080-exec-3] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 22:49:14.127 [http-nio-8080-exec-5] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 22:49:14.639 [http-nio-8080-exec-7] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 93665
+2021-03-29 22:49:14.666 [http-nio-8080-exec-7] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 93698
+2021-03-29 22:49:20.197 [http-nio-8080-exec-4] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 22:49:24.957 [http-nio-8080-exec-1] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 22:50:56.826 [http-nio-8080-exec-7] INFO  org.jeecg.config.shiro.ShiroRealm:155 - ——————————用户在线操作，更新token保证不掉线—————————jwtTokenRefresh——————— eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTcwMjkzOTMsInVzZXJuYW1lIjoiYWRtaW4ifQ.Y1KL3Dawvp3bJPXeLNAnROoq_8U9jnr8pdCjTOboWek
+2021-03-29 22:50:56.826 [http-nio-8080-exec-6] INFO  org.jeecg.config.shiro.ShiroRealm:155 - ——————————用户在线操作，更新token保证不掉线—————————jwtTokenRefresh——————— eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTcwMjkzOTMsInVzZXJuYW1lIjoiYWRtaW4ifQ.Y1KL3Dawvp3bJPXeLNAnROoq_8U9jnr8pdCjTOboWek
+2021-03-29 22:50:56.896 [http-nio-8080-exec-7] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 91542
+2021-03-29 22:50:56.898 [http-nio-8080-exec-7] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 91548
+2021-03-29 22:51:00.076 [http-nio-8080-exec-4] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 22:51:04.940 [http-nio-8080-exec-1] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 22:51:40.813 [http-nio-8080-exec-5] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 22:51:45.410 [http-nio-8080-exec-10] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 22:55:39.366 [http-nio-8080-exec-6] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 22:55:43.654 [http-nio-8080-exec-1] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 22:55:44.062 [http-nio-8080-exec-6] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 238066
+2021-03-29 22:55:44.063 [http-nio-8080-exec-10] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 278838
+2021-03-29 22:56:41.893 [http-nio-8080-exec-5] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 22:56:45.615 [http-nio-8080-exec-9] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 22:56:45.921 [http-nio-8080-exec-2] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 61795
+2021-03-29 22:57:30.109 [http-nio-8080-exec-10] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 22:57:34.198 [http-nio-8080-exec-1] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 22:59:17.877 [http-nio-8080-exec-10] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 22:59:24.132 [http-nio-8080-exec-6] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 22:59:24.261 [http-nio-8080-exec-10] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 109809
+2021-03-29 22:59:24.265 [http-nio-8080-exec-7] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 158318
+2021-03-29 23:00:57.294 [http-nio-8080-exec-3] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 92986
+2021-03-29 23:00:57.297 [http-nio-8080-exec-3] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 92989
+2021-03-29 23:01:03.093 [http-nio-8080-exec-10] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 23:01:07.443 [http-nio-8080-exec-6] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 23:03:20.770 [http-nio-8080-exec-9] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 23:03:26.544 [http-nio-8080-exec-10] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 23:04:13.532 [http-nio-8080-exec-7] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 185702
+2021-03-29 23:04:13.547 [http-nio-8080-exec-7] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 185719
+2021-03-29 23:05:02.640 [http-nio-8080-exec-6] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 23:05:06.909 [http-nio-8080-exec-5] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 23:05:37.484 [http-nio-8080-exec-2] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 23:05:42.134 [http-nio-8080-exec-6] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 23:06:28.597 [http-nio-8080-exec-3] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 23:06:34.048 [http-nio-8080-exec-8] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 23:07:50.326 [http-nio-8080-exec-2] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 23:07:55.238 [http-nio-8080-exec-10] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 23:08:15.989 [http-nio-8080-exec-6] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 23:08:21.706 [http-nio-8080-exec-2] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 23:08:22.085 [http-nio-8080-exec-3] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 107750
+2021-03-29 23:08:22.089 [http-nio-8080-exec-3] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 107808
+2021-03-29 23:08:39.983 [http-nio-8080-exec-7] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 23:08:46.153 [http-nio-8080-exec-5] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 23:12:12.200 [http-nio-8080-exec-6] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 23:12:16.822 [http-nio-8080-exec-8] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 23:12:17.265 [http-nio-8080-exec-1] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 210753
+2021-03-29 23:12:17.327 [http-nio-8080-exec-4] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 210809
+2021-03-29 23:15:18.936 [http-nio-8080-exec-5] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 23:15:24.671 [http-nio-8080-exec-10] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 23:15:24.994 [http-nio-8080-exec-1] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 187627
+2021-03-29 23:15:24.997 [http-nio-8080-exec-1] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 187634
+2021-03-29 23:15:38.304 [http-nio-8080-exec-3] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 23:15:42.455 [http-nio-8080-exec-8] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 23:15:55.137 [http-nio-8080-exec-10] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 23:15:59.356 [http-nio-8080-exec-1] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 23:16:13.037 [http-nio-8080-exec-5] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 23:16:18.094 [http-nio-8080-exec-8] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 23:17:17.457 [http-nio-8080-exec-6] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 23:17:26.378 [http-nio-8080-exec-6] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 23:17:26.716 [QuartzScheduler_MyScheduler-LAPTOP-ZKS1617027546508_ClusterManager] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 68210
+2021-03-29 23:17:26.727 [http-nio-8080-exec-9] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 68229
+2021-03-29 23:21:26.622 [http-nio-8080-exec-8] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 23:21:29.568 [http-nio-8080-exec-3] INFO  org.jeecg.config.shiro.ShiroRealm:155 - ——————————用户在线操作，更新token保证不掉线—————————jwtTokenRefresh——————— eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTcwMjkzOTMsInVzZXJuYW1lIjoiYWRtaW4ifQ.Y1KL3Dawvp3bJPXeLNAnROoq_8U9jnr8pdCjTOboWek
+2021-03-29 23:21:31.299 [http-nio-8080-exec-9] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 23:21:31.592 [http-nio-8080-exec-7] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 244782
+2021-03-29 23:21:31.595 [http-nio-8080-exec-8] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 244792
+2021-03-29 23:21:57.999 [http-nio-8080-exec-1] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 23:22:02.036 [http-nio-8080-exec-10] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 23:22:25.555 [http-nio-8080-exec-4] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 23:22:29.523 [http-nio-8080-exec-2] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 23:22:52.972 [http-nio-8080-exec-7] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 23:22:57.460 [http-nio-8080-exec-1] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 23:23:42.361 [http-nio-8080-exec-8] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 23:23:47.655 [http-nio-8080-exec-6] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 23:25:27.368 [http-nio-8080-exec-2] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 23:25:31.943 [http-nio-8080-exec-1] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 23:25:32.343 [http-nio-8080-exec-6] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 104346
+2021-03-29 23:25:32.348 [http-nio-8080-exec-6] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 209931
+2021-03-29 23:27:09.190 [http-nio-8080-exec-9] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 23:27:14.886 [http-nio-8080-exec-8] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 23:27:15.365 [http-nio-8080-exec-2] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 103003
+2021-03-29 23:30:24.999 [http-nio-8080-exec-5] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 23:30:31.801 [http-nio-8080-exec-7] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 23:30:32.207 [http-nio-8080-exec-1] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 196727
+2021-03-29 23:30:32.209 [http-nio-8080-exec-10] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 196728
+2021-03-29 23:31:42.894 [http-nio-8080-exec-6] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 23:31:48.361 [http-nio-8080-exec-9] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 23:31:48.742 [http-nio-8080-exec-3] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 76476
+2021-03-29 23:31:48.742 [http-nio-8080-exec-8] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 76477
+2021-03-29 23:33:01.223 [http-nio-8080-exec-7] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 23:33:05.398 [http-nio-8080-exec-6] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 23:33:05.792 [http-nio-8080-exec-1] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 76977
+2021-03-29 23:33:05.794 [http-nio-8080-exec-1] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 76982
+2021-03-29 23:34:24.664 [http-nio-8080-exec-10] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 23:34:30.385 [http-nio-8080-exec-3] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 23:34:30.751 [http-nio-8080-exec-7] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 84948
+2021-03-29 23:38:00.950 [http-nio-8080-exec-5] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 23:38:07.601 [http-nio-8080-exec-10] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1
+2021-03-29 23:38:51.098 [http-nio-8080-exec-1] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 260329
+2021-03-29 23:38:51.102 [http-nio-8080-exec-1] WARN  com.alibaba.druid.pool.DruidAbstractDataSource:1489 - discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.4, lastPacketReceivedIdleMillis : 260338
+2021-03-29 23:38:52.372 [http-nio-8080-exec-3] INFO  org.jeecg.modules.message.websocket.WebSocket:51 - 【websocket消息】连接断开，总数为:0
+2021-03-29 23:38:58.691 [http-nio-8080-exec-6] INFO  org.jeecg.modules.message.websocket.WebSocket:42 - 【websocket消息】有新的连接，总数为:1

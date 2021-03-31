@@ -7,6 +7,8 @@ import com.baomidou.mybatisplus.extension.toolkit.SqlHelper;
 import org.jeecg.modules.sto.entity.EnterHouse;
 import com.baomidou.mybatisplus.extension.service.IService;
 
+import java.math.BigDecimal;
+
 /**
  * @Description: 材料入库
  * @Author: jeecg-boot
@@ -35,12 +37,13 @@ public interface IEnterHouseService extends IService<EnterHouse> {
 
         //无库存插入
         if (ObjectUtil.isNull(enterHouse)) {
+            entity.setTotalWeight(entity.getMatWeight().multiply(new BigDecimal(entity.getMatNumber() ) ) );
             flag = IService.super.save(entity);
         }
         //已有库存更新重量，数量
         if (ObjectUtil.isNotNull(enterHouse)) {
-//            enterHouse.setMatNumber(entity.getMatNumber() + enterHouse.getMatNumber());
-            enterHouse.setMatWeight(NumberUtil.add(entity.getMatWeight(), enterHouse.getMatWeight()));
+            enterHouse.setMatNumber(entity.getMatNumber() + enterHouse.getMatNumber());
+            enterHouse.setTotalWeight(enterHouse.getMatWeight().multiply(new BigDecimal(enterHouse.getMatNumber())));
             flag = updateById(enterHouse);
         }
         return flag;

@@ -75,6 +75,14 @@ public class MaterialInformation implements Serializable {
 	@Excel(name = "材料宽度", width = 15)
     @ApiModelProperty(value = "材料宽度")
     private java.math.BigDecimal matWidth;
+    /**材料重量*/
+    @Excel(name = "材料重量", width = 15)
+    @ApiModelProperty(value = "材料重量")
+    private java.math.BigDecimal matWeight;
+    /**材料件数*/
+    @Excel(name = "材料件数", width = 15)
+    @ApiModelProperty(value = "材料件数")
+    private java.lang.Integer matNumber;
     /**材料号*/
     @Excel(name = "材料号", width = 15)
     @ApiModelProperty(value = "材料号")
