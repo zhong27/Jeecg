@@ -94,6 +94,7 @@ public class OrderDetServiceImpl extends ServiceImpl<OrderDetMapper, OrderDet> i
         BigDecimal orderTotal = BigDecimal.ZERO;
         for (OrderDet orderDet:orderDetList){
             orderTotal = orderTotal.add(orderDet.getTotal());
+            enterHouseService.updateEnterHouse(orderDet);
         }
         orderBooking.setOrderTotal(orderBooking.getOrderTotal().subtract(orderTotal));
         orderBookingService.updateById(orderBooking);

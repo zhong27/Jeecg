@@ -1,6 +1,7 @@
 package org.jeecg.modules.ord.service.impl;
 
 import cn.hutool.core.date.DateUtil;
+import org.jeecg.modules.ord.BillStatusEnum;
 import org.jeecg.modules.ord.OrderNo;
 import org.jeecg.modules.ord.entity.*;
 import org.jeecg.modules.ord.mapper.OrderDriverMapper;
@@ -80,6 +81,7 @@ public class OrderBillServiceImpl extends ServiceImpl<OrderBillMapper, OrderBill
 		String billNo = DateUtil.format(DateUtil.date(), "yyyyMMddHHmmss");
 		billNo = OrderNo.BILL_NO_PRE.getValue() + billNo;
 		orderBill.setBillNo(billNo);
+		orderBill.setBillStatus(BillStatusEnum.TAKING.getValue());
 		save(orderBill);
 	}
 }

@@ -1,6 +1,7 @@
 package org.jeecg.modules.ord.service.impl;
 
 import cn.hutool.core.bean.BeanUtil;
+import lombok.SneakyThrows;
 import org.jeecg.modules.man.entity.Driver;
 import org.jeecg.modules.man.service.impl.DriverServiceImpl;
 import org.jeecg.modules.ord.entity.OrderBill;
@@ -9,6 +10,7 @@ import org.jeecg.modules.ord.entity.OrderDriver;
 import org.jeecg.modules.ord.mapper.OrderBillMapper;
 import org.jeecg.modules.ord.mapper.OrderDriverMapper;
 import org.jeecg.modules.ord.service.IOrderDriverService;
+import org.apache.commons.beanutils.BeanUtils;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -35,11 +37,12 @@ public class OrderDriverServiceImpl extends ServiceImpl<OrderDriverMapper, Order
 		return orderDriverMapper.selectByMainId(mainId);
 	}
 
+	@SneakyThrows
     public void addDriver(OrderBooking orderBooking) {
 		OrderDriver orderDriver = new OrderDriver();
 		//获取司机信息
 		Driver driver = driverService.getById(orderBooking.getDriver());
-		BeanUtil.copyProperties(driver,orderDriver);
+		BeanUtils.copyProperties(orderDriver,driver);
 
 		//查询提单主表id
 		OrderBill selectOrderBill = orderBillMapper.selectByOrderId(orderBooking.getId());

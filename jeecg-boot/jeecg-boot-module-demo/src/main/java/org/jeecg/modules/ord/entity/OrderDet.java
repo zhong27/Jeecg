@@ -88,7 +88,7 @@ public class OrderDet implements Serializable {
 	/**数量*/
 	@Excel(name = "数量", width = 15)
 	@ApiModelProperty(value = "数量")
-	private java.lang.Integer num;
+	private java.math.BigDecimal num;
 	/**重量*/
 	@Excel(name = "重量", width = 15)
 	@ApiModelProperty(value = "重量")
@@ -101,8 +101,4 @@ public class OrderDet implements Serializable {
 	@Excel(name = "逻辑删除", width = 15)
 	@ApiModelProperty(value = "逻辑删除")
 	private int delFlag;
-	/**租户id*/
-	@Excel(name = "租户id", width = 15)
-	@ApiModelProperty(value = "租户id")
-	private java.lang.String tenantId;
 }

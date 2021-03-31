@@ -1,8 +1,8 @@
 package org.jeecg.modules.ord.service.impl;
 
-import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.collection.CollectionUtil;
-import cn.hutool.core.util.ObjectUtil;
+import lombok.SneakyThrows;
+import org.apache.commons.beanutils.BeanUtils;
 import org.jeecg.modules.JeecgException;
 import org.jeecg.modules.ord.entity.OrderBill;
 import org.jeecg.modules.ord.entity.OrderDet;
@@ -39,7 +39,8 @@ public class OrderMaterServiceImpl extends ServiceImpl<OrderMaterMapper, OrderMa
 		return orderMaterMapper.selectByMainId(mainId);
 	}
 
-    public void addOrderMater(String orderId) {
+    @SneakyThrows
+	public void addOrderMater(String orderId) {
 		List<OrderDet> orderDetList = orderDetService.selectByMainId(orderId);
 		//非空判断
 		if (CollectionUtil.isEmpty(orderDetList)){
@@ -50,7 +51,7 @@ public class OrderMaterServiceImpl extends ServiceImpl<OrderMaterMapper, OrderMa
 		List<OrderMater> orderMaterList = new ArrayList<>();
 		for (OrderDet orderDet:orderDetList){
 			OrderMater orderMater = new OrderMater();
-			BeanUtil.copyProperties(orderDet,orderMater);
+			BeanUtils.copyProperties(orderMater,orderDet);
 			orderMater.setId(null);
 			orderMater.setCreateBy(null);
 			orderMater.setCreateTime(null);

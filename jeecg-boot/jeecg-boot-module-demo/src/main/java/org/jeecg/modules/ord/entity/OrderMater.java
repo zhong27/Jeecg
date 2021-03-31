@@ -51,7 +51,7 @@ public class OrderMater implements Serializable {
 	/**逻辑删除*/
 	@Excel(name = "逻辑删除", width = 15)
 	@ApiModelProperty(value = "逻辑删除")
-	private java.lang.Integer delFlag;
+	private int delFlag;
 	/**材料名称*/
 	@Excel(name = "材料名称", width = 15)
 	@ApiModelProperty(value = "材料名称")
@@ -68,11 +68,11 @@ public class OrderMater implements Serializable {
 	/**材料宽度*/
 	@Excel(name = "材料宽度", width = 15)
 	@ApiModelProperty(value = "材料宽度")
-	private java.lang.String matWidth;
+	private java.math.BigDecimal matWidth;
 	/**材料厚度*/
 	@Excel(name = "材料厚度", width = 15)
 	@ApiModelProperty(value = "材料厚度")
-	private java.lang.String matThick;
+	private java.math.BigDecimal matThick;
 	/**材料号*/
 	@Excel(name = "材料号", width = 15)
 	@ApiModelProperty(value = "材料号")
@@ -85,11 +85,11 @@ public class OrderMater implements Serializable {
 	/**单价*/
 	@Excel(name = "单价", width = 15)
 	@ApiModelProperty(value = "单价")
-	private java.lang.String price;
+	private java.math.BigDecimal price;
 	/**数量*/
 	@Excel(name = "数量", width = 15)
 	@ApiModelProperty(value = "数量")
-	private java.lang.Integer num;
+	private java.math.BigDecimal num;
 	/**重量*/
 	@Excel(name = "重量", width = 15)
 	@ApiModelProperty(value = "重量")

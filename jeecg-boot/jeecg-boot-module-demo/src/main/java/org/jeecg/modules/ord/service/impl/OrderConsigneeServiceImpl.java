@@ -1,6 +1,8 @@
 package org.jeecg.modules.ord.service.impl;
 
 import cn.hutool.core.bean.BeanUtil;
+import lombok.SneakyThrows;
+import org.apache.commons.beanutils.BeanUtils;
 import org.jeecg.modules.man.entity.Consignee;
 import org.jeecg.modules.man.service.impl.ConsigneeServiceImpl;
 import org.jeecg.modules.ord.entity.OrderBill;
@@ -35,14 +37,15 @@ public class OrderConsigneeServiceImpl extends ServiceImpl<OrderConsigneeMapper,
 		return orderConsigneeMapper.selectByMainId(mainId);
 	}
 
-    public void addConsignee(OrderBooking orderBooking) {
+    @SneakyThrows
+	public void addConsignee(OrderBooking orderBooking) {
 		Consignee getByConsignee = consigneeService.getById(orderBooking.getConsignee());
 		OrderConsignee consignee = new OrderConsignee();
 
 		//查询提单主表id
 		OrderBill selectOrderBill = orderBillMapper.selectByOrderId(orderBooking.getId());
 
-		BeanUtil.copyProperties(getByConsignee,consignee);
+		BeanUtils.copyProperties(consignee,getByConsignee);
 		consignee.setId(null);
 		consignee.setCreateBy(null);
 		consignee.setCreateTime(null);

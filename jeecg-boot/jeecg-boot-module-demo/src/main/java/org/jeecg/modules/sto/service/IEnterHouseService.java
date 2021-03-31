@@ -37,13 +37,13 @@ public interface IEnterHouseService extends IService<EnterHouse> {
 
         //无库存插入
         if (ObjectUtil.isNull(enterHouse)) {
-            entity.setTotalWeight(entity.getMatWeight().multiply(new BigDecimal(entity.getMatNumber() ) ) );
+            entity.setTotalWeight(entity.getMatWeight().multiply(entity.getMatNumber()  ) );
             flag = IService.super.save(entity);
         }
         //已有库存更新重量，数量
         if (ObjectUtil.isNotNull(enterHouse)) {
-            enterHouse.setMatNumber(entity.getMatNumber() + enterHouse.getMatNumber());
-            enterHouse.setTotalWeight(enterHouse.getMatWeight().multiply(new BigDecimal(enterHouse.getMatNumber())));
+            enterHouse.setMatNumber(entity.getMatNumber().add(enterHouse.getMatNumber()));
+            enterHouse.setTotalWeight(enterHouse.getMatWeight().multiply(enterHouse.getMatNumber()));
             flag = updateById(enterHouse);
         }
         return flag;

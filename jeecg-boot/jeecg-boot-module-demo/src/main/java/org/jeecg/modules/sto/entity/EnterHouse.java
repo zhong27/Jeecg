@@ -82,7 +82,7 @@ public class EnterHouse implements Serializable {
 	/**材料总件数*/
 	@Excel(name = "材料总件数", width = 15)
     @ApiModelProperty(value = "材料总件数")
-    private java.lang.Integer matNumber;
+    private java.math.BigDecimal matNumber;
     /**材料总重量*/
     @Excel(name = "材料总重量", width = 15)
     @ApiModelProperty(value = "材料总重量")

@@ -28,6 +28,7 @@ import org.springframework.stereotype.Service;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 
 import javax.transaction.Transactional;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -70,7 +71,8 @@ public class EnterHouseServiceImpl extends ServiceImpl<EnterHouseMapper, EnterHo
         if (selectEnterHouse.getMatWeight().compareTo(orderDet.getWeight()) == -1) {
             throw new JeecgException(StrUtil.format("材料库存不足！当前可下单重量：{}", selectEnterHouse.getMatWeight()));
         }
-        selectEnterHouse.setMatWeight(selectEnterHouse.getMatWeight().subtract(orderDet.getWeight()));
+        selectEnterHouse.setTotalWeight(selectEnterHouse.getTotalWeight().subtract(orderDet.getWeight()));
+        selectEnterHouse.setMatNumber(selectEnterHouse.getTotalWeight().divide(selectEnterHouse.getMatWeight(),3, BigDecimal.ROUND_HALF_UP));
         updateById(selectEnterHouse);
 
     }
@@ -87,7 +89,8 @@ public class EnterHouseServiceImpl extends ServiceImpl<EnterHouseMapper, EnterHo
                 .eq(EnterHouse::getMatName, orderDet.getMatName())
                 .eq(EnterHouse::getWarehouse, orderDet.getWarehouse());
         EnterHouse enterHouse = getBaseMapper().selectOne(queryWrapperOrderDet);
-        enterHouse.setMatWeight(enterHouse.getMatWeight().add(orderDet.getWeight()));
+        enterHouse.setTotalWeight(enterHouse.getTotalWeight().add(orderDet.getWeight()));
+        enterHouse.setMatNumber(enterHouse.getTotalWeight().divide(enterHouse.getMatWeight(),3, BigDecimal.ROUND_HALF_UP));
         updateById(enterHouse);
     }
 
