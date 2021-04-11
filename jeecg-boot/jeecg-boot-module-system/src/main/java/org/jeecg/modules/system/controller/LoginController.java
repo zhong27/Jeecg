@@ -195,8 +195,10 @@ public class LoginController {
         calendar.set(Calendar.SECOND,0);
         calendar.set(Calendar.MILLISECOND,0);
         calendar.add(Calendar.DAY_OF_MONTH, 1);
+		System.out.println("getTime1"+calendar.getTime());
         Date dayEnd = calendar.getTime();
         calendar.add(Calendar.DAY_OF_MONTH, -7);
+		System.out.println("getTime2"+calendar.getTime());
         Date dayStart = calendar.getTime();
         List<Map<String,Object>> list = logService.findVisitCount(dayStart, dayEnd);
 		result.setResult(oConvertUtils.toLowerCasePageList(list));

@@ -68,7 +68,7 @@ public class EnterHouseServiceImpl extends ServiceImpl<EnterHouseMapper, EnterHo
                 .eq(EnterHouse::getWarehouse, orderDet.getWarehouse());
         EnterHouse selectEnterHouse = getBaseMapper().selectOne(queryWrapperOrderDet);
         //判断库存重量
-        if (selectEnterHouse.getMatWeight().compareTo(orderDet.getWeight()) == -1) {
+        if (selectEnterHouse.getTotalWeight().compareTo(orderDet.getWeight()) == -1) {
             throw new JeecgException(StrUtil.format("材料库存不足！当前可下单重量：{}", selectEnterHouse.getMatWeight()));
         }
         selectEnterHouse.setTotalWeight(selectEnterHouse.getTotalWeight().subtract(orderDet.getWeight()));
@@ -95,27 +95,31 @@ public class EnterHouseServiceImpl extends ServiceImpl<EnterHouseMapper, EnterHo
     }
 
     @Transactional
-    public void refundGoods(String ids) {
+    //退货确认
+    public void refundGoodVerify(String ids) {
         List<String> idList = Arrays.asList(ids.split(","));
         List<EnterHouse> enterHouseList = new ArrayList<>();
         for (String id : idList) {
             Refund refund = refundService.getById(id);
             if (StrUtil.equals(refund.getRefundAgree(), RefundAgreeEnum.DISAGREE.getValue())) {
                 OrderBill orderBill = orderBillService.getBaseMapper().selectByBillNo(refund.getBillNo());
-                List<OrderMater> orderDetList = orderMaterMapper.selectByMainId(orderBill.getId());
-                OrderMater orderMater = orderDetList.get(0);
-                //通过仓库、长度、宽度、厚度、材料号、产品大类、产品名称，校验库存
-                QueryWrapper<EnterHouse> queryWrapperOrderDet = new QueryWrapper<>();
-                queryWrapperOrderDet.lambda().eq(EnterHouse::getMatWidth, orderMater.getMatWidth())
-                        .eq(EnterHouse::getMatLen, orderMater.getMatLen())
-                        .eq(EnterHouse::getMatThick, orderMater.getMatThick())
-                        .eq(EnterHouse::getMatNo, orderMater.getMatNo())
-                        .eq(EnterHouse::getMatType, orderMater.getMatType())
-                        .eq(EnterHouse::getMatName, orderMater.getMatName())
-                        .eq(EnterHouse::getWarehouse, orderMater.getWarehouse());
-                EnterHouse selectEnterHouse = getOne(queryWrapperOrderDet);
-                EnterHouse enterHouse = selectEnterHouse.setMatWeight(selectEnterHouse.getMatWeight().add(orderMater.getWeight()));
-                enterHouseList.add(enterHouse);
+                List<OrderMater> orderMaterList = orderMaterMapper.selectByMainId(orderBill.getId());
+               for (OrderMater orderMater:orderMaterList){
+                   //通过仓库、长度、宽度、厚度、材料号、产品大类、产品名称，校验库存
+                   QueryWrapper<EnterHouse> queryWrapperOrderDet = new QueryWrapper<>();
+                   queryWrapperOrderDet.lambda().eq(EnterHouse::getMatWidth, orderMater.getMatWidth())
+                           .eq(EnterHouse::getMatLen, orderMater.getMatLen())
+                           .eq(EnterHouse::getMatThick, orderMater.getMatThick())
+                           .eq(EnterHouse::getMatNo, orderMater.getMatNo())
+                           .eq(EnterHouse::getMatType, orderMater.getMatType())
+                           .eq(EnterHouse::getMatName, orderMater.getMatName())
+                           .eq(EnterHouse::getWarehouse, orderMater.getWarehouse());
+                   EnterHouse selectEnterHouse = getOne(queryWrapperOrderDet);
+                  selectEnterHouse.setTotalWeight(selectEnterHouse.getTotalWeight().add(orderMater.getWeight()));
+                  selectEnterHouse.setMatNumber(selectEnterHouse.getTotalWeight().divide(selectEnterHouse.getMatWeight(),3,BigDecimal.ROUND_HALF_UP));
+                  enterHouseList.add(selectEnterHouse);
+               }
+
                 refund.setRefundAgree(RefundAgreeEnum.AGREE.getValue());
                 refundService.updateById(refund);
             }
@@ -126,5 +130,26 @@ public class EnterHouseServiceImpl extends ServiceImpl<EnterHouseMapper, EnterHo
         }
         updateBatchById(enterHouseList);
 
+    }
+
+    public void refundGoods(OrderBill orderBill) {
+        List<OrderMater> orderMaterList = orderMaterMapper.selectByMainId(orderBill.getId());
+        List<EnterHouse> enterHouseList = new ArrayList<>();
+        for (OrderMater orderMater:orderMaterList){
+            //通过仓库、长度、宽度、厚度、材料号、产品大类、产品名称，校验库存
+            QueryWrapper<EnterHouse> queryWrapperOrderDet = new QueryWrapper<>();
+            queryWrapperOrderDet.lambda().eq(EnterHouse::getMatWidth, orderMater.getMatWidth())
+                    .eq(EnterHouse::getMatLen, orderMater.getMatLen())
+                    .eq(EnterHouse::getMatThick, orderMater.getMatThick())
+                    .eq(EnterHouse::getMatNo, orderMater.getMatNo())
+                    .eq(EnterHouse::getMatType, orderMater.getMatType())
+                    .eq(EnterHouse::getMatName, orderMater.getMatName())
+                    .eq(EnterHouse::getWarehouse, orderMater.getWarehouse());
+            EnterHouse selectEnterHouse = getOne(queryWrapperOrderDet);
+            selectEnterHouse.setTotalWeight(selectEnterHouse.getTotalWeight().add(orderMater.getWeight()));
+            selectEnterHouse.setMatNumber(selectEnterHouse.getTotalWeight().divide(selectEnterHouse.getMatWeight(),3,BigDecimal.ROUND_HALF_UP));
+            enterHouseList.add(selectEnterHouse);
+        }
+        updateBatchById(enterHouseList);
     }
 }

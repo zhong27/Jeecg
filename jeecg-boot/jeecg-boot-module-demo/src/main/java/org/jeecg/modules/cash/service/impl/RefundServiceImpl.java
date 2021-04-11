@@ -17,11 +17,14 @@ import org.jeecg.modules.ord.BillStatusEnum;
 import org.jeecg.modules.ord.entity.OrderBill;
 import org.jeecg.modules.ord.mapper.OrderBillMapper;
 import org.jeecg.modules.ord.service.impl.OrderBillServiceImpl;
+import org.jeecg.modules.sto.service.IEnterHouseService;
+import org.jeecg.modules.sto.service.impl.EnterHouseServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
@@ -42,16 +45,24 @@ public class RefundServiceImpl extends ServiceImpl<RefundMapper, Refund> impleme
     private RefundMapper refundMapper;
     @Autowired
     private CashBalanceServiceImpl cashBalanceService;
+    @Autowired
+    private EnterHouseServiceImpl enterHouseService;
 
-    public String addRefund(String id) {
+    public String addRefund(String orderBillId) {
         String result = "";
         //获取提单信息
-        OrderBill orderBill = orderBillService.getById(id);
+        OrderBill orderBill = orderBillService.getById(orderBillId);
         //查询退款是否存在
         List<Refund> refundList = refundMapper.selectByBillNo(orderBill.getBillNo());
+        //过滤出审核为通过的对象
+        List<Refund> filterRefundlist = new ArrayList<>();
+        if (CollectionUtil.isNotEmpty(refundList)){
+            filterRefundlist= refundList.stream()
+                    .filter(refund -> StrUtil.equals(refund.getRefundStatus(), RefundCheckEnum.PASS.getValue()))
+                    .collect(Collectors.toList());
+        }
         Refund refund = new Refund();
-        if (CollectionUtil.isEmpty(refundList)||
-                (CollectionUtil.isNotEmpty(refundList) && StrUtil.equals(refundList.get(0).getRefundStatus(),RefundCheckEnum.UN_PASS.getValue())) ) {
+        if (CollectionUtil.isEmpty(refundList)|| CollectionUtil.isEmpty(filterRefundlist) ) {
             //设置退款编号
             String refundNo = RefundPreEnum.RE.getValue();
             refundNo += DateUtil.format(DateUtil.date(), "yyyyMMddHHmmss");
@@ -61,9 +72,14 @@ public class RefundServiceImpl extends ServiceImpl<RefundMapper, Refund> impleme
                     .setCustomer(orderBill.getCustomerId())
                     .setRefundMoney(orderBill.getTotal())
                     .setRefundStatus(RefundCheckEnum.UN_CHECK.getValue());
+            //设置退款类型、退货确认状态
             if (StrUtil.equals(orderBill.getBillStatus(), BillStatusEnum.TAKING.getValue())) {
                 refund.setRefundType(RefundTypeEnum.REFUND.getValue())
                         .setRefundAgree(RefundAgreeEnum.AGREE.getValue());
+                //第一次退库存
+                if (CollectionUtil.isEmpty(refundList)){
+                    enterHouseService.refundGoods(orderBill);
+                }
             }
             if (StrUtil.equals(orderBill.getBillStatus(), BillStatusEnum.PICKED_UP.getValue())) {
                 refund.setRefundType(RefundTypeEnum.REFUND_GOODS.getValue())
@@ -91,6 +107,10 @@ public class RefundServiceImpl extends ServiceImpl<RefundMapper, Refund> impleme
         //审核通过
         if (StrUtil.equals(RefundCheckEnum.PASS.getValue(),status)){
             for (Refund refund:refunds){
+                if (StrUtil.equals(refund.getRefundStatus(),RefundCheckEnum.UN_PASS.getValue())
+                        || StrUtil.equals(refund.getRefundStatus(),RefundCheckEnum.PASS.getValue())) {
+                    throw new JeecgException("已审核！不可重复审核");
+                }
                 CashBalance cashBalance = cashBalanceService.getBaseMapper().selectByCusotmerId(refund.getCustomer());
                 cashBalance.setRemainMoney(cashBalance.getRemainMoney().add(refund.getRefundMoney()))
                         .setRefundAmount(cashBalance.getRefundAmount().add(refund.getRefundMoney()))
@@ -123,6 +143,7 @@ public class RefundServiceImpl extends ServiceImpl<RefundMapper, Refund> impleme
             }
 
         }
+
         updateBatchById(refunds);
     }
 

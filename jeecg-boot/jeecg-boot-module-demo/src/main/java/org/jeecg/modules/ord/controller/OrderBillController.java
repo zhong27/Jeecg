@@ -112,6 +112,22 @@ public class OrderBillController extends JeecgController<OrderBill, IOrderBillSe
         return Result.OK("添加成功！");
     }
 
+	 /**
+	  * 收件确认
+	  *
+	  * @param id
+	  * @return
+	  */
+	 @AutoLog(value = "收件确认")
+	 @ApiOperation(value="收件确认", notes="收件确认")
+	 @GetMapping(value = "/pickUpConfirm")
+	 public Result<?> pickUpConfirm(@RequestParam(name="id",required=true) String id) {
+		 //更新提单状态
+		 OrderBill orderBill = orderBillService.getById(id);
+		 orderBill.setBillStatus(BillStatusEnum.PICKED_UP.getValue());
+		 orderBillService.updateById(orderBill);
+		 return Result.OK("收件成功！");
+	 }
     /**
      *  编辑
      * @param orderBill

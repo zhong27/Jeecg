@@ -8,6 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.jeecg.common.system.base.controller.JeecgController;
 import org.jeecg.common.api.vo.Result;
 import org.jeecg.config.mybatis.TenantContext;
+import org.jeecg.modules.man.AccountStatusEnum;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
@@ -91,6 +92,28 @@ public class CustomerController extends JeecgController<Customer, ICustomerServi
         customerService.save(customer);
         return Result.OK("添加成功！");
     }
+
+
+	 @AutoLog(value = "冻结账户")
+	 @ApiOperation(value="冻结账户", notes="冻结账户")
+	 @GetMapping(value = "/customerForzen")
+	 public Result<?> customerForzen(@RequestParam(name="id") String customerId) {
+		 Customer customer = customerService.getById(customerId);
+		 customer.setAccountStatus(AccountStatusEnum.FROZEN.getValue());
+		 boolean result = customerService.updateById(customer);
+		 return Result.OK(result);
+	 }
+
+
+	 @AutoLog(value = "解冻账户")
+	 @ApiOperation(value="解冻账户", notes="解冻账户")
+	 @GetMapping(value = "/customerNormal")
+	 public Result<?> customerNormal(@RequestParam(name="id") String customerId) {
+		 Customer customer = customerService.getById(customerId);
+		 customer.setAccountStatus(AccountStatusEnum.NORMAL.getValue());
+		 boolean result = customerService.updateById(customer);
+		 return Result.OK(result);
+	 }
 
     /**
      *  编辑

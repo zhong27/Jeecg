@@ -1,6 +1,7 @@
 package org.jeecg.modules.ord.service.impl;
 
 import cn.hutool.core.collection.CollectionUtil;
+import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.util.NumberUtil;
 import cn.hutool.core.util.ObjectUtil;
 import cn.hutool.core.util.StrUtil;
@@ -8,6 +9,10 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.IService;
 import org.jeecg.modules.JeecgException;
 import org.jeecg.modules.cash.service.impl.CashBalanceServiceImpl;
+import org.jeecg.modules.man.AccountStatusEnum;
+import org.jeecg.modules.man.entity.Customer;
+import org.jeecg.modules.man.service.impl.CustomerServiceImpl;
+import org.jeecg.modules.ord.OrderNo;
 import org.jeecg.modules.ord.PayStatusEnum;
 import org.jeecg.modules.ord.entity.OrderBooking;
 import org.jeecg.modules.ord.entity.OrderDet;
@@ -56,6 +61,8 @@ public class OrderBookingServiceImpl extends ServiceImpl<OrderBookingMapper, Ord
     private OrderDriverServiceImpl orderDriverService;
     @Autowired
     private OrderConsigneeServiceImpl orderConsigneeService;
+    @Autowired
+    private CustomerServiceImpl customerService;
 
 
     @Override
@@ -78,6 +85,25 @@ public class OrderBookingServiceImpl extends ServiceImpl<OrderBookingMapper, Ord
             orderBookingMapper.deleteById(id);
         }
     }
+
+
+    //订单add方法重写
+    @Transactional
+    public boolean saveOrderBooking(OrderBooking orderBooking) {
+
+        //检验账户是否冻结 
+        Customer customer = customerService.getById(orderBooking.getCustomer());
+        if (StrUtil.equals(customer.getAccountStatus(), AccountStatusEnum.FROZEN.getValue())){
+            throw new JeecgException(StrUtil.format("不可下单！当前账户已被冻结，请联系管理员解冻账户！",customer.getCustomerName()));
+        }
+        //订单编号
+        String orderNo = DateUtil.format(DateUtil.date(),"yyyyMMddHHmmss");
+        orderNo = OrderNo.ORDER_NO_PRE.getValue() + orderNo;
+        orderBooking.setOrderNo(orderNo);
+        orderBooking.setOrderTotal(BigDecimal.ZERO);
+        return save(orderBooking);
+    }
+
     @Transactional
     public void calculateBooking(OrderDet orderDet) {
 
@@ -120,7 +146,7 @@ public class OrderBookingServiceImpl extends ServiceImpl<OrderBookingMapper, Ord
                 .eq(EnterHouse::getMatName,orderDet.getMatName())
                 .eq(EnterHouse::getWarehouse,orderDet.getWarehouse());
         EnterHouse selectEnterHouse = enterHouseService.getOne(queryWrapperOrderDet);
-        selectEnterHouse.setMatWeight(selectEnterHouse.getMatWeight().subtract(orderDet.getWeight())
+        selectEnterHouse.setTotalWeight(selectEnterHouse.getTotalWeight().subtract(orderDet.getWeight())
                 .add(updateBeforeOrderDet.getWeight()));
 
         enterHouseService.updateById(selectEnterHouse);

@@ -141,7 +141,7 @@ public class EnterHouseController extends JeecgController<EnterHouse, IEnterHous
 	 @ApiOperation(value="通过退款id退货确认", notes="通过退款id退货确认")
 	 @GetMapping(value = "/refundGoods")
 	 public Result<?> refundGoods(@RequestParam(name="id",required=true) String ids) {
-		 enterHouseServiceImpl.refundGoods(ids);
+		 enterHouseServiceImpl.refundGoodVerify(ids);
 		 return Result.OK(ids);
 	 }
 	

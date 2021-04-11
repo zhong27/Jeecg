@@ -120,16 +120,16 @@ public class RefundController extends JeecgController<Refund, IRefundService> {
 	 /**
 	  * 提单退款
 	  *
-	  * @param id
+	  * @param orderBillId
 	  * @return
 	  */
 	 @AutoLog(value = "提单退款")
 	 @ApiOperation(value="提单退款", notes="提单退款")
 	 @GetMapping(value = "/refundBill")
-	 public Result<?> refundBill(@RequestParam(name="id",required=true) String id) {
-		 String result = refundServiceimp.addRefund(id);
+	 public Result<?> refundBill(@RequestParam(name="id",required=true) String orderBillId) {
+		 String result = refundServiceimp.addRefund(orderBillId);
 		 //更新提单状态
-		 OrderBill orderBill = orderBillMapper.selectById(id);
+		 OrderBill orderBill = orderBillMapper.selectById(orderBillId);
 		 orderBill.setBillStatus(BillStatusEnum.REFUNDING.getValue());
 		 orderBillMapper.updateById(orderBill);
 		 return Result.OK(result);

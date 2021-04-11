@@ -97,12 +97,12 @@ public class OrderBookingController extends JeecgController<OrderBooking, IOrder
     @ApiOperation(value="订单预定-添加", notes="订单预定-添加")
     @PostMapping(value = "/add")
     public Result<?> add(@RequestBody OrderBooking orderBooking) {
-        orderBookingService.save(orderBooking);
+        orderBookingServiceImpl.saveOrderBooking(orderBooking);
         return Result.OK("添加成功！");
     }
 
     /**
-     *  编辑
+     *
      * @param orderBooking
      * @return
      */
@@ -192,7 +192,7 @@ public class OrderBookingController extends JeecgController<OrderBooking, IOrder
 	}
 
     /**
-	 * 编辑
+	 * 编辑editOrderDet
 	 * @param orderDet
 	 * @return
 	 */
