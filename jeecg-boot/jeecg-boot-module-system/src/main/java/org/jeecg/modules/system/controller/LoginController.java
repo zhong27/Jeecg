@@ -10,21 +10,25 @@ import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.SecurityUtils;
 import org.jeecg.common.api.vo.Result;
+import org.jeecg.common.aspect.annotation.AutoLog;
 import org.jeecg.common.constant.CacheConstant;
 import org.jeecg.common.constant.CommonConstant;
 import org.jeecg.common.system.api.ISysBaseAPI;
+import org.jeecg.config.mybatis.TenantContext;
 import org.jeecg.modules.base.service.BaseCommonService;
 import org.jeecg.common.system.util.JwtUtil;
 import org.jeecg.common.system.vo.LoginUser;
 import org.jeecg.common.util.*;
 import org.jeecg.common.util.encryption.EncryptedString;
 import org.jeecg.modules.system.entity.SysDepart;
+import org.jeecg.modules.system.entity.SysTenant;
 import org.jeecg.modules.system.entity.SysUser;
 import org.jeecg.modules.system.model.SysLoginModel;
 import org.jeecg.modules.system.service.ISysDepartService;
 import org.jeecg.modules.system.service.ISysDictService;
 import org.jeecg.modules.system.service.ISysLogService;
 import org.jeecg.modules.system.service.ISysUserService;
+import org.jeecg.modules.system.service.impl.SysTenantServiceImpl;
 import org.jeecg.modules.system.util.RandImageUtil;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -58,6 +62,8 @@ public class LoginController {
     private ISysDictService sysDictService;
 	@Resource
 	private BaseCommonService baseCommonService;
+	@Autowired
+	private SysTenantServiceImpl sysTenantService;
 
 	private static final String BASE_CHECK_CODES = "qwertyuiplkjhgfdsazxcvbnmQWERTYUPLKJHGFDSAZXCVBNM1234567890";
 
@@ -116,6 +122,22 @@ public class LoginController {
         //update-end--Author:wangshuai  Date:20200714  for：登录日志没有记录人员
 		return result;
 	}
+
+	/**
+	 * 获取公司名称
+	 *
+	 * @param
+	 * @return
+	 */
+	@AutoLog(value = "获取公司名称")
+	@ApiOperation(value="获取公司名称", notes="获取公司名称")
+	@GetMapping(value = "/getCompanyName")
+	public Result<?> getCompanyName(){
+		SysTenant sysTenant = sysTenantService.getById(TenantContext.getTenant());
+		System.out.println("sysTenant"+sysTenant);
+		return Result.OK(sysTenant.getName());
+	}
+
 	
 	/**
 	 * 退出登录

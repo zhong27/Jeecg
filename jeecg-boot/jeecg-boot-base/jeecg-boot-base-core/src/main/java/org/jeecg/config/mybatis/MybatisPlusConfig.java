@@ -54,6 +54,7 @@ public class MybatisPlusConfig {
         tenantTable.add("man_consignee");
         tenantTable.add("order_bill");
         tenantTable.add("cash_refund");
+        tenantTable.add("sto_enter_house");
         DDL_KEYWORD.add("alter");
     }
 
