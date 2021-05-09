@@ -81,9 +81,9 @@ public class RefundServiceImpl extends ServiceImpl<RefundMapper, Refund> impleme
                     enterHouseService.refundGoods(orderBill);
                 }
             }
-            if (StrUtil.equals(orderBill.getBillStatus(), BillStatusEnum.PICKED_UP.getValue())) {
+            if (StrUtil.equals(orderBill.getBillStatus(), BillStatusEnum.REFUNDED.getValue())) {
                 refund.setRefundType(RefundTypeEnum.REFUND_GOODS.getValue())
-                        .setRefundAgree(RefundAgreeEnum.DISAGREE.getValue());
+                        .setRefundAgree(RefundAgreeEnum.AGREE.getValue());
             }
         } else {
             throw new JeecgException("退单已存在，请勿重复退单！");
@@ -121,7 +121,7 @@ public class RefundServiceImpl extends ServiceImpl<RefundMapper, Refund> impleme
                 refund.setRefundDate(new Date());
                 refund.setRefundStatus(status);
                 OrderBill orderBill = orderBillService.getBaseMapper().selectByBillNo(refund.getBillNo());
-                orderBill.setBillStatus(BillStatusEnum.REFUNDED.getValue());
+                orderBill.setBillStatus(BillStatusEnum.FINISHED.getValue());
                 orderBillService.updateById(orderBill);
             }
         }

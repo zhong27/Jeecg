@@ -8,6 +8,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import lombok.extern.slf4j.Slf4j;
 import org.jeecg.common.system.base.controller.JeecgController;
 import org.jeecg.common.api.vo.Result;
+import org.jeecg.modules.cash.service.impl.RefundServiceImpl;
 import org.jeecg.modules.ord.BillRefundEnum;
 import org.jeecg.modules.ord.BillStatusEnum;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,7 +43,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
- /**
+import static org.jeecg.modules.ord.BillStatusEnum.*;
+
+/**
  * @Description: 提单信息管理
  * @Author: jeecg-boot
  * @Date:   2021-03-21
@@ -66,6 +69,9 @@ public class OrderBillController extends JeecgController<OrderBill, IOrderBillSe
 	@Autowired
 	private IOrderConsigneeService orderConsigneeService;
 
+	@Autowired
+	private RefundServiceImpl refundServiceimp;
+
 
 	/*---------------------------------主表处理-begin-------------------------------------*/
 
@@ -86,12 +92,13 @@ public class OrderBillController extends JeecgController<OrderBill, IOrderBillSe
 								   HttpServletRequest req) {
 		QueryWrapper<OrderBill> queryWrapper = QueryGenerator.initQueryWrapper(orderBill, req.getParameterMap());
 		if (StrUtil.equals(BillRefundEnum.UN_REFUND.getValue(),orderBill.getQueryType())){
-			queryWrapper.lambda().eq(OrderBill::getBillStatus, BillStatusEnum.TAKING.getValue()).or()
-					.eq(OrderBill::getBillStatus, BillStatusEnum.PICKED_UP.getValue());
+			queryWrapper.lambda().eq(OrderBill::getBillStatus, TAKING.getValue()).or()
+					.eq(OrderBill::getBillStatus, PICKED_UP.getValue());
 		}
 		if (StrUtil.equals(BillRefundEnum.REFUND.getValue(),orderBill.getQueryType())){
-			queryWrapper.lambda().eq(OrderBill::getBillStatus, BillStatusEnum.REFUNDING.getValue()).or()
-					.eq(OrderBill::getBillStatus, BillStatusEnum.REFUNDED.getValue());
+			queryWrapper.lambda().eq(OrderBill::getBillStatus, REFUNDING.getValue())
+					.or().eq(OrderBill::getBillStatus, REFUNDED.getValue())
+					.or().eq(OrderBill::getBillStatus, FINISHED.getValue());
 		}
 
 		Page<OrderBill> page = new Page<OrderBill>(pageNo, pageSize);
@@ -124,10 +131,31 @@ public class OrderBillController extends JeecgController<OrderBill, IOrderBillSe
 	 public Result<?> pickUpConfirm(@RequestParam(name="id",required=true) String id) {
 		 //更新提单状态
 		 OrderBill orderBill = orderBillService.getById(id);
-		 orderBill.setBillStatus(BillStatusEnum.PICKED_UP.getValue());
+		 orderBill.setBillStatus(PICKED_UP.getValue());
 		 orderBillService.updateById(orderBill);
 		 return Result.OK("收件成功！");
 	 }
+
+	 /**
+	  * 退货确认
+	  *
+	  * @param orderBillId
+	  * @return
+	  */
+	 @AutoLog(value = "退货确认")
+	 @ApiOperation(value="退货确认", notes="退货确认")
+	 @GetMapping(value = "/returnConfirmation")
+	 public Result<?> returnConfirmation(@RequestParam(name="id",required=true) String orderBillId) {
+		 OrderBill orderBillReConfirmation = orderBillService.getById(orderBillId);
+		 String result = "";
+		 if (orderBillReConfirmation.getBillStatus().equals(BillStatusEnum.REFUNDING.getValue())){
+		 	orderBillReConfirmation.setBillStatus(BillStatusEnum.REFUNDED.getValue());
+			 orderBillService.updateById(orderBillReConfirmation);
+			 result = refundServiceimp.addRefund(orderBillId);
+		 }
+		 return Result.OK(result);
+	 }
+
     /**
      *  编辑
      * @param orderBill

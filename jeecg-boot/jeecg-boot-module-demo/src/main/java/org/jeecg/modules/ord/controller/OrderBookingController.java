@@ -218,6 +218,18 @@ public class OrderBookingController extends JeecgController<OrderBooking, IOrder
 		 return Result.OK("信息添加成功！");
 	 }
 
+	 /**
+	  * 销售数据查询
+	  *
+	  * @return
+	  */
+	 @AutoLog(value = "销售数据查询")
+	 @ApiOperation(value="销售数据查询", notes="销售数据查询")
+	 @GetMapping(value = "/saleInfo")
+	 public Result<?> saleInfo() {
+		OrderBookingServiceImpl.SaleInfo saleInfo = orderBookingServiceImpl.seleInfo();
+		 return Result.OK(saleInfo);
+	 }
 	/**
 	 * 通过id删除
 	 * @param id

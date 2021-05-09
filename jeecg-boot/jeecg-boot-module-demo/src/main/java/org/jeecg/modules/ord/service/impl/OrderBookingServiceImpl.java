@@ -7,6 +7,7 @@ import cn.hutool.core.util.ObjectUtil;
 import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.IService;
+import org.jeecg.config.mybatis.TenantContext;
 import org.jeecg.modules.JeecgException;
 import org.jeecg.modules.cash.service.impl.CashBalanceServiceImpl;
 import org.jeecg.modules.man.AccountStatusEnum;
@@ -185,5 +186,56 @@ public class OrderBookingServiceImpl extends ServiceImpl<OrderBookingMapper, Ord
 
         }
 
+    }
+    @Transactional
+    public SaleInfo seleInfo() {
+        SaleInfo saleInfo = new SaleInfo();
+        QueryWrapper<OrderBooking> orderBookingQueryWrapper = new QueryWrapper<>();
+        orderBookingQueryWrapper.lambda().eq(OrderBooking::getDelFlag,0)
+                .eq(OrderBooking::getTenantId,TenantContext.getTenant());
+        List<OrderBooking> orderBookingList = list(orderBookingQueryWrapper);
+        BigDecimal total = BigDecimal.ZERO;
+        BigDecimal weight = BigDecimal.ZERO;
+        List<OrderDet> orderDetList = new ArrayList<>();
+        for(OrderBooking orderBooking:orderBookingList){
+            total = total.add(orderBooking.getOrderTotal());
+            orderDetList.addAll(orderDetMapper.selectByMainId(orderBooking.getId()));
+        }
+        for(OrderDet orderDet:orderDetList){
+            weight = weight.add(orderDet.getWeight());
+        }
+        saleInfo.setMoney(total);
+        saleInfo.setNum(orderBookingList.size());
+        saleInfo.setWeight(weight);
+        return saleInfo;
+    }
+    public class SaleInfo{
+        int num;
+        BigDecimal weight;
+        BigDecimal Money;
+
+        public int getNum() {
+            return num;
+        }
+
+        public void setNum(int num) {
+            this.num = num;
+        }
+
+        public BigDecimal getWeight() {
+            return weight;
+        }
+
+        public void setWeight(BigDecimal weight) {
+            this.weight = weight;
+        }
+
+        public BigDecimal getMoney() {
+            return Money;
+        }
+
+        public void setMoney(BigDecimal money) {
+            Money = money;
+        }
     }
 }
