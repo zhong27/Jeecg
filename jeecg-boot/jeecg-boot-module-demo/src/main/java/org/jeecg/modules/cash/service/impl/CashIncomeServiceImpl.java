@@ -38,7 +38,6 @@ public class CashIncomeServiceImpl extends ServiceImpl<CashIncomeMapper, CashInc
     //来款审核
     public void checkIncome(String id){
         CashIncome cashIncome = getById(id);
-
         //判断来款审核状态
         if (StrUtil.equals(cashIncome.getStatus(),CheckStatus.FINISH.getValue())){
             throw new JeecgException("来款已审核！");
